@@ -1,0 +1,239 @@
+body {
+    background: #f3f3f3;
+}
+
+#main {
+    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;
+    width: 75%;
+    height: auto;
+    padding: 30px;
+    margin-top: -30px;
+    margin-right: 10px;
+    float: right;
+    font: 16px Arial, Helvetica, sans-serif;
+    box-shadow: #999 3px 3px 3px;
+    border-radius: 10px;
+}
+
+
+a.content {
+    text-decoration: none;
+    color: #36526c;
+    transition: 1s;
+}
+
+
+a.content:hover {
+    text-decoration: none;
+    color: #6b93af;
+    transition: 1s;
+}
+
+
+h1 {
+    display: block;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+    margin-top: 100px;
+}
+
+
+ul {
+    list-style-image: inherit !important;
+}
+
+
+#logo {
+    width: 220px;
+    height: 134px;
+    float: left;
+    margin-left: 90px;
+    margin-top: -50px;
+    margin-right: 40px;
+}
+
+#igemimg {
+    width: 130px;
+    height: 99px;
+    margin-top: -50px;
+    margin-left: -250px;
+}
+
+
+#top {
+    position: fixed;
+    background-color: #34495e;
+    width: 100%;
+    height: 100px;
+    z-index: 5000;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+}
+
+
+#header {
+    position: relative;
+    background-color: #34495e;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 15px 15px;
+    height: 100px;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    border-top-width: 0px;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+
+.menu {
+    font: 18px Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.menu ul li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+}
+
+
+.menu ul li a,
+.menu ul li a:visited {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    /*border:1px solid #34495e;
+   border-width:1px 1px 0 0;*/
+    background: #34495e;
+    line-height: 40px;
+    font-size: 16px;
+    /*letter-spacing:1px;*/
+    transition: 1s;
+}
+
+
+.menu ul li ul {
+    display: none;
+    list-style-type: none !important;
+    transition: 1s;
+}
+
+
+.menu ul li:hover a {
+    color: #000;
+    background: #fff;
+    transition: 1s;
+}
+
+
+.menu ul li:hover ul {
+    display: block;
+    position: fixed;
+    top: 90px;
+    width: 150px;
+    transition: 1s;
+}
+
+
+.menu ul li:hover ul li a {
+    display: block;
+    background: #34495e;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    transition: 1s;
+}
+
+
+.menu ul li:hover ul li a:hover {
+    background: #7599bc;
+    color: #fff;
+    transition: 1s;
+}
+
+
+#igem {
+    float: right;
+    margin-top: -1px;
+    margin-right: -55px;
+    height: 83px;
+    width: 130px;
+}
+
+
+#igem a img {
+    transition: width 1s, height 1s;
+    -moz-transition: width 1s, height 1s, -moz-transform 1s;
+    /* Firefox 4 */
+    -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+    /* Safari and Chrome */
+    -o-transition: width 1s, height 1s, -o-transform 1s;
+    /* Opera */
+    -ms-transition: width 1s, height 1s, -ms-transform 1s;
+}
+
+#igem a img:hover {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    /* Firefox 4 */
+    -webkit-transform: rotate(360deg);
+    /* Safari and Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
+    -ms-transition: width 1s, height 1s, -ms-transform 1s;
+    /*IE*/
+}
+
+
+#direction {
+    width: 18%;
+    height: 100%;
+    float: left;
+    top: 140px;
+    left: 10px;
+    position: fixed;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+#direction ul,
+#direction ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Tahoma, Geneva, sans-serif;
+    list-style-image: none;
+    list-style-image: circle;
+}
+
+#direction ul li a:hover {
+    color: #aaed51;
+    opacity: 1;
+    font-size: 18px;
+}
+
+#subbutton {
+    font-size: 16px !important;
+    margin-left: 10px;
+}

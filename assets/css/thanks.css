@@ -1,0 +1,80 @@
+.img {
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    float: left;
+    margin: auto 15px auto 15px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+}
+
+.img img {
+    width: 290px;
+    height: 65px;
+    margin: 0;
+}
+
+
+.img:hover {
+    -webkit-transform: scale(0.8);
+    -webkit-box-shadow: 0px 0px 30px #36526C;
+    -moz-transform: scale(0.8);
+    -moz-box-shadow: 0px 0px 30px #36526C;
+    -o-transform: scale(0.8);
+    -o-box-shadow: 0px 0px 30px #36526C;
+    -ms-transform: scale(0.8);
+    -ms-box-shadow: 0px 0px 30px #36526C;
+}
+
+
+.img .mask1,
+.img .mask2,
+.img .mask3,
+.img .mask4,
+.img .mask5 {
+    background-color: #36526C;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+}
+
+
+
+.img .mask1 {
+    background: url(https://static.igem.org/mediawiki/2013/3/36/USTC_Software_Db_mask.png) center no-repeat;
+}
+
+.img .mask2 {
+    background: url(https://static.igem.org/mediawiki/2013/7/72/USTC_Software_USTCIF_mask.png) center no-repeat;
+}
+
+.img .mask3 {
+    background: url(https://static.igem.org/mediawiki/2013/9/90/USTC_Software_Teaching_mask.png) center no-repeat;
+}
+
+.img .mask4 {
+    background: url(https://static.igem.org/mediawiki/2013/5/52/USTC_Software_Physics_mask.png) center no-repeat;
+}
+
+.img .mask5 {
+    background: url(https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_Life_mask.png) center no-repeat;
+}
+
+
+
+#img:hover .mask1,
+#img:hover .mask2,
+#img:hover .mask3,
+#img:hover .mask4,
+#img:hover .mask5 {
+    height: 0;
+    margin-top: 35px;
+}

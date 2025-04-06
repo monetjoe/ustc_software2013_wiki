@@ -1,0 +1,118 @@
+{{USTC-Software/hidden}}
+
+{{USTC-Software/header2}}
+
+<!--{{USTC-Software/project}}-->
+
+<html>
+
+<head>
+
+    <title>Future Work</title>
+
+    <!--link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Database/css?action=raw&ctype=text/css" type="text/css"/-->
+
+    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/future/css?action=raw&ctype=text/css"
+        type="text/css" />
+
+    <style>
+        #futurebutton,
+        #projectbutton {
+            color: #aaed51 !important;
+        }
+    </style>
+
+<body>
+    <script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
+
+
+    <div id="direction">
+        <ul>
+            <li><a href="#TT" class="button">Regulation Prediction</a></li>
+
+            <li><a href="#TG" class="button">Simulation</a></li>
+
+            <li><a href=".cpa" class="button">Converse Prediction Accuracy</a></li>
+            <li><a href=".vg" class="button">Visualization GUI</a></li>
+
+            <li><a href="#main" class="button">Top</a></li>
+
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function () {
+                var href = $(this).attr("href");
+                var pos = $(href).offset().top - 100;
+                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
+                return false;
+            });
+        });
+    </script>
+
+
+    <div id="main">
+
+        <h1>Future Work</h1>
+
+
+        <div id="TT" style="margin-top:0px;">
+            <h2 align="justify">Regulation Prediction</h2>
+            <p align="justify">There will be a room for improvement in calculating regulation by alignment. We use
+                global alignment in our software now, but actually in biological field, local alignment is also very
+                important. As a result, combining global alignment with local alignment gives a better calculation. On
+                the other hand, we use BLOSM50 to score the alignment but whether this scoring mechanism is suitable for
+                calculating regulation needs to be verified. And using machine learning to optimize our scoring
+                mechanism will be our future goal. Suitable is the best! It will be a part our future work enhancing the
+                efficiency of alignment. Better alignment method and backtrace model will make our software more
+                excellent dealing with giant and complex network!</p>
+
+            <p align="justify">Meanwhile, it is feasible to some extent that using alignment to predict the regulation,
+                but concerning the other information about interaction such as operator, protein second structure would
+                be more helpful. Focusing on the core of regulation is the key of analyzing!</p>
+
+        </div>
+
+
+
+
+        <div id="TG">
+            <h2 align="justify">Simulation</h2>
+            <p align="justify">Hill equation we used is universal in lots of field and as a result it will cause the low
+                accuracy in network modeling. Finding an appropriate equation is really important. Chemical master
+                equation needs a large amount of calculation, so finding a equilibrium point between accuracy and speed
+                will be an important part of our future work.</p>
+            <p align="justify">There will be a lot of uncertainty in biological process, simply mathematical equation is
+                hard to simulate the high coupling in biology. How to decouple and enhance the accuracy of mathematical
+                simulation will also be a part. In the same time, it will be a good attempt to add other ways of
+                simulation.</p>
+
+
+        </div>
+
+
+        <div id="TI" class="cpa">
+            <h2 align="justify">Converse Prediction Accuracy</h2>
+            <p align="justify">PSO algorithm depends on the number of particles and precision, but it will increase the
+                time of calculation, of course. We are trying to combine different optimal methods such as genetic
+                algorithm, machine learning, annealing algorithm which could take a big part in finding best solution.
+            </p>
+            <p align="justify">For giving a better directivity, we are trying to pick out the really useful data of
+                prediction to the users. And users could choose what they need more efficiently.</p>
+        </div>
+
+
+        <div id="TI" class="vg">
+            <h2 align="justify">Visualization GUI</h2>
+            <p align="justify">A fantastically visualized UI is a key point of good software, more friendly control,
+                more vivid data visualization, better network output. All of them will be a big part of our future work
+                that improving the aesthetics and interactivity of GUI. </p>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
