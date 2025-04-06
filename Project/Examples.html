@@ -1,0 +1,3150 @@
+{{USTC-Software/hidden}}
+
+{{USTC-Software/header2}}
+
+<!--{{USTC-Software/project}}-->
+
+<html>
+
+<head>
+
+    <title>Example</title>
+
+
+    <!--link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Examples/css?action=raw&ctype=text/css" type="text/css"/>
+
+<style> #examplesbutton , #projectbutton {color:#aaed51 !important;} </style-->
+
+</head>
+
+<body>
+
+
+    <div id="direction">
+        <ul>
+
+            <li><a href="#tvel" class="button">Test and verify by experiment literatures</a></br>
+                <a href="#gge" class="button" id="subbutton">IHF+/IHF-</a></br>
+                <a href="#ggep" class="button" id="subbutton">Lrp+/Lrp-</a></br>
+
+                <a href="#ggepe" class="button" id="subbutton">-Oxygen FNR+/FNR-</a></br>
+
+                <a href="#ggepec" class="button" id="subbutton">-Oxygen ArcA+/ArcA-</a>
+
+            </li>
+
+            <li><a href="#consistency" class="button">Consistency</a></li>
+
+            <li><a href="#sum1" class="button">Summary</li>
+            <li><a href="#reference" class="button">Reference</li>
+            <li><a href="#main" class="button">Top</a></li>
+
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function () {
+                var href = $(this).attr("href");
+                var pos = $(href).offset().top - 100;
+                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
+                return false;
+            });
+        });
+    </script>
+
+
+    <div id="main">
+
+        <h1>Examples</h1>
+
+
+        <h2 id="tvel">Test and verify by experiment literatures</h2>
+
+
+        <p align="justify">To prove our software’s reliability, we looked into lots of literature. It is hard to find an
+            appropriate literature which research the effect of importing an exogenous gene into E.coli K-12. But
+            actually, our software could also simulate the effect of changing endogenous gene by putting the same
+            promoter and gene sequence in.</br></br>
+            So, we eventually found four literatures to test and verify our software.
+        </p>
+
+        </br>
+        <h3 id="gge">Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST FACTOR</h3>
+
+
+        <p align="justify">In this literature, Stuart and his team measured the gene expression profiles in otherwise
+            isogenic integration host factor IHF+ and IHF- strains. And IHF is one of the genes in our genetic
+            regulatory network(GRN). </br></br>
+            By importing the IHF’s promoter and gene sequence, we used our software simulating the enhancement of IHF’s
+            expression and compared the result with the gene expression profile in that literature.</br></br>
+            There are 30 genes in that profile which are also in our GRN. Here is the list and Genes differentially
+            expressed between E. coli K12 strains IH100 (IHF+) and IH105 (IHF-) with a p value less than 0.0005:
+        </p>
+
+
+        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+            <tr>
+                <td width="69" rowspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">Gene</p>
+                </td>
+                <td width="137" colspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">Avg</p>
+                </td>
+                <td width="137" colspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">S.D.</p>
+                </td>
+                <td width="69" rowspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">p value</p>
+                </td>
+                <td width="69" rowspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">Fold</p>
+                </td>
+                <td width="69" rowspan="2" style="border-bottom:2px #000 solid;">
+                    <p align="center">Compare<br />
+                        Result</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69" style="border-bottom:2px #000 solid;">
+                    <p align="center">IH100</p>
+                </td>
+                <td width="69" style="border-bottom:2px #000 solid;">
+                    <p align="center">IH105</p>
+                </td>
+                <td width="69" style="border-bottom:2px #000 solid;">
+                    <p align="center">IH100</p>
+                </td>
+                <td width="69" style="border-bottom:2px #000 solid;">
+                    <p align="center">IH105</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>glnA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.91E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.39E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.80E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.33E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.30E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">-3.1</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>ilvA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">5.06E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.42E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.86E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.26E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.00E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">-1.48</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>ilvE</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">5.81E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.58E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.70E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.77E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.80E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">-1.62</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>ilvG</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.97E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.67E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.65E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.23E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.40E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">-2.57</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>leuA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">6.99E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.07E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.21E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.23E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.30E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.53</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>cobT</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.00E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.97E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.82E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.13E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">8.50E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.97</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>cobU</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">4.26E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.22E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.79E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.95E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.90E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.85</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>lacA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">5.14E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.21E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.54E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.52E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.50E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">-4.24</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>lacZ</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.10E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.14E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.77E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.34E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.20E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">-4.08</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>lacY</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.62E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.08E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.53E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.95E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.80E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">-3.96</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>ompF</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">7.23E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.35E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.90E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.69E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.40E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">-3.07</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>gltD</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">9.91E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.40E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.88E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.06E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.10E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">-7.1</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>lpdA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.07E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.60E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.17E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.75E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.60E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">-1.41</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>rffT</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">5.81E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.65E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.66E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.86E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.40E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.28</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>ndh</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">5.03E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.46E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.94E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.29E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.50E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.9</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>cheR</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.29E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.68E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.07E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.75E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.30E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">-4.82</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>sodA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">3.80E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.74E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.06E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.26E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.00E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.57</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>sodB</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">7.80E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.91E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.45E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.11E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.30E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.44</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>cpdB</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.92E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.56E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.24E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.40E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.50E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.94</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>guaA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">8.25E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.31E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.43E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.34E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.60E203</p>
+                </td>
+                <td width="69">
+                    <p align="center">-1.91</p>
+                </td>
+                <td width="69">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>yiaJ</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">3.47E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.15E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.74E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.64E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.10E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">17.74</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>dsdX</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.05E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.88E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.23E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.44E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.70E203</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.7</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>oppD</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.32E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">8.02E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.81E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.66E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.50E203</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.46</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>glnL</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.41E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.99E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">4.81E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.81E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.60E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">-6.04</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>oppA</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.54E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.06E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.72E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.68E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.40E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">2</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>oppB</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.06E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.57E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.06E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.22E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.60E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.35</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>proV</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">2.50E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.30E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">7.34E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">9.57E206<strong></strong></p>
+                </td>
+                <td width="69">
+                    <p align="center">3.60E203</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.12</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>rbsC</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">4.20E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.12E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.47E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.70E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.90E203</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.67</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>hdeB</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">1.09E-03</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.51E-06</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.80E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">3.47E206</p>
+                </td>
+                <td width="69">
+                    <p align="center">2.00E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">-198.5</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="69">
+                    <p align="center"><em>yefM</em></p>
+                </td>
+                <td width="69">
+                    <p align="center">4.63E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">8.12E-04</p>
+                </td>
+                <td width="69">
+                    <p align="center">5.02E-05</p>
+                </td>
+                <td width="69">
+                    <p align="center">6.07E205</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.10E204</p>
+                </td>
+                <td width="69">
+                    <p align="center">1.75</p>
+                </td>
+                <td width="69">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+        </table>
+
+
+        <p align="justify">The comparison indicates whether the result of our software fit the result of gene expression
+            profile or not. After statistical processing, in these 30 genes, there are 21 genes whose result are same
+            with gNAP’s simulation, 70% of the total.</p>
+
+
+        </br>
+        <h3 id="ggep">Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF LEUCINE-RESPONSIVE
+            REGULATORY PROTEIN</h3>
+
+        <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
+            with the effects of leucine-responsive regulatory protein(Lrp). And Lrp is one of the genes in our genetic
+            regulatory network(GRN). </br></br>
+            By importing the Lrp’s promoter and gene sequence, we used our software simulating the enhancement of Lrp’s
+            expression and compared the result with the gene expression profile in that literature.</br></br>
+            There are 22 genes in that profile which are also in our GRN. Here is the list and Genes deferentially
+            expressed between lrp+ and lrp- (control vs. experimental) E. coli strains with a p value less than 0.001:
+        </p>
+
+        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+            <tr>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">Gene name</p>
+                </td>
+                <td width="66" style="border-bottom:2px #000 solid;">
+                    <p align="center">Control</p>
+                </td>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">Experimental</p>
+                </td>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">Control</p>
+                </td>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">Experimental</p>
+                </td>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">p value</p>
+                </td>
+                <td width="76" style="border-bottom:2px #000 solid;">
+                    <p align="center">PPDE(&lt;p)</p>
+                </td>
+                <td width="52" style="border-bottom:2px #000 solid;">
+                    <p align="center">Fold</p>
+                </td>
+                <td width="64" style="border-bottom:2px #000 solid;">
+                    <p align="center">Compare result</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>&nbsp;</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">mean</p>
+                </td>
+                <td width="64">
+                    <p align="center">mean</p>
+                </td>
+                <td width="64">
+                    <p align="center">S.D.</p>
+                </td>
+                <td width="64">
+                    <p align="center">S.D.</p>
+                </td>
+                <td width="64">
+                    <p align="center">&nbsp;</p>
+                </td>
+                <td width="76">
+                    <p align="center">&nbsp;</p>
+                </td>
+                <td width="52">
+                    <p align="center">&nbsp;</p>
+                </td>
+                <td width="64">
+                    <p align="center">&nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>uvrA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">0.00128</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.00104</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.50E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.37E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.70E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.99386</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.23</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>gdhA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">9.16E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.73E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.52E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.16E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.18E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.99329</p>
+                </td>
+                <td width="52">
+                    <p align="center">2.98</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>oppB*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">7.51E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.00114</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.12E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.79E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.48E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.99298</p>
+                </td>
+                <td width="52">
+                    <p align="center">15.12</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>artP</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">6.73E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.23E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.24E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.16E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.60E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.992</p>
+                </td>
+                <td width="52">
+                    <p align="center">6.28</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>oppC*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">2.01E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.00108</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.34E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.61E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">5.44E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.99074</p>
+                </td>
+                <td width="52">
+                    <p align="center">5.38</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>gltD*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">5.28E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.74E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.28E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.42E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">5.87E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.99049</p>
+                </td>
+                <td width="52">
+                    <p align="center">-19.27</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>oppA*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">0.00162</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.0316</p>
+                </td>
+                <td width="64">
+                    <p align="center">7.63E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.0103</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.45E-05</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.9892</p>
+                </td>
+                <td width="52">
+                    <p align="center">19.44</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>malE*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">3.56E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.01E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.32E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.17E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.16E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98793</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.78</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>oppD*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">8.97E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">6.55E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.76E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.05E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.16E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98793</p>
+                </td>
+                <td width="52">
+                    <p align="center">7.3</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>galP</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">3.75E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.11E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.25E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.40E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.31E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.9874</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.78</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>lysU*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">1.81E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">0.00124</p>
+                </td>
+                <td width="64">
+                    <p align="center">7.48E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.78E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.44E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98697</p>
+                </td>
+                <td width="52">
+                    <p align="center">6.87</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>hybA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">3.53E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.47E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.11E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.50E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.49E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98682</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.43</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>hybC</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">3.54E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.34E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.20E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.81E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.61E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98646</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.51</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>ilvG_1*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">4.21E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">9.15E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">7.55E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">6.85E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.54E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98411</p>
+                </td>
+                <td width="52">
+                    <p align="center">2.17</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>phoP</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">8.29E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.10E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.20E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.42E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.16E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98285</p>
+                </td>
+                <td width="52">
+                    <p align="center">2.54</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>emrA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">3.58E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.78E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.43E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.57E-06</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.95E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98147</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.29</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>glpA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">1.28E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.01E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.54E-06</p>
+                </td>
+                <td width="64">
+                    <p align="center">9.26E-06</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.71E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98029</p>
+                </td>
+                <td width="52">
+                    <p align="center">-1.59</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>manA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">8.71E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.40E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.16E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.08E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.80E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.98016</p>
+                </td>
+                <td width="52">
+                    <p align="center">2.75</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>amn</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">4.31E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">6.51E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.47E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">4.72E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">6.07E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.97848</p>
+                </td>
+                <td width="52">
+                    <p align="center">1.51</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>speB</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">1.21E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">3.56E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.09E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.08E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">7.73E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.97659</p>
+                </td>
+                <td width="52">
+                    <p align="center">-3.4</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>hdeA</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">2.40E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.29E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.46E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">9.90E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.12E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.97619</p>
+                </td>
+                <td width="52">
+                    <p align="center">3.45</p>
+                </td>
+                <td width="64">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="64">
+                    <p align="center"><em>lrp*</em></p>
+                </td>
+                <td width="66">
+                    <p align="center">2.96E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">1.11E-04</p>
+                </td>
+                <td width="64">
+                    <p align="center">6.21E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">2.22E-05</p>
+                </td>
+                <td width="64">
+                    <p align="center">8.27E-04</p>
+                </td>
+                <td width="76">
+                    <p align="center">0.97604</p>
+                </td>
+                <td width="52">
+                    <p align="center">-2.67</p>
+                </td>
+                <td width="64">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+        </table>
+
+        <p align="justify">The compare result means that whether the result of our software fit to the result of gene
+            expression profile. After statistical processing, in these 22 genes, there are 15 genes whose result are
+            same to gNAP’s simulation, 68.2% of the total.</p>
+
+
+        </br>
+        <h3 id="ggepe">Global Gene Expression Profiling in Escherichia coli K12 THE EFFECTS OF OXYGEN AVAILABILITY AND
+            FNR</h3>
+
+        <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
+            with the effects of oxygen availability and FNR. And FNR is one of the genes in our genetic regulatory
+            network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
+            and consider the effect of FNR+ and FNR-.</br></br>
+            By importing the FNR’s promoter and gene sequence, we used our software simulating the enhancement of FNR’s
+            expression and compared the result with the gene expression profile in that literature.</br></br>
+            There are 38 genes in that profile which are also in our GRN. Here is the list and Genes differentially
+            expressed between FNR+ and FNR- E. coli strains:
+        </p>
+
+
+        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+            <tr>
+                <td width="114" style="border-bottom:2px #000000 solid;">
+                    <p align="center">Gene</p>
+                </td>
+                <td width="114" style="border-bottom:2px #000000 solid;">
+                    <p align="center">p value</p>
+                </td>
+                <td width="114" style="border-bottom:2px #000000 solid;">
+                    <p align="center">PPDE(&lt;p)</p>
+                </td>
+                <td width="114" style="border-bottom:2px #000000 solid;">
+                    <p align="center">Fold</p>
+                </td>
+                <td width="114" style="border-bottom:2px #000000 solid;">
+                    <p align="center">Compare result</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>trpB</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">4.94E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99872</p>
+                </td>
+                <td width="114">
+                    <p align="center">9.24</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>cyoA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.96E-07</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="114">
+                    <p align="center">13.05</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>gpmA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.73E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99939</p>
+                </td>
+                <td width="114">
+                    <p align="center">10.41</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>crr</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.26E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.9997</p>
+                </td>
+                <td width="114">
+                    <p align="center">3.47</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>nuoE</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.17E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99953</p>
+                </td>
+                <td width="114">
+                    <p align="center">4.49</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>rplM</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">5.72E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99994</p>
+                </td>
+                <td width="114">
+                    <p align="center">14.32</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>gatY</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.92E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99934</p>
+                </td>
+                <td width="114">
+                    <p align="center">8</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>trmD</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.64E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99941</p>
+                </td>
+                <td width="114">
+                    <p align="center">2.5</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>ndh</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">8.73E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99992</p>
+                </td>
+                <td width="114">
+                    <p align="center">5.06</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>manY</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.49E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99921</p>
+                </td>
+                <td width="114">
+                    <p align="center">8.35</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>manZ</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.07E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99956</p>
+                </td>
+                <td width="114">
+                    <p align="center">2.53</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>ompA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.57E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99994</p>
+                </td>
+                <td width="114">
+                    <p align="center">3.41</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>rplT</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.68E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99979</p>
+                </td>
+                <td width="114">
+                    <p align="center">8.41</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>rpsJ</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.23E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99849</p>
+                </td>
+                <td width="114">
+                    <p align="center">4.27</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>cydA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.15E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99906</p>
+                </td>
+                <td width="114">
+                    <p align="center">4.73</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>rplS</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.70E-07</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="114">
+                    <p align="center">6.24</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>ptsG</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.41E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99901</p>
+                </td>
+                <td width="114">
+                    <p align="center">3.17</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>oppA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">9.06E-14</p>
+                </td>
+                <td width="114">
+                    <p align="center">1</p>
+                </td>
+                <td width="114">
+                    <p align="center">4.53</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>talA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">7.62E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99965</p>
+                </td>
+                <td width="114">
+                    <p align="center">2.76</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>fdhF</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.84E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99936</p>
+                </td>
+                <td width="114">
+                    <p align="center">-2.28</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>caiT</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.28E-07</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="114">
+                    <p align="center">-6.62</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>pyrD</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.25E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99994</p>
+                </td>
+                <td width="114">
+                    <p align="center">-13.74</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>recC</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.38E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99969</p>
+                </td>
+                <td width="114">
+                    <p align="center">-2.29</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>tdh</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.06E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99991</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.01</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>araB</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.21E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99951</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.59</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>nanT</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.13E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99991</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.04</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>acrF</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.53E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99998</p>
+                </td>
+                <td width="114">
+                    <p align="center">-6.83</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>pstS</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">4.63E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99975</p>
+                </td>
+                <td width="114">
+                    <p align="center">-4.35</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>metL</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.16E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99996</p>
+                </td>
+                <td width="114">
+                    <p align="center">-5.65</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>mhpF</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.77E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99983</p>
+                </td>
+                <td width="114">
+                    <p align="center">-5.92</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>glgA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.51E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99899</p>
+                </td>
+                <td width="114">
+                    <p align="center">-2.33</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>glnD</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">1.09E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99991</p>
+                </td>
+                <td width="114">
+                    <p align="center">-6.32</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>uraA</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.11E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99929</p>
+                </td>
+                <td width="114">
+                    <p align="center">-2.48</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>speC</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">2.49E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99997</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.54</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>fliP</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">6.45E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99846</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.58</p>
+                </td>
+                <td width="114">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>dinG</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">4.66E-05</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99975</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.14</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>proW</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">3.73E-06</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99996</p>
+                </td>
+                <td width="114">
+                    <p align="center">-4.97</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="114">
+                    <p align="center"><em>sbcC</em></p>
+                </td>
+                <td width="114">
+                    <p align="center">5.66E-04</p>
+                </td>
+                <td width="114">
+                    <p align="center">0.99859</p>
+                </td>
+                <td width="114">
+                    <p align="center">-3.06</p>
+                </td>
+                <td width="114">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+        </table>
+
+        <p align="justify">The compare result means that whether the result of our software fit to the result of gene
+            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP’s
+            simulation, 65.8% of the total.</p>
+
+
+        </br>
+        <h3 id="ggepec">Global Gene Expression Profiling in Escherichia coli K12 EFFECTS OF OXYGEN AVAILABILITY AND ArcA
+        </h3>
+
+        <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
+            with the effects of oxygen availability and arcA. And arcA is one of the genes in our genetic regulatory
+            network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
+            and consider the effect of arcA+ and arcA-.</br></br>
+            By importing the arcA’s promoter and gene sequence, we used our software simulating the enhancement of
+            arcA’s expression and compared the result with the gene expression profile in that literature.</br></br>
+            There are 43 genes in that profile which are also in our arcA. Here is the list and Genes differentially
+            expressed between arcA+ and arcA- E. coli strains:
+        </p>
+
+        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+            <tr>
+                <td width="187" style="border-bottom:2px #000000 solid;">
+                    <p align="center">Gene name(NIH) and b no.</p>
+                </td>
+                <td width="102" style="border-bottom:2px #000000 solid;">
+                    <p align="center">p value</p>
+                </td>
+                <td width="101" style="border-bottom:2px #000000 solid;">
+                    <p align="center">PPDE(&lt;p)</p>
+                </td>
+                <td width="67" style="border-bottom:2px #000000 solid;">
+                    <p align="center">-Fold</p>
+                </td>
+                <td width="115" style="border-bottom:2px #000000 solid;">
+                    <p align="center">Compare result</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">talA(b2464)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.21E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99933</p>
+                </td>
+                <td width="67">
+                    <p align="center">3.46</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">crr(b2417)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.14E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">3.63</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">oppA(b1243)</p>
+                </td>
+                <td width="102">
+                    <p align="center">8.78E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99966</p>
+                </td>
+                <td width="67">
+                    <p align="center">3.79</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rpsJ(b3321)</p>
+                </td>
+                <td width="102">
+                    <p align="center">6.28E-06</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99995</p>
+                </td>
+                <td width="67">
+                    <p align="center">3.8</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">ompA(b0957)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.48E-06</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99998</p>
+                </td>
+                <td width="67">
+                    <p align="center">4.02</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rbsD(b3748)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.85E-08</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">4.83</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rplS(b2606)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.02E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99984</p>
+                </td>
+                <td width="67">
+                    <p align="center">5.81</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">nuoE(b2285)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.34E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">8.83</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rplT(b1716)</p>
+                </td>
+                <td width="102">
+                    <p align="center">4.41E-06</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99996</p>
+                </td>
+                <td width="67">
+                    <p align="center">9.01</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gatY(b2096)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.49E-07</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="67">
+                    <p align="center">10.72</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">sdhA(b0723)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.06E-07</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">14.54</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gpmA(b0755)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.27E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">16.95</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rplM(b3231)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.40E-07</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="67">
+                    <p align="center">17.05</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">mdh(b3236)</p>
+                </td>
+                <td width="102">
+                    <p align="center">4.00E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99896</p>
+                </td>
+                <td width="67">
+                    <p align="center">17.95</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">nuoB(b2287)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.32E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99954</p>
+                </td>
+                <td width="67">
+                    <p align="center">19.34</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">trpB(b1261)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.12E-10</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">19.97</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">cyoA(b0432)</p>
+                </td>
+                <td width="102">
+                    <p align="center">9.70E-10</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">23.3</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">sdhB(b0724)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.25E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99992</p>
+                </td>
+                <td width="67">
+                    <p align="center">27.87</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">sucD(b0729)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.42E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99987</p>
+                </td>
+                <td width="67">
+                    <p align="center">86.14</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gltA(b0720)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.09E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99984</p>
+                </td>
+                <td width="67">
+                    <p align="center">107.01</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">pyrD(b0945)</p>
+                </td>
+                <td width="102">
+                    <p align="center">5.36E-06</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99996</p>
+                </td>
+                <td width="67">
+                    <p align="center">-18.91</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">dinG(b0799)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.20E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99912</p>
+                </td>
+                <td width="67">
+                    <p align="center">-11.79</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gadB(b1493)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.87E-08</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">-11.23</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gadA(b3517)</p>
+                </td>
+                <td width="102">
+                    <p align="center">5.14E-07</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99999</p>
+                </td>
+                <td width="67">
+                    <p align="center">-9.44</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">glnD(b0167)</p>
+                </td>
+                <td width="102">
+                    <p align="center">8.77E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99966</p>
+                </td>
+                <td width="67">
+                    <p align="center">-8.58</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">aroM(b0390)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.81E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99942</p>
+                </td>
+                <td width="67">
+                    <p align="center">-7.13</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">pnuC(b0751)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.71E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.9999</p>
+                </td>
+                <td width="67">
+                    <p align="center">-6.22</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gadX(b3516)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.32E-06</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99998</p>
+                </td>
+                <td width="67">
+                    <p align="center">-6.11</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">sbcC(b0397)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.89E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99898</p>
+                </td>
+                <td width="67">
+                    <p align="center">-5.59</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">xylR(b3569)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.55E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99905</p>
+                </td>
+                <td width="67">
+                    <p align="center">-5.11</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">gadW(b3515)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.41E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99987</p>
+                </td>
+                <td width="67">
+                    <p align="center">-4.63</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">recC(b2822)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.98E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99985</p>
+                </td>
+                <td width="67">
+                    <p align="center">-4.62</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">appC(b0978)</p>
+                </td>
+                <td width="102">
+                    <p align="center">4.83E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">-4.01</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">speC(b2965)</p>
+                </td>
+                <td width="102">
+                    <p align="center">2.86E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99919</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.97</p>
+                </td>
+                <td width="115">
+                    <p align="center">unfit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">glgA(b3429)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.74E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99944</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.9</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">nanT(b3224)</p>
+                </td>
+                <td width="102">
+                    <p align="center">7.22E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99971</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.46</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">appB(b0979)</p>
+                </td>
+                <td width="102">
+                    <p align="center">3.31E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.43</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">rhaA(b3903)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.48E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.9995</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.41</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">hycD(b2722)</p>
+                </td>
+                <td width="102">
+                    <p align="center">1.50E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99991</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.21</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">hdeA(b3510)</p>
+                </td>
+                <td width="102">
+                    <p align="center">4.82E-09</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.83</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">hyaB(b0973)</p>
+                </td>
+                <td width="102">
+                    <p align="center">7.30E-08</p>
+                </td>
+                <td width="101">
+                    <p align="center">1</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.83</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">uraA(b2497)</p>
+                </td>
+                <td width="102">
+                    <p align="center">7.91E-05</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99968</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.6</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="187">
+                    <p align="center">glgC(b3430)</p>
+                </td>
+                <td width="102">
+                    <p align="center">4.69E-04</p>
+                </td>
+                <td width="101">
+                    <p align="center">0.99883</p>
+                </td>
+                <td width="67">
+                    <p align="center">-2.15</p>
+                </td>
+                <td width="115">
+                    <p align="center">fit</p>
+                </td>
+            </tr>
+        </table>
+
+        <p align="justify">The compare result means that whether the result of our software fit to the result of gene
+            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP’s
+            simulation, 62.8% of the total.</p>
+
+
+
+        <h2 id="consistency">Consistency</h2>
+        <p>The consistency of the program has also been tested. We inserted a gene as same as a
+            gene in the network and compared the regulations predicted by the program with the
+            original regulations. Without filtering the random similarities, the actual regulations were
+            submerged in the network noise.</p>
+        <div align="center"><img
+                src="https://static.igem.org/mediawiki/igem.org/2/2a/USTC_Software_Theoretical_Regulation_wiki.png" />
+            <p><strong>Figure 1.</strong> The green line represents regulating values.<br />
+                The blue line
+                represents regulated values.</p>
+        </div>
+
+        <div align="center"><img
+                src="https://static.igem.org/mediawiki/igem.org/5/59/USTC_Software_Predicted_Regulation_wiki.png" />
+            <p><strong>Figure 2.</strong>Predicted regulation without filtered.<br />
+                The actual regulations are submerged by the
+                noise.</p>
+        </div>
+
+        <p>With random similarities filtered, all original regulations were picked out. The result shows
+            that the program is consistent with the original network.</p>
+        <br />
+        <div align="center"><img
+                src="https://static.igem.org/mediawiki/igem.org/b/b9/USTC_Software_Predicted_Regulation_%28Filtered%29.png" />
+            <p><strong>Figure 3.</strong>The SNR is better.<br />
+                The actual regulations are
+                picked out.</p>
+        </div>
+
+
+        <h2 id="sum1">Summary</h2>
+
+        <p align="justify">In first two literatures, without the limit of oxygen, the average fitness is up to 69.1%.
+            And in the other two literatures, the average fitness is 64.3%. We thought that it may be the oxygen’s limit
+            which affect the expression of each gene. Gene regulatory network analysis has its weakness about
+            environment’s change.</br></br>
+            All in all, the total average of fitness is still up to 66.7%. Therefore, we may draw the following
+            conclusion that our software could simulate the impact of new gene to some extent.
+        </p>
+
+
+        <h2 id="reference">Reference</h2>
+        <p align="justify"><a class="content" href="http://www.jbc.org/content/275/38/29672.short">Arfin S M, Long A D,
+                Ito E T, et al. Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST
+                FACTOR[J]. Journal of Biological Chemistry, 2000, 275(38): 29672-29684.</a></br></br>
+
+            <a class="content" href="http://www.jbc.org/content/277/43/40309.short">Hung S, Baldi P, Hatfield G W.
+                Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF LEUCINE-RESPONSIVE REGULATORY
+                PROTEIN[J]. Journal of Biological Chemistry, 2002, 277(43): 40309-40323.</a></br></br>
+
+            <a class="content" href="http://www.jbc.org/content/278/32/29837.short">Salmon K, Hung S, Mekjian K, et al.
+                Global Gene Expression Profiling in Escherichia coli K12 THE EFFECTS OF OXYGEN AVAILABILITY AND FNR[J].
+                Journal of Biological Chemistry, 2003, 278(32): 29837-29855.</a></br></br>
+
+            <a class="content" href="http://www.jbc.org/content/280/15/15084.short">Salmon K A, Hung S, Steffen N R, et
+                al. Global Gene Expression Profiling in Escherichia coli K12 EFFECTS OF OXYGEN AVAILABILITY AND ArcA[J].
+                Journal of Biological Chemistry, 2005, 280(15): 15084-15096.</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

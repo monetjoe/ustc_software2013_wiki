@@ -1,0 +1,806 @@
+{{USTC-Software/hidden}}
+
+{{USTC-Software/header2}}
+
+<!--{{USTC-Software/project}}-->
+
+<html>
+
+<head>
+
+    <title>Methodologies</title>
+
+    <script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
+    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Method/css?action=raw&ctype=text/css"
+        type="text/css" />
+
+    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/css?action=raw&ctype=text/css"
+        type="text/css" />
+
+
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide1?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide2?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide3?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide4?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide5?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide6?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide7?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide8?action=raw&ctype=text/javascript"
+        type="text/javascript" charset="utf-8"></script>
+
+    <style>
+        #methodbutton {
+            color: #aaed51 !important;
+        }
+    </style>
+
+<body>
+
+    <div id="direction">
+        <ul>
+
+            <!--li><a href="#sequence" class="button">2.1 Sequence</a></br>
+                <a href="#nwa" class="button" id="subbutton">2.1.1 Needleman-Wunsch Algorithm</a></br>
+                <a href="#asg" class="button" id="subbutton">2.1.2 A Supplementary Game</a>
+          </li>
+
+          <li><a href="#filtering" class="button">2.2 Filtering</a></br>
+                <a href="#rn" class="button" id="subbutton">2.2.1 Random Noise</a></br>
+                <a href="#filter" class="button" id="subbutton">2.2.2 Filter</a>
+         </li>
+
+          <li><a href="#rc" class="button">2.3 Regulation Calculation</a></li>
+
+          <li><a href="#main" class="button">Top</a></li-->
+
+
+            <li><a href="#Fetch_Database" class="button">Database</a></li>
+            <li><a href="#Alignment_Analyze" class="button">Operon Theory and Regulatory Model</a></li>
+            <li><a href="#fa" class="button">Forward Analysis</a></li>
+            <li><a href="#ra" class="button">Reverse Analysis</a></li>
+            <li><a href="#reference" class="button">Reference</a></li>
+            <li><a href="#main" class="button">Top</a></li>
+
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function () {
+                var href = $(this).attr("href");
+                var pos = $(href).offset().top - 100;
+                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
+                return false;
+            });
+        });
+    </script>
+
+
+
+    <div id="main">
+
+
+        <div id="abstract">
+            <h1 align="justify">Methodologies</h1>
+            <p align="justify">In order to simulate the GRN's working and analyze the changing after exogenous gene
+                imported, some advanced algorithms and classical methods are employed in the software. These algorithms
+                and methods include Binary Tree method, Needle-Wunsch Algorithm, Decision Tree method, Hill Equation and
+                PSO Algorithm.</br><br />
+
+                <img src="https://static.igem.org/mediawiki/2013/6/6b/USTC_Software_FLOW.png"
+                    style="width:1000px;" /></br>
+
+                There are four parts of methodologies: Database, Operon Theory and Regulatory Model, Forward Analysis
+                and Reverse Analysis.
+            </p>
+
+        </div><!--end of abstract-->
+
+
+
+        <div id="Fetch_Database">
+
+            <h2>Database</h2>
+            <div id="jobs_container">
+                <div class="jobs_trigger" id="dbabstract"><strong>Abstract</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p class="bodytext"></p>
+                    <p align="justify">To simulate and analyze a genetic regulatory network (GRN), we need to build an
+                        objects' array to store the complete information of each gene. It contains regulation
+                        relationships between genes, sequences of genes, sequences of promoters and so on. However, it's
+                        hard to find an appropriate database online containing all information we need in a simple file.
+                        RegulonDB has downloadable files about the regulation between transcription factors (TF) and
+                        genes. Files about genetic information, transcription unit information and promoter information
+                        can also be downloaded from the RegulonDB. All those files have been put into file “source data”
+                        in the root directory of our software. They contain all information the simulation needs and we
+                        use fetching module to achieve data extraction and integration. There are four steps: fetch
+                        regulation relationships, fetch gene information, fetch promoter information and integrate
+                        information above.
+                    </p>
+                </div>
+
+                <div id="jobs_container">
+                    <div class="jobs_trigger" id="fetch"><strong>Fetch Regulation</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p class="bodytext"></p>
+                        <p align="justify">In GRN, there are two kinds of files: <a class="content"
+                                href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/network_tf_tf.txt"> TF
+                                to TF</a> and <a class="content"
+                                href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/network_tf_gene.txt">TF
+                                to Gene</a>. Since the database about the regulation between TFs and Genes contains only
+                            one-way interaction, the matrix of GRN is a rectangle.</br></br>
+                            First of all, read the regulation relationship of TFs. Our software filters the
+                            documentation of RegulonDB on the head of all files and then reads the name of regulate and
+                            regulated TF, which is also the name of its genes, one by one. In the same time, our
+                            software numerates the genes and stores their names into an objects' array of genetic data.
+                            </br></br>
+                            &nbsp;&nbsp;The format of regulation database:</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;+/-/+-</br></br>
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/2013/6/69/USTC_Software_TT.jpg" /></div></br>
+                        The regulation of TFs has been put into a square matrix whose row is the regulator and column is
+                        the one regulated by. To make our GRN as complete as possible, the regulation between TF and
+                        genes has joined into the matrix. The one-way interaction results that we must read the TF in
+                        order to fulfill the regulator before completing the TF to gene's regulation in the same way of
+                        TF to TF. </br></br>
+                        &nbsp;&nbsp;The format of regulation database:</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;Gene_name &nbsp;&nbsp;&nbsp;+/-/+-</br></br>
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/2013/4/47/USTC_Software_TG.jpg" /></div></br>
+                        At last, a regulatory matrix whose row represents regulate gene (TF) and whose column represents
+                        gene regulated by (TF+Gene) has been output into a file called “old_GRN” in root directory. The
+                        values in GRN matrix are regulations in which “1” means positive activation, “-1” means
+                        repression and “0” means no relationship. There have been some regulations both positive and
+                        negative identified regulations are determined by the experimental environment. As a result, our
+                        software picks out those uncertain genes and stores them into a file named
+                        “uncertain_database”.</br></br>
+                        &nbsp;&nbsp;The format of uncertain database:</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;? &nbsp;&nbsp;&nbsp;Gene_name->Gene_name</br></br>
+
+                        The question mark represents the unknown regulation between regulator and regulated-by whose
+                        names presented afterward. Users could replace the question mark with the data known in past
+                        experiment. (“+” rep positive, “-” rep negative). Our software will replace the values in matrix
+                        automatically. But if not rewrote, our software will regard those regulation as unknown.
+                        </p>
+                    </div>
+
+                    <div class="jobs_trigger" id="fgi"><strong> Fetch Gene Info</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">
+                            All gene information has been deposited into a file named gene_info which could be
+                            downloaded <a class="content"
+                                href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/Gene_sequence.txt">here</a>.
+                            In order of picking out the genes in GRN as fast as possible, all genetic information are
+                            stored in a “map”. “Map” is just like a dictionary yet its words are names of genes and its
+                            descriptions of words are replaced by genetic information. By using binary tree method, it
+                            is very fast to search the “word” wanted in the “dictionary”. As tested, the speed of binary
+                            tree method built-in “map” function is 720 times faster than traversal method.</br></br>
+                            &nbsp;&nbsp;The format of Gene Info database:</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ID_assigned_by_RegulonDB &nbsp;&nbsp;&nbsp;Gene_name
+                            &nbsp;&nbsp;&nbsp;Left_end_position &nbsp;&nbsp;&nbsp;Right_end_position
+                            &nbsp;&nbsp;&nbsp;DNA_strand &nbsp;&nbsp;&nbsp;Product_type
+                            &nbsp;&nbsp;&nbsp;&nbsp;Product_name
+                            &nbsp;&nbsp;&nbsp;Start_codon_sequence&nbsp;&nbsp;&nbsp; Stop_codon_sequence
+                            &nbsp;&nbsp;&nbsp;Gene_sequence</br></br>
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/2013/4/45/USTC_Software_GI.jpg" /></div></br>
+                        The label of the map vector is gene name which will be picked out based on the names read in
+                        regulation matrix before. It is really fast using the binary tree method to find the specific
+                        genetic information and store them into a specific object. Those information includes gene ID,
+                        left position, right position, gene description and gene sequence. The gene ID is used to link
+                        to RegulonDB's gene details; The left position is used to find its specific transcription unit;
+                        The right position is used to figure out the base amount; The description of genes is used to
+                        distinguish the RNA and protein; The sequence is used to predict the regulation by alignment.
+
+                        </p>
+                    </div>
+
+
+
+                    <div class="jobs_trigger" id="fpi"> <strong>Fetch Promoter Info</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">All promoter information has been deposited into a file named promoter_info
+                            which could be downloaded <a class="content"
+                                href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/PromoterSet.txt">here</a>.
+                            But we also need transcription unit information because the information files about promoter
+                            do not contain all genes' names backward. “TU Info” file, which can be downloaded <a
+                                class="content"
+                                href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/TUSet.txt">here</a>,
+                            contains the starting position of each TU and its promoter name. Our software picks out the
+                            starting position into a integer array. Using the left position picked out in gene info, our
+                            software would find out which unit the gene belongs to through dichotomy method and then
+                            stores the name of promoter into corresponding object.</br></br>
+                            &nbsp;&nbsp;The format of TU info database:</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Operon_name &nbsp;&nbsp;&nbsp;Unit_name
+                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;Transcription_start_site ......</br></br>
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/2013/1/1e/USTC_Software_TI.jpg" /></div></br>
+                        The principle of fetching information of promoters is same as fetching genes's. Our software
+                        stores the promoter information from the file named “promoter_info” in a “map” which could be
+                        used to pick out the promoter sequence by searching promoter name through binary tree
+                        method.</br></br>
+                        &nbsp;&nbsp;The format of Promoter Info database:</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Promoter_ID_assigned_by_RegulonDB
+                        &nbsp;&nbsp;&nbsp;Promoter_name</br></br>
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/2013/8/8a/USTC_Software_PI.jpg" /></div></br>
+                        The sequence of promoter will be used in the alignment method in next module which could make a
+                        prediction of exogenous genes' regulation pattern.
+                        </p>
+                    </div>
+
+
+
+                    <div class="jobs_trigger" id="Integration"> <strong>Integration</strong></div>
+                    <div class="jobs_item" style="display: block;">
+                        <p align="justify">
+                            Our software integrates all information we picked out about genes and generates a file named
+                            “all_info” —— all information about genes —— for the output graphical interface's reading.
+                            In the meanwhile, the array of objects containing all information has been stored in
+                            computer memory which greatly improve the computing speed of our software.</br></br>
+                            &nbsp;&nbsp;The format of all_info database:</br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;No. &nbsp;&nbsp;&nbsp;promoter_sequence
+                            &nbsp;&nbsp;&nbsp;gene_sequence &nbsp;&nbsp;&nbsp;gene_name &nbsp;&nbsp;&nbsp;ID
+                            &nbsp;&nbsp;&nbsp;left_position &nbsp;&nbsp;&nbsp;right_position
+                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;&nbsp;description</br>
+
+                            The fetching module generates three files: old_GRN, all_info and uncertain_database.</br>
+                        </p>
+                    </div>
+
+
+                </div><!--jobs container-->
+
+
+            </div>
+
+
+
+
+            <div id="Alignment_Analyze">
+                <h2>Operon Theory and Regulatory Model</h2>
+
+                <div id="jobs_container">
+                    <div class="jobs_trigger"><strong>Operon Theory</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p class="bodytext"></p>
+                        <p align="justify">In genetics, an operon is a functioning unit of genomic DNA containing a
+                            cluster of genes
+                            under the control of a single regulatory signal or promoter. The genes contained in the
+                            operon are either expressed together or not at all. Several genes must be both cotranscribed
+                            and co-regulated to define an operon.<br /><br />
+                            The first time "operon" was proposed is in a paper of French Academic Science, 1960.
+                            The lac operon of the model bacterium E. coli was discovered and provides a typical
+                            example of operon function. It consists a promoter, an operator, three structural genes and
+                            a terminator. The operon is regulated by several factors including the availability of
+                            glucose
+                            and lactose.<br /><br />
+                            From this paper, the so-called general theory of the operon was developed. According to
+                            the theory, all genes are controlled by means of operons through a single feedback
+                            regulatory mechanism-repression. The first operon to be described was the lac operon in
+                            E. coli. The 1965 Nobel Prize in Physiology and Medicine was awarded to François Jacob,
+                            André Michel Lwoff and Jacques Lucien Monod for their discoveries concerning the operon and
+                            virus synthesis.<br />
+                        </p>
+
+                        <div align="center"><img
+                                src="https://static.igem.org/mediawiki/igem.org/7/7d/USTC_Software_Figure_1.png" />
+                            <p align="center"><strong>Figure 1.</strong> Structure of Operon</p>
+                        </div>
+                        <p align="justify">An operon is made up of several structural genes arranged under a common
+                            promoter and
+                            regulated by a common operator. It is defined as a set of adjacent structural genes, plus
+                            the adjacent regulatory signals that affect transcription of the structural genes. The
+                            regulators of a given operon, including repressors, corepressors and activators, are not
+                            necessarily coded for by that operon.<br /><br />
+                            As a unit of transcription, upstream of the structural genes lies a promoter sequence which
+                            provides a site for RNA polymerase to bind and initiate transcription. Close to the promoter
+                            lies a section of DNA called an operator.<br /><br />
+                            Operon regulation can be either negative or positive by induction or repression. Negative
+                            control involves the binding of a repressor to the operator to prevent transcription.
+                            Operons can also be positively controlled. An activator protein binds to DNA, usually at a
+                            site other than the operator, to stimulate transcription.
+                        </p>
+                        <div align="center"><img style="width:600px;"
+                                src="https://static.igem.org/mediawiki/igem.org/2/25/USTC_Software_Figure_2.png" />
+                            <p align="justify"><strong>Figure 2.</strong> Regulation of Operon
+                                1: RNA Polymerase, 2: Repressor, 3: Promoter, 4: Operator, 5: Lactose, 6: lacZ, 7:
+                                lacY, 8: lacA. Top: The gene is essentially turned off. There is no lactose to inhibit
+                                the
+                                repressor, so the repressor binds to the operator, which obstructs the RNA polymerase
+                                from binding to the promoter and making lactase.Bottom: The gene is turned on.Lactose
+                                is inhibiting the repressor, allowing the RNA polymerase to bind with the promoter, and
+                                express the genes, which synthesize lactase. Eventually, the lactase will digest all of
+                                the
+                                lactose, until there is none to bind to the repressor. The repressor will then bind to
+                                the
+                                operator, stopping the manufacture of lactase.</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="jobs_trigger"><strong>Regulatory Model</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">Regulation of gene expression includes four levels. We choose the
+                            transcriptional level to simulate the regulation both for its significance and model
+                            simplification.</p>
+                        <div align="center"><img style="width:600px; height:auto;"
+                                src="https://static.igem.org/mediawiki/igem.org/8/87/USTC_Software_Figure_3.png" />
+                            <p><strong>Figure 3.</strong>Regulation of gene expression.<br />Our regulation model is
+                                built based on the operon theory.<br /> The promoter region is regarded as the main
+                                regulatory region.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="jobs_trigger"> <strong>Similarity and Homology</strong></div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">The sequence similarity is obtained by sequence alignment. It is defined as
+                            the proportion of the common subsequence in the aligned sequence. Any two sequences share a
+                            certain
+                            similarity. It should be noted that similarity and homology are two different
+                            concepts.<br /><br />
+                            As with anatomical structures, homology between protein or DNA sequences is defined in
+                            terms of shared ancestry. Two segments of DNA can have shared ancestry because of
+                            either a speciation event or a duplication event. The terms “percent homology” and
+                            “sequence similarity” are often used interchangeably. As with anatomical structures, high
+                            sequence similarity might occur because of convergent evolution, or, as with shorter
+                            sequences, because of chance. Such sequences are similar but not homologous.
+                            Sequence regions that homologous are also called conserved.<br /><br />
+                            In our project, we use similarity to connect the exogenous gene with the original network.
+                            Because there is a good chance that the exogenous gene is not homologous with the
+                            genes in the network.</p>
+                    </div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">The GRN matrix is the mathematical description of gene regulatory network in
+                            which “1” represents “enhance”, “-1” represents “repress” and “0” represents “no regulatory
+                            relationship”. The units(RU) in x-axis regulate the units in y-axis. A row can be seen as a
+                            vector containing all the information of the target(corresponding unit in the y-axis).
+                            Similarly, a column can be seen as a vector containing all the information of the
+                            regulator(corresponding unit in the x-axis).</p>
+                    </div>
+                    <div class="jobs_item" style="display: none;">
+                        <p align="justify">The sequence similarity is obtained by sequence alignment based on
+                            Needleman-Wunsch algorithm[FIXME: wiki link here]. The Needleman-Wunsch algorithm performs a
+                            global alignment on two protein sequences or nucleotide sequences. It was the first
+                            application of dynamic programming to biological sequence comparison.<br /><br />
+
+                            When dynamic programming is applicable, the method takes far less time than naive methods.
+                            Using a naive method, many of the subproblems are generated and sovled many times. The
+                            dynamic programming approach seeks to solve each subproblem only once. Once the solution to
+                            a given subproblem has been computed, it is stored to be looked up next time.<br /><br />
+
+                            Like the Needleman-Wunsch algorithm, of which it is a variation, Smith-Waterman is also a
+                            dynamic programming algorithm. But it is a local sequence alignment algorithm. The famous
+                            BLAST(Basic Local Alignment Search Tool) is improved from Smith-Waterman algorithm. Although
+                            local algorithm has the desirable property that it is guaranteed to find the optimal local
+                            alignment, we decided to choose the global one because we regarded the segment sequence as a
+                            unit.<br /><br />
+
+                            Sequences are aligned with different detailed methods in different situations. In the
+                            regulated side, what we care about is the DNA sequence. In the regulating side, it is the
+                            amino acid sequence. When it comes to predict the regulated behavior, we use a DNA
+                            substitution matrix to align promoter and protein coding sequences. In the prediction of
+                            regulating behavior, the substitution matrix BLOSUM_50 is used to align the amino acid
+                            sequences translated from protein coding sequences.<br /><br />
+
+                            The promoter similarities of the query unit and subject units are stored in a vector. The
+                            protein coding similarities are stored in another vector. These vectors are prepared to be
+                            used in the new network construction.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <h2 id="fa">Forward Analysis</h2>
+                <div class="jobs_trigger" id="cng"><strong>Construct New GRN</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <h3 id="ui">1 User Input</h3>
+                    <p align="justify">
+                        Some genes' regulation could be get from experiment. So, if users could get the unknow
+                        regulation between new gene and old ones, they could manually set the interactions which do not
+                        need model. Those regulations will be used in later simulation.
+                    </p>
+                    <h3>2 Simalarity Analysis</h3>
+                    <p align="justify">
+                    <div id="sequence">
+                        <h4>2.1 Sequence</h4>
+                    </div></br>
+                    <div id="nwa">
+                        <h5>2.1.1 Needleman-Wunsch Algorithm</h5>
+                    </div>
+                    The Needleman-Wunsch algorithm was first published in1970 by Saul B. Needleman and Christian D.
+                    Wunsch. It performs a global alignment of two sequences and is mostly used in bioinformatics to
+                    align protein or nucleotide sequence. Our software applied this algorithm in the alignment of DNA
+                    and amino acid sequences.<br /><br />
+
+                    The Needleman-Wunsch algorithm is one kind of dynamic programming and It was the first attempt in
+                    biological sequence comparison of dynamic programming.<br /><br />
+
+                    Here is an example of Needleman-Wunsch algorithm. S(a,b) is the similarity of character a and
+                    character b. The scores of characters are shown in the similarity matrix. We assume this matrix was
+                    </p>
+                    <div align="center"><img
+                            src="https://static.igem.org/mediawiki/2013/5/52/USTC_Software_DNA_S_M.png" /></div>
+                    <p>And we uses linear gap penalty, denoted by d, here, we set the gap penalty as -5.Then the
+                        alignment:</p>
+                    <p align="center"><strong><em>
+                                A: AGACTAGTTAC<br />
+                                B: CGA - - - GACGT
+                            </em></strong></p>
+
+                    <p>would have the following score:</p>
+                    <p align="center"><strong><em>
+                                S(A,C)+S(G,C)+S(A,A)+(3)+S(G,G)+S(T,A)+S(T,C)+S(A,G)+S(C,T) =
+                                -3+7+10-(3x5)+7+(-4)+0+(-1)+0 = 1
+                            </em></strong></p>
+
+                    <p align="justify">To find the highest score of alignment, in this algorithm, a two dimensional
+                        matrix F with sequences and scores was allocated. The score in row i, column j is denoted by
+                        Fij. There is one column for each character in sequence A and one row for each character in
+                        sequence B. Therefore, if we align sequences with sizes of n and m, the amount of memory taken
+                        up here is O(n,m).<br /><br />
+
+                        As the algorithm going on, Fij was calculated to be the optimal score by the principle as
+                        following:<br />
+                        Basis:
+                    </p>
+                    <p align="center"><strong><em>Fi0 = d*i<br />F0j = d*j</em></strong></p>
+                    <p>Recursion:</p>
+                    <p align="center"><strong><em>Fij = max(F(i-1,j-1) + S(Ai,Bj), F(i-1,j) + d, F(i,j-1) +
+                                d)</em></strong></p><br />
+                    <p>The pseudo-code of this algorithm would look like this:</p>
+                    <br />
+                    <div id="pseudo">
+                        <p>
+                            <strong> for</strong> i = 0 <strong>to length(A)</strong><br />
+                            &nbsp; F(i,0) <-- d*i<br />
+                            <strong> for</strong> j = 0 <strong>to length(B)</strong><br />
+                            &nbsp; F(0,j) <-- d*j<br />
+                            <strong>for</strong> i = 0 <strong>to length(A)</strong><br />
+                            &nbsp; <strong>for</strong> j = 0 <strong>to length(B)</strong><br />
+                            &nbsp; {<br />
+                            &nbsp; &nbsp; Match <-- F(i-1,j-1) + S(Ai,Bj)<br />
+                            &nbsp; &nbsp; Delete <-- F(i-1,j) + d<br />
+                            &nbsp; &nbsp; Insert <-- F(i,j-1) + d<br />
+                            &nbsp; &nbsp; F(i,j) <-- <strong>max</strong>(Match, Insert, Delete)<br />
+                                &nbsp; }
+                        </p>
+                    </div>
+
+                    <p align="justify">After the matrix F was computed, Fnm would be the maximum score among all
+                        possible alignment.<br /><br />
+
+                        If you want to see the optimal alignment, you can trace back from Fnm by comparing three
+                        possible sources mentioned in the above code (Match, Insert and Delete). If Match, then Aj and
+                        Bi are aligned, if Insert, Bi was aligned with a gap and if Delete, then Aj and a gap are
+                        aligned. Also, you may find there are not only one optimal alignment.<br /><br />
+                        As for the example, we would get the following matrix by applying Needleman Wunsch algorithm:
+                    </p>
+
+
+                    <div align="center"><img
+                            src="https://static.igem.org/mediawiki/2013/e/e2/USTC_Software_arrow_game.png" /></div>
+                    <p>And the optimal alignment would be:</p>
+
+                    <p align="center"><strong><em>- - AGACTAGTTAC <br />
+                                CGAGAC - - GT - - -
+                            </em></strong></p>
+                    <div id="asg">
+                        <h5>2.1.2 A Supplementary Game</h5>
+                    </div>
+                    <p align="justify">The rows and columns in the GRN matrix can be regarded as vectors containing the
+                        regulated or the regulating information. The behavior similarity of two units can be described
+                        by the dot product of two regulated vectors or two regulating vectors. Biologists usually think
+                        the more similar two sequences are, the more likely they have similar behaviors. Whether the
+                        ratio of genes with similar behaviors is positively correlated with gene similarity is essential
+                        to our project. So we obtained 1.6 million sets of data by pairwise alignment of all the 1748
+                        units in the GRN of K-12. Each set of data consists of gene similarity and behavior similarity.
+                        The result is analyzed and plotted in the figure. The linear fit shows that the ratio is
+                        positively correlated with the similarity.</p><br />
+
+                    <div align="center"><img style="width:600px; height:auto;"
+                            src="https://static.igem.org/mediawiki/2013/d/d0/USTC_Software_Simi-Ratio.png" />
+                        <p><strong>Figure 4.</strong>Linear fit of ratio-similarity relationship.</p>
+                    </div>
+                    <p align="justify">Although there are examples that a slight change in DNA sequence will
+                        significantly change the property of the gene, for example, sickle-cell disease, the influence
+                        is usually determined by the location and scale of the mutation. So the result is still
+                        convincing to some degree.</p>
+
+                    <div id="filtering">
+                        <h4>2.2 Filtering</h4>
+                    </div>
+                    <div id="rn">
+                        <h5>2.2.1 Random Noise</h5>
+                    </div>
+                    <p class="bodytext"></p>
+                    <p align="justify">Normally, the similarity of two sequences will not be zero. Some computational
+                        experiments were carried out to study the random sequence similarities. We randomly
+                        chose a gene in the network and generated 1000 random sequences. The alignment result
+                        indicates that the random sequence similarities are Gauss distributed. The result suggests
+                        that some similarities are out of statistic significance.</p>
+                    <div align="center">
+                        <img src="https://static.igem.org/mediawiki/igem.org/8/89/USTC_Software_Figure_4.png" />
+                        <p><strong>Figure 5.</strong> Random similarity distribution</p>
+                    </div>
+                    <div id="filter">
+                        <h5>2.2.2 Filter</h5>
+                    </div>
+                    <p align="justify">We need the genes highly similar to the exogenous one to interact with it. The
+                        program will
+                        align the exogenous gene(query) with genes in the network(subject) and get the original
+                        similarities. In order to filter meaningless low values, a certain amount of random
+                        sequences are generated for each query-subject alignment. Normally, 100 is sufficient.
+                        Because the sequence length will influence alignment result, random sequences are fixed
+                        at the same length as the query one. Then align random sequences with the subject
+                        sequence. The statistic result of these random similarities is used as a threshold.<br />
+                    <div align="center">Threshold = μ + xσ</div><br />
+                    In the formula, μ is the average random similarity. σ is the standard deviation. x is used to
+                    control the filter determined by machine learning. If the original similarity is lower than the
+                    threshold, it is abandoned. It is usually means the original value is usually short of
+                    statistical significance.<br /><br />
+                    An example about filtring and consistency is presented in “Example”.
+                    </p>
+                    <div id="rc">
+                        <h4>2.3 Regulation Calculation</h4>
+                    </div>
+                    <p align="justify">If there is a three-unit network and they interact with each other as it is shown
+                        in the figure.
+                        The regulation is described by the GRN matrix.</p>
+                    <div align="center"><img
+                            src="https://static.igem.org/mediawiki/igem.org/8/8a/USTC_Software_Figure_5.png" />
+                        <p align="center"><strong>Figure 6.</strong> Example network and its GRN matrix.</p>
+                    </div>
+
+
+                    <p align="justify">If D is the exogenous unit, we can obtain three similarity data sets of D with
+                        the units in the
+                        original GRN:
+                        <li style="margin-left:40px;">Promoter sequence similarity</li>
+                        <li style="margin-left:40px;">Gene sequence similarity</li>
+                        <li style="margin-left:40px;">Amino acid sequence similarity.</li>
+                    <p>
+                        The construction is equivalent to add a new column and a row into the original matrix.</p>
+                    <div align="center"><img
+                            src="https://static.igem.org/mediawiki/igem.org/9/97/USTC_Software_Figure_6.png" />
+                        <p><strong>Figure 7.</strong> Mathematical Equivalence</p>
+                    </div>
+                    <p align="justify">When filling the column, D is compared with the regulators of the unit in each
+                        row. The
+                        regulations in the row are consider separately and marked as “positive group” and
+                        “negative group”. The average similarity of each group represents the distance between
+                        the exogenous unit and the group. D is supposed to have the larger one's regulatory
+                        direction(positive or negative). The regulatory intensity is the weight average regulation of
+                        the chose group. The weight here is the amino acid sequence similarity.<br /><br />
+                        There are two conditions when fill the new row:<br />
+                        1. There are units having the same promoter as the exogenous unit.<br />
+                        2. There is no units having the same promoter as the exogenous unit.<br /><br />
+                        In condition 1, the units sharing the same promoter with the new member are picked out,
+                        and the following steps are the same as the construction of the column. The difference is
+                        the similarity used here is the gene sequence similarity. As explained in the regulation
+                        model part, the promoter is the main regulatory region, but the following sequence is also
+                        considered. Now the promoter is the same, so what we focus on are the gene
+                        sequences.<br /><br />
+                        In condition 2, the process is almost the same as constructing the new column. Promoter
+                        similarity is used because it is the main region.</p>
+                    <div align="center">
+                        <img src="https://static.igem.org/mediawiki/igem.org/c/c5/USTC_Software_Figure_7.png" />
+                    </div>
+                    <p align="center"><strong>Figure 8.</strong> Construct New GRN</p>
+                    <h3>3 Clustering</h3>
+                    <p>
+                        Cluster analysis or clustering is the task of grouping a set of objects in such a way that
+                        objects in the same group (called a cluster) are more similar (in some sense or another) to each
+                        other than to those in other groups (clusters). It is a main task of exploratory data mining,
+                        and a common technique for statistical data analysis, used in many fields, including machine
+                        learning, pattern recognition, image analysis, information retrieval, and
+                        bioinformatics.</br></br>
+                        For get a better regulation, we use online database DAVID to cluster all the genes in our whole
+                        GRN. Avoid of supersoftless, we hope to create an online communication with DAVID. After getting
+                        the cluster of our genes, we multiply the genes simalarity with a factor if they are in the same
+                        cluster.</br></br>
+                        Though the source code of this part has already done, we lack the experiment information to set
+                        a propriate factor. All source code were pushed up to our github.
+                    </p>
+                </div>
+                <div class="jobs_trigger" id="nm"><strong>Network Model</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">Network analysis includes finding stable condition of network, adding new gene,
+                        finding new stable condition and changes from original condition to new condition. We use
+                        densities of materials to describe network condition. If all material densities are
+                        time-invariant, we can say the network condition is stable.</p>
+                    <p class="bodytext"></p>
+                    <p align="justify">Regulation relationship in genetic network includes positive regulation, negative
+                        regulation, positive-or-negative regulation and no regulation. We store regulation relationship
+                        in matrix R. Rji means the unit in line j and row i. For the material of original network, Rji=1
+                        means material i enhance material j, Rji=-1 means material i repress material j, Rji=0 means
+                        material i has no influence on material j, Rji=2 means material i enhance or repress material j.
+                        For the new material, Rji ranges from -1 to 1. Rji<0 means the possibility of positive
+                            regulation is Rji; Rji>0 means the possibility of negative regulation is –Rji; Rji=0 means
+                            there is no regulation from i to j.
+                            We use Hill equations to describe intensity of regulation. Equations are like following:
+                            <br /></br>
+                            <img src="https://static.igem.org/mediawiki/2013/e/e0/USTC_Software_1.png"
+                                style="width:600px;" />
+                            <br /></br>
+                            The left side of the equation is the derivative x(density) on
+                            t(time).”qi”,”pi”,”ri”,”mi”,”ni” are parameters, which determine the intensity of
+                            regulation."ri" is degradation rate. Mji is exponent. M is a matrix whose dimensions are
+                            equivalent to R's. Mji is 0 or ranges from 0.5 to 1.2 or ranges from -1.2 to 0.5. For the
+                            material of original network, if Rji=1,Mji ranges from 0.5 to 1.2;if Rji=-1, Mji ranges from
+                            -1.2 to -0.5; if Rji=2;Mji ranges from -1.2 to 0.5 or 0.5 to 1. These Mjis' absolute values
+                            are given randomly by program. If Rji=0, Mji=0.
+                            </br>For the new material,
+                            <br /></br>
+                            <img src="https://static.igem.org/mediawiki/2013/6/64/USTC_Software_2.png" />
+                            <br /></br>
+
+                    </p>
+                    <p align="justify">
+                        Stable condition is the condition in which densities are time-invariant. We store material
+                        densities in a vector and solve the differential equations with Euler's formula, which is like
+                        below
+                        <br /></br>
+                        <img src="https://static.igem.org/mediawiki/2013/e/e6/USTC_Software_3.png"
+                            style="width:600px;" />
+                        <br /></br>
+                        We know the network will be stable at last, so every material density has a limitation.
+
+                    </p>
+
+
+
+                </div>
+                <div class="jobs_trigger" id="en"><strong>Evaluate Network</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">Record the original stable condition, set new material density to 0 and this is
+                        the new initial density vector. Solve new equations and record density vectors before the new
+                        condition is stable and store these data in a text file.</br></br>
+
+                        To evaluate the new network, we introduce the grading system.
+                        <br /></br>
+                        <img src="https://static.igem.org/mediawiki/2013/3/32/USTC_Software_4.png"
+                            style="width:600px;" />
+                        <img src="https://static.igem.org/mediawiki/2013/b/bc/USTC_Software_5.png"
+                            style="width:500px;" />
+
+                        <br /></br>
+                        "xi" and "Xi" are densities of material i, which is not the new material."ny" is the number of
+                        materials. The more new densities are close to the original, the less the influence the cell
+                        endues. In general, cells close to the original cell are more likely to survive than those who
+                        are far different from the original cell. That is the thought of the grading system.</br></br>
+                        We did a lot of running and found that the “AbsValue” ranges from 0 to 370, so "ScoreA" ranges
+                        from 0 to 4.9.We get the integer part and store it in an array, which has five sections.
+                        Generate 100 or 200 matrix M from matrix R and run the original and new network for each M, so
+                        we can get 100 or 200 of "ScoreA"s. The section which has maximum "ScoreA"s is the eventual
+                        score.
+                    </p>
+                </div>
+
+
+                <h2 id="ra">Reverse Analysis</h2>
+
+                <div class="jobs_trigger" id="vg"><strong>Virtual Gene</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">Before reverse analysis, we use the same idea about constructing a new GRN. So we
+                        create a virtual gene which replace the gene what users want to get. In calculation, it means
+                        that we add a row and a column to the matrix of GRN.</p>
+                </div>
+
+
+                <div class="jobs_trigger" id="er"><strong>Expression Range</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">Before prediction, the expression of specific genes which the experimenter needs
+                        should be input into our software as well as the improvement or depression. The number of target
+                        gene is SIX at most.</br></br>
+                        It is a must that figuring out the strongest and weakest expression strength before inputting
+                        the extreme cases into the target expression. The way to find out the strongest and weakest
+                        expression is modeling the GRN's steady state by a large amount of random regulation from -1 and
+                        1. We ran it for 1000 times to get the range of gene expression. On the other hand, the
+                        expression of genes unpicked by the users should be stable as much as possible. The initial
+                        strength of expression is calculated by modeling the original GRN with Hill's equation.
+                    </p>
+                </div>
+
+
+                <div class="jobs_trigger" id="pso"><strong>Particle Swarm Optimaztion</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">
+                        For getting the best regulation, our software uses PSO algorithm based on 30 particles to
+                        simulate the GRN's changing. First of all, the interactions of regulator and regulated-by have
+                        been put into those particles in random so that each particle will have the whole set of
+                        regulation. Secondly, the variance between target expressions and stable expression of new GRN
+                        have been regarded as the optimize requirements in PSO algorithm. As a result, the minimal
+                        variance of 30 particles is the global optimum and the minimal variance of the procession in one
+                        particle is the local optimum. Then, taking a step towards global and local optimum as well as
+                        considering the inertia and perturbation avoids falling into the sub-optimal
+                        condition.</br></br>
+                        At last, when the variance of expression reaches an acceptable range, our software picks out and
+                        saves the best global optimum particle following by the movement of those particles
+                        stop.</br></br>
+                        We constantly revises the factors in PSO algorithm by machine learning method for accurate
+                        simulation with a fast PSO particle-motion equation. At the same time, our software also filter
+                        the result of regulatory value which is more intuitive.
+                    </p>
+                </div>
+
+
+                <div class="jobs_trigger" id="lot"><strong>Locate Optimal Target</strong></div>
+                <div class="jobs_item" style="display: none;">
+                    <p align="justify">To improve the efficiency of choosing a suitable gene after getting a series of
+                        regulatory value, our software picks out some obvious regulation. The value of regulation is
+                        between -1 to 1 in which -1 means negative effect and 1 means positive effect. As a result, what
+                        our software has done is filtering out the absolute value which is lower than 0.9. Because the
+                        difference of regulatory intensity lower than 0.1 has very little effect to the stable
+                        expression, the final result of regulation is indicated by Boolean value.</br></br>
+                        The format of regulatory prediction in “Result”:</br>
+                        Gene_name->Gene_name regulation(+/-)
+                    </p>
+                </div>
+
+                <h2 id="reference">Reference</h2>
+
+                <p align="justify">
+
+                    Lei Z, Dai Y. Assessing protein similarity with Gene Ontology and its use in subnuclear localization
+                    prediction[J]. BMC bioinformatics, 2006, 7(1): 491.</br></br>
+
+
+                    Ramoni M F, Sebastiani P, Kohane I S. Cluster analysis of gene expression dynamics[J]. Proceedings
+                    of the National Academy of Sciences, 2002, 99(14): 9121-9126.</br></br>
+
+                    Thieffry D, Huerta A M, Pérez‐Rueda E, et al. From specific gene regulation to genomic networks: a
+                    global analysis of transcriptional regulation in Escherichia coli[J]. Bioessays, 1998, 20(5):
+                    433-440.</br></br>
+
+
+                    Eberhart R, Kennedy J. A new optimizer using particle swarm theory[C]//Micro Machine and Human
+                    Science, 1995. MHS'95., Proceedings of the Sixth International Symposium on. IEEE, 1995:
+                    39-43.</br></br>
+
+
+                    Jacob F, Perrin D, Sánchez C, et al. L'opéron: groupe de gènes à expression coordonnée par un
+                    opérateur [CR Acad. Sci. Paris 250 (1960) 1727–1729][J]. Comptes rendus biologies, 2005, 328(6):
+                    514-520.</br></br>
+
+
+                    Needleman S B, Wunsch C D. A general method applicable to the search for similarities in the amino
+                    acid sequence of two proteins[J]. Journal of molecular biology, 1970, 48(3): 443-453.</br></br>
+
+
+                    Gama-Castro S, Jiménez-Jacinto V, Peralta-Gil M, et al. RegulonDB (version 6.0): gene regulation
+                    model of Escherichia coli K-12 beyond transcription, active (experimental) annotated promoters and
+                    Textpresso navigation[J]. Nucleic acids research, 2008, 36(suppl 1): D120-D124.</br></br>
+
+                    Martınez-Antonio A, Collado-Vides J. Identifying global regulators in transcriptional regulatory
+                    networks in bacteria[J]. Current opinion in microbiology, 2003, 6(5): 482-489.</br></br>
+
+
+                    Salgado H, Moreno-Hagelsieb G, Smith T F, et al. Operons in Escherichia coli: genomic analyses and
+                    predictions[J]. Proceedings of the National Academy of Sciences, 2000, 97(12): 6652-6657.</br></br>
+
+
+                    Thieffry D, Salgado H, Huerta A M, et al. Prediction of transcriptional regulatory sites in the
+                    complete genome sequence of Escherichia coli K-12[J]. Bioinformatics, 1998, 14(5): 391-400.
+
+                </p>
+
+                <div class="jobs_trigger" style="display:none;"></div>
+                <div class="jobs_item" style="display: none;">
+                    <p></p>
+                </div>
+
+
+</body>
+
+</html>

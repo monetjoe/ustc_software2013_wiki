@@ -1,0 +1,365 @@
+{{USTC-Software/hidden}}
+
+{{USTC-Software/header2}}
+
+<!--{{USTC-Software/project}}-->
+
+<html>
+
+<head>
+
+    <title>Software</title>
+
+    <link rel="stylesheet"
+        href="https://2013.igem.org/Team:USTC-Software/Project/App_Clotho/css?action=raw&ctype=text/css"
+        type="text/css" />
+
+
+    <link rel="stylesheet"
+        href="https://2013.igem.org/Team:USTC-Software/Project/Software/css?action=raw&ctype=text/css"
+        type="text/css" />
+    <!--link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/css?action=raw&ctype=text/css" type="text/css"/-->
+
+    <!--script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
+
+<style> #softwarebutton , #projectbutton {color:#aaed51 !important;} </style-->
+
+<body>
+
+    <div id="direction">
+        <ul>
+            <li><a href="#title" class="button">gNAP</a></br>
+                <a href="#Starter" class="button" id="subbutton">Starter</a></br>
+                <a href="#Monitor" class="button" id="subbutton">Monitor</a></br>
+                <a href="#Result" class="button" id="subbutton">Result</a></br>
+                <a href="#Display" class="button" id="subbutton">Display</a></br>
+                <a href="#Tutorial" class="button" id="subbutton">Tutorial</a></br>
+                <a href="#Code" class="button" id="subbutton">Code</a></br>
+                <a href="#Summary" class="button" id="subbutton">Summary</a></br>
+            </li>
+
+            <li><a href=".gFinder" class="button">gFinder</a></li>
+
+            <li><a href=".gRNA" class="button">gRNA</a></br>
+                <a href="#first" class="button" id="subbutton">Introduction</a></br>
+                <a href="#second" class="button" id="subbutton">Tutorial</a>
+            </li>
+
+            <li><a href="#Download" class="button">Download</a></li>
+
+            <li><a href="#title" class="button">Top</a></li>
+
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function () {
+                var href = $(this).attr("href");
+                var pos = $(href).offset().top - 100;
+                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
+                return false;
+            });
+        });
+    </script>
+
+
+    <div id="main">
+        <div id="title" class="contain">
+            <div align="left" style="margin-left:20px;"><img
+                    src="https://static.igem.org/mediawiki/2013/b/bd/USTC_Software_Gnap.png" />
+            </div>
+        </div>
+
+        <div id="abstract" class="contain">
+
+            <p align="justify">As an experimenter, have you ever confused about getting no result when all experimental
+                conditions are well enough? Or have you ever been tired of repeating the experiment over and over again
+                without knowing whether your pay is futile? Or have you ever dreamed of choosing an imported gene by
+                global regulation instead of only direct interaction? If yes, take a gNAP before wearing lab
+                gloves!<br /><br />
+                gNAP, genetic Network Analyze and Predict, is a software analyze the infection of exogenous gene to
+                engineered bacteria’s Genetic Regulatory Network(GRN) and introduce a predicted imported gene satisfying
+                your needs!<br /><br />
+                To reach the best user experience, we designed four succinct User Interfaces on which you just need to
+                click some buttons and all the questions above will be solved.
+            </p>
+
+        </div>
+
+        <div id="Starter" class="contain">
+            <h2>Starter</h2>
+
+
+            <div class="image" align="center"><img
+                    src="https://static.igem.org/mediawiki/2013/3/36/USTC-Software_start.png" /></div>
+
+
+            <p align="justify">“Starter” has only one button which could lead users to input all information needed for
+                the next simulation and get ready to start. It is an easy-to-use interface guiding users to complete the
+                operation according to the prompts. The exogenous transcription unit’s promoter and gene sequence shall
+                be put into gNAP in this part. If not, users could not use analyze function, yet predict module can
+                function normally. All the database files will be integrated in this part and genetic information will
+                be stored in an external file, “all_info”, eventually. The original GRN is built in “Starter” with a
+                matrix of regulation in file “old_GRN”.<br /><br />
+                Now, it’s time to start taking a gNAP!
+            </p>
+        </div>
+
+
+
+
+        <div id="Monitor" class="contain">
+            <h2>Monitor</h2>
+
+            <div class="image" align="center"><img
+                    src="https://static.igem.org/mediawiki/2013/a/aa/USTC_Software_start.jpg" /></div>
+            <p>This shows the function of forward analysis.</p>
+
+            <div class="image" align="center"><img
+                    src="https://static.igem.org/mediawiki/2013/8/8a/USTC-Software_monitor.png" /></div>
+            <p>This shows the function of reverse analysis.</p>
+
+            <p align="justify">"Monitor" is one of the main module of our software as a monitor keeping watch on
+                running. The command lines in "Monitor" intuitively shows the detail in the process of software running.
+                There are two main functions in this part. One of which is analysis function that simulate the infection
+                of new gene's importing before and the simple evaluation of new GRN. The new GRN matrix is output into a
+                file called “new_GRN”. This function may cost about 3 minutes, so taking a nap will be a good choice.
+                The procession running and command lines' showing are synchronous. Prediction function is another one
+                which can be operated with adding the desired target expression instead of inputting the exogenous gene
+                sequence. The running time of this part is determined by the precision and the number of iteration time
+                in prediction algorithms. "Monitor" is very easy to operate through some simple action buttons and
+                intelligent gene selection mode.</br></br>
+
+                The result of this monitor can be found in "Result" and "Display".</p>
+
+        </div>
+
+
+        <div id="Result" class="contain">
+            <h2>Result</h2>
+
+            <div class="image" align="center"><img
+                    src="https://static.igem.org/mediawiki/2013/8/89/USTC_Software_Software_result.png" /></div>
+
+            <p align="justify">"Result" uses simply words to show the results of all functions of gNAP intuitively.
+                There are two parts in the interface showing different results about the modules of analyze and predict.
+                <br /><br />
+                In the part of analysis, the stability has been scored into five degrees and users can choose a specific
+                gene showing its information. All the information can generate an SBOL file as well as searching genetic
+                information in RegulonDB. In the other part of prediction, target expression and predicted interactions
+                are shown in a table. Users could pick out the significant regulation as a reference of genetic choice.
+                <br /><br />
+                The most succinct words have been used in this part to give users the most intuitive and clearest
+                results. The graphs and vivid network structure will be put into "Display" with JAVA's rich GUI library.
+            </p>
+        </div>
+
+
+
+
+
+        <div id="Display" class="contain">
+            <h2>Display</h2>
+            <p align="justify">“Display” is the data visualization part of our software. To reach a better impression,
+                it had been written in JAVA language. There are three parts in “Display” module: show regulation, show
+                gene change and show network. The prediction of interaction between new gene and original genes can be
+                seen in “show regulation” part with both regulated and regulating. “Show gene change” part shows the
+                changing of all genes with the time changing. What’s more, users could see the interactions of whole
+                network in “show network” part. Dragging, choosing, picking out the genes in GUI is available. When
+                choosing one gene in a giant network, all genes who have interactions with that one will be picked out
+                and shown in a small network.
+            </p>
+        </div>
+
+
+        <div class="image" align="center"><img
+                src="https://static.igem.org/mediawiki/2013/2/29/USTC_Software_Display.png" /></div>
+
+
+        <div id="Tutorial" class="contain">
+
+            <div class="left">
+                <h2>Tutorial</h2>
+                <p align="justify">The tutorial of gNAP contains 3 parts: Help Document, Quick Start, and Instruction
+                    Video.<br /><br />
+                    Help Document is a PDF document which collects all of the information and operation details of the
+                    application. It will be helpful for users who want to carefully understand our software because it
+                    contains all details about gNAP using. If you are interested in gNAP and hope to start in a minute,
+                    Quick Start will be the best approach.<br /><br />
+                    Quick Start is designed for beginners, especially for those who need to know the basic operation of
+                    gNAP. With no doubt, it is brief and will help the users starting using gNAP and doing his work in a
+                    convenient and swift way by several pictures with short instructive sentences.</br></br>
+
+                    Instruction Video uploaded on YouTube is also tailored for novices. It shows the operation in a
+                    dynamic status, which makes the operation vividly and easy-to-learn.</p>
+
+            </div>
+
+            <div class="right" align="center">
+
+
+                <iframe width="440" height="330" src="http://www.youtube.com/embed/F6Y6WAxUSws" frameborder="0"
+                    allowfullscreen="true"></iframe>
+
+
+                <p>PDF Download</p>
+                <a href="https://static.igem.org/mediawiki/igem.org/3/35/USTC_Software_QucikStart.pdf"
+                    style="color:#8cc63f;"><b>*QucikStart</b></a><br />
+                <a href="https://static.igem.org/mediawiki/igem.org/9/9f/USTC_Software_Tutorial.pdf"
+                    style="color:#8cc63f;"><b>*Tutorial</b></a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="Code" class="contain">
+            <h2>Code</h2>
+            <p align="justify">All source code of our software have been pushed up to <a class="content"
+                    href="https://github.com/igemsoftware/USTC-Software2013">Github</a> and there is a help document
+                generated by Doxygen based on our notations in the command lines. You can download the PDF file [here]
+                which contains the introductions about all Classes and Functions used in our software.<br /><br />
+                The command line source files are written in C++ language and visualization part are written in Java
+                language. Both of them can be complied across platforms. The GUI source files are also written in C++
+                language with Qt Creator, it can also be compiled across various platforms using Qt 5.1.0, which can be
+                downloaded <a class="content"
+                    href="https://static.igem.org/mediawiki/2013/3/32/USTC-Software_2013_API_of_gNAP.pdf">here</a>.</p>
+        </div>
+
+
+
+
+
+
+        <div id="Summary" class="contain">
+            <h2>Summary</h2>
+
+            <p align="justify">In general, most mathematical models were used for analyze the experimental results. <a
+                    class="content" href="http://ibis.inrialpes.fr/article122.html">GNA</a> also analyze the GRN but
+                just focus on regulation in original network. However, our software focuses on the infection of imported
+                gene which is quite usual in synthetic biology instead of analyze the GRN only. In the same time, gNAP
+                uses various algorithms and methotheir lab gloves will be really useful to researchers and save them a
+                lot of time.</p>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="main" class="gFinder"><!--gFinder-->
+
+        <h1 style="margin-top:0px;">gFinder: Gene Finder</h1>
+
+        <div class="image" align="center"><img
+                src="https://static.igem.org/mediawiki/2013/b/bc/USTC_Software_Finder2.jpg" /></div>
+
+        <p align="justify">gFinder is a web app which you can visit here<a
+                href="http://gfinder.stlover.org:8080/static/" class="content"></a>. It could be used to find the
+            specific gene with target regulations.</br></br>
+            For example, if users need to find a gene which can enhance geneA’s expression, depress geneB’s expression,
+            enhance..., gFinder can find a gene whose function is similar most from the database. So, with the help of
+            gFinder, the reverse analysis result of gNAP, our main software, can step forward. We could get the specific
+            gene for target expression instead of some interactions. Users could also input the known regulation to get
+            the specific gene from database.
+        </p>
+
+        <div class="image" align="center"><img
+                src="https://static.igem.org/mediawiki/2013/f/fe/USTC_Software_Finder1.jpg" /></div>
+
+        <p align="justify">About our database, it is a pity that there are no integral databases available containing
+            information of such giant gene regulatory network. So in our software, we use some specific gene sequence
+            segments to create a network. In fact, all genes there is virtual gene. For future development, we also left
+            a file input entrance from which you could input real GRN.</br></br>
+            What’s more, gFinder is written as a website and it will be really convenient to use. The source code of
+            gFinder is written in C++ language. All source code has been pushed up to our github.
+        </p>
+
+
+
+    </div>
+
+
+    <div id="main" class="gRNA">
+
+        <div id="first">
+            <h1 style="margin-top:0px;">gRNA: gene regulatory network analysts</h1>
+            <h2>Introduction</h2>
+
+            <p align="justify">This little app is a entertaining yet educational program for children who are interested
+                in network analysis. Through this game they can cultivate the interest of biology and have a visual
+                image of complex regulatory network. The calculation module is as same as the modeling of GRN in our
+                major software “gNAP”. To make the app more interesting, we reduced the difficulty of analysis and
+                investigate the analytical thinking ability of complex network regulation.
+            </p></br>
+        </div>
+
+        <div align="center"><img src="https://static.igem.org/mediawiki/2013/d/dd/USTC_Software_Clotho.png" /></div>
+
+
+        <div id="second" align="justify">
+            <h2>Tutorial</h2>
+
+
+            <p>• Press ‘start’ to begin the game,</p>
+
+            <p>• After you entered the game interface, you can right click the gene (those colorful circles) to find out
+                how other genes change if you remove the gene you choose. </p>
+            <p>• Then you should judge the relationship among the genes. There are two kinds of relationships,
+                suppression and promotion. Attention, not all genes have relationship with other genes, and every two
+                genes can only have one relationship. For example, gene1 suppresses gene2, then they can’t have other
+                relationship such as gene1 promotes gene2 or gene2 suppresses gene1 etc.</p>
+            <p>• When you have already judged all genes, you can make you own regulatory network. Press the suppression
+                button and the you can draw a red arrow between two genes. If gene1 points to gene2, it means gene1
+                suppresses gene2. In the similar way, you can draw green arrows with promotion button.</p>
+            <p>• If you what to undo the last operation, press the cancel button.</p>
+            <p>• When you have finished you operation, press finish button.</p>
+            <p>• The bar on the left is control by time and the quality of your job. When this bar disappears, the game
+                is over.</p>
+            <p>• If you press the finish button, the answer button and next button will available. Press the answer
+                button to check the answer (the answer may not be unique, so even if your answer is different with the
+                answer that computer gives you, you may also get a high score).Press the next button to the next level.
+            </p>
+            <p>• In the next level, you can see how much score you have got in previous level.</p>
+            <p>• If you want to quit game, press back button on the right-up corner.</p>
+            <p>• There are 10 levels waiting for you! Good luck and have fun!</p>
+
+
+        </div>
+
+
+
+
+        <div id="Download" class="contain">
+            <h2>Download</h2>
+
+            <p>You can download the ZIP files including Executable Program build on Windows, Linux and MacOS here:</p>
+
+            <span class="downloadbutton"><a class="content"
+                    href="https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_GNAP-3.0-linux-32bit.zip"><img
+                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
+                        align="absmiddle" />gNAP_3.0_linux_32bit</a></span><br />
+            <!--span class="downloadbutton"><a class="content" href="https://static.igem.org/mediawiki/igem.org/4/44/USTC_GNAP-2.1.5-linux-64bit-.zip"><img  src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png" align="absmiddle" />gNAP_2.1.5_linux_64bit</a></span><br /-->
+            <span class="downloadbutton"><a class="content"
+                    href="https://static.igem.org/mediawiki/2013/6/64/USTC_Software_GNAP_windows-32bit.zip"><img
+                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
+                        align="absmiddle" />gNAP_3.0_windows_32bit/64bit</a></span><br />
+            <span class="downloadbutton"><a class="content"
+                    href="https://static.igem.org/mediawiki/2013/5/56/USTC_Software_GNAP_3.0_Mac_OS.zip"><img
+                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
+                        align="absmiddle" />gNAP_3.0_Mac_OS</span></a></br>
+            <span class="downloadbutton"><a class="content"
+                    href="https://static.igem.org/mediawiki/2013/5/5f/USTC_Software_Clotho_App.zip"><img
+                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
+                        align="absmiddle" />gRNA</span></a>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

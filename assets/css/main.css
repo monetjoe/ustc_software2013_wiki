@@ -1,0 +1,155 @@
+body {
+    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;
+}
+
+#camera {
+    width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 100px;
+}
+
+#green {
+    background: #8cc63f;
+    width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+
+#cyan {
+    background: #2da7a0;
+    width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+#blue {
+    background: #6b93af;
+    width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+
+
+#purple {
+    background: #b575a7;
+    width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+
+.right {
+    width: 620px;
+    height: 200px;
+    font: 16px Arial, Helvetica, sans-serif;
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+
+
+.right p {
+    color: #fff;
+}
+
+
+.right h2 {
+    color: #fff;
+}
+
+
+.left {
+    width: 290px;
+    height: 240px;
+    float: left;
+}
+
+
+
+#green .left img {
+    margin-left: 60px;
+    margin-top: 35px;
+    height: 180px;
+    width: 190px;
+}
+
+
+#cyan .left img {
+    margin-left: 30px;
+    margin-top: 25px;
+    height: 190px;
+    width: 210px;
+}
+
+
+#blue .left img {
+    margin-left: 45px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+#purple .left img {
+    margin-left: 60px;
+    margin-top: 34px;
+    height: 180px;
+    width: 180px;
+}
+
+
+/*#green .right{margin-top:-25px;}
+
+#green .left{margin-top:-50px;}*/
+
+
+#sponsors {
+    background: #34495e;
+    height: 133px;
+    /*133*/
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+#sponsors h2 {
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fff;
+    float: left;
+    margin-left: 20px;
+    margin-right: 105px;
+    margin-top: 15px;
+}
+
+.more {
+    height: 35px;
+    width: 70px;
+    background: url(https://static.igem.org/mediawiki/2012/7/70/More.png) no-repeat center;
+    float: right;
+    margin-top: -20px;
+}
+
+.more:hover {
+    height: 35px;
+    width: 70px;
+    background: url(https://static.igem.org/mediawiki/2012/f/f5/USTC_Software_More.gif) no-repeat center;
+}
+
+
+#homelink {
+    color: #fcc644;
+    transition: 1s;
+}
+
+#homelink:hover {
+    color: #fff;
+    text-decoration: none;
+    transition: 1s;
+}
