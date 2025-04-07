@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/medal.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -14,90 +15,79 @@
             <li><a href="#Introduction" class="button">Bronze Medal</a></li>
             <li><a href="#Software" class="button">Silver Medal</a></li>
             <li><a href="#Methodology" class="button">Gold Medal</a><br>
-                <a href="#plus" class="button" id="subbutton">Plus</a>
+                <a href="#plus" class="button subbutton">Plus</a>
             </li>
             <li><a href="#main" class="button">Top</a></li>
         </ul>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".button").click(function () {
-                var href = $(this).attr("href");
-                var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
-                return false;
-            });
-        });
-    </script>
 
     <div id="main">
         <div id="Introduction">
-            <h2 align="justify"><img src="https://static.igem.org/mediawiki/2013/e/ee/USTC-Software_Bronze.png"
-                    width="52" height="52" align="absmiddle" />Bronze Medal</h2>
-            <p align="justify"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png"
-                    width="30" height="30" align="absmiddle" />Register the team, have a great summer, and have fun
+            <h2 align="justify"><img src="./assets/src/USTC-Software_Bronze.png" width="52" height="52"
+                    align="absmiddle" />Bronze Medal</h2>
+            <p align="justify"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />Register the team, have a great summer, and have fun
                 attending the Jamboree.</p>
-            <p><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30" height="30"
-                    align="absmiddle" />Create and share a description of the team's project via the iGEM wiki.</p>
-            <p><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30" height="30"
-                    align="absmiddle" />Present a Poster and Talk at the iGEM Jamboree.</p>
-            <p><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30" height="30"
-                    align="absmiddle" />Develop and make available via the The Registry of Software Tools an open source
+            <p><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30" align="absmiddle" />Create and
+                share a description of the team's project via the iGEM wiki.</p>
+            <p><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30" align="absmiddle" />Present a
+                Poster and Talk at the iGEM Jamboree.</p>
+            <p><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30" align="absmiddle" />Develop and
+                make available via the The Registry of Software Tools an open source
                 software tool that supports synthetic biology based on BioBrick standard biological parts (remember, the
                 iGEM judges will be looking for substantial team-based software projects).<a id="out"
                     href="https://github.com/igemsoftware/USTC-Software2013">read more</a></p>
         </div>
         <div id="Software">
-            <h2 align="justify"><img src="https://static.igem.org/mediawiki/2013/8/88/USTC-Software_Silver.png"
-                    width="52" height="52" align="absmiddle" />Silver Medal</h2>
-            <p align="justify"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png"
-                    width="30" height="30" align="absmiddle" />Provide a detailed, draft specification for the next
-                version of your software tool<a id="out" href="./Project/Preview.html">read more</a></p>
-            <p><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30" height="30"
-                    align="absmiddle" />Provide a second, distinct (yet complementary) software tools project.<a
-                    id="out" href="./Project/App_Clotho.html">read more</a></p>
+            <h2 align="justify"><img src="./assets/src/USTC-Software_Silver.png" width="52" height="52"
+                    align="absmiddle" />Silver Medal</h2>
+            <p align="justify"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />Provide a detailed, draft specification for the next
+                version of your software tool<a id="out" href="./Preview.html">read more</a></p>
+            <p><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30" align="absmiddle" />Provide a
+                second, distinct (yet complementary) software tools project.<a id="out" href="./App_Clotho.html">read
+                    more</a></p>
             <h3>Add</h3>
-            <p><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30" height="30"
-                    align="absmiddle" />Provide a demonstration of their software either as a textual or video tutorial
+            <p><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30" align="absmiddle" />Provide a
+                demonstration of their software either as a textual or video tutorial
                 made available on their wiki. This tutorial should explain all the features of the tool as well as
-                provide sample input and output as appropriate.<a id="out" href="./Project/Software.html#Tutorial">read
+                provide sample input and output as appropriate.<a id="out" href="./Software.html#Tutorial">read
                     more</a></p>
         </div>
         <div id="Methodology">
-            <h2 align="left"><img src="https://static.igem.org/mediawiki/2013/d/dc/USTC_Software_Gold.png" width="52"
-                    height="52" align="absmiddle" />Gold Medal</h2>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30"
-                    height="30" align="absmiddle" />Have another team utilize the software developed by your team. You
+            <h2 align="left"><img src="./assets/src/USTC_Software_Gold.png" width="52" height="52"
+                    align="absmiddle" />Gold Medal</h2>
+            <p align="left"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />Have another team utilize the software developed by your team. You
                 must clearly show how your software was used and the results that were obtained.<a id="out"
-                    href="./Communicate/collaboration.html">read more</a></p>
+                    href="./collaboration.html">read more</a></p>
             <div align="left"><br />
             </div>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30"
-                    height="30" align="absmiddle" />Outline and detail how your software effects Human Practices in
+            <p align="left"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />Outline and detail how your software effects Human Practices in
                 Synthetic Biology. Such topics include: safety, security, ethics, or ownership, sharing, and innovation.
-                <a id="out" href="./Communicate/Human_practice.html">read more</a>
+                <a id="out" href="./Human_practice.html">read more</a>
             </p>
             <h3 align="left">Or</h3>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30"
-                    height="30" align="absmiddle" />In place of requirement two, a team may instead use SBOL in your
+            <p align="left"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />In place of requirement two, a team may instead use SBOL in your
                 software documentation.</p>
             <p align="left" style="font-size:16px;">The gene information could be output in SBOL when clicking the
                 button “SBOL it!”.
                 The file whose name is same as the name of gene containing in.
                 For example:
-                This is a file named “gutM.xml”<br /><br /><img
-                    src="https://static.igem.org/mediawiki/igem.org/archive/2/23/20130924051624%21Starter.png"
-                    width="1000" height="436" /></p>
+                This is a file named “gutM.xml”<br /><br /><img src="./assets/src/20130924051624%21Starter.png"
+                    width="100%" /></p>
             <h3 align="left" id="plus">Plus</h3>
             <h4 align="left">Develop and document a new technical standard that supports one of the following:</h4>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/2/28/USTC-Software-checkbn.png" width="30"
-                    height="30" align="absmiddle" />design of BioBrick Parts or Devices</p>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/2/28/USTC-Software-checkbn.png" width="30"
-                    height="30" align="absmiddle" />construction of BioBrick Parts or Devices</p>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/2/28/USTC-Software-checkbn.png" width="30"
-                    height="30" align="absmiddle" />characterization of BioBrick Parts or Devices</p>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/7/72/USTC-Software-check_B.png" width="30"
-                    height="30" align="absmiddle" />the analysis, modeling, and simulation of BioBrick Parts or Devices
+            <p align="left"><img src="./assets/src/USTC-Software-checkbn.png" width="30" height="30"
+                    align="absmiddle" />design of BioBrick Parts or Devices</p>
+            <p align="left"><img src="./assets/src/USTC-Software-checkbn.png" width="30" height="30"
+                    align="absmiddle" />construction of BioBrick Parts or Devices</p>
+            <p align="left"><img src="./assets/src/USTC-Software-checkbn.png" width="30" height="30"
+                    align="absmiddle" />characterization of BioBrick Parts or Devices</p>
+            <p align="left"><img src="./assets/src/USTC-Software-check_B.png" width="30" height="30"
+                    align="absmiddle" />the analysis, modeling, and simulation of BioBrick Parts or Devices
             </p>
             <p align="left" style="font-size:16px;">Actually, our software could model all parts in Biobrick Parts. So
                 we choose two parts containing promoter and protein gene of LuxR which are used more than 1000
@@ -110,15 +100,15 @@
                 (no LVA?) <br />
                 <br />
                 Our software analyze the stability of the GRN after importing. Because those parts are multiple
-                transcriptional regulator, the score of the stability is only two stars which means that after LuxR’s
+                transcriptional regulator, the score of the stability is only two stars which means that after LuxR's
                 import the expression of each gene changed a lot.
             </p>
-            <p align="left"><img src="https://static.igem.org/mediawiki/2013/2/28/USTC-Software-checkbn.png" width="30"
-                    height="30" align="absmiddle" />the sharing of BioBrick Parts or Devices, either via physical DNA or
+            <p align="left"><img src="./assets/src/USTC-Software-checkbn.png" width="30" height="30"
+                    align="absmiddle" />the sharing of BioBrick Parts or Devices, either via physical DNA or
                 as information via the internet.</p>
             <h3 align="left">Or</h3>
-            <P align="left"><img src="https://static.igem.org/mediawiki/2013/2/28/USTC-Software-checkbn.png" width="30"
-                    height="30" align="absmiddle" />Build upon existing software from a previous iGEM competition found
+            <P align="left"><img src="./assets/src/USTC-Software-checkbn.png" width="30" height="30"
+                    align="absmiddle" />Build upon existing software from a previous iGEM competition found
                 on the The Registry of Software Tools</P>
         </div>
     </div>
