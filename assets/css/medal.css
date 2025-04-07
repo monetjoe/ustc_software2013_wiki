@@ -14,34 +14,27 @@ a#out:hover {
 #Introduction {
     margin: 0 auto;
     margin-top: 100px;
-    width: 1000px;
+    width: 100%;
     font: 14px Arial, Helvetica, sans-serif;
 }
-
-
-
 
 #Software {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     font: 14px Arial, Helvetica, sans-serif;
 }
-
-
 
 #Methodology {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     font: 14px Arial, Helvetica, sans-serif;
 }
-
 
 #medalbutton {
     color: #aaed51 !important;
     opacity: 1;
     font-size: 14px;
 }
-
 
 p {
     font-size: 16px;

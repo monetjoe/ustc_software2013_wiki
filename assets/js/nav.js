@@ -3,6 +3,6 @@ $(document).ready(function () {
     $('body').prepend('<div id="nav"></div>');
     $('#nav').load('nav.html');
     $('a').each(function () {
-        if (!$(this).attr('href').includes("#")) $(this).attr('target', '_blank');
+        if ($(this).attr('href').includes("http")) $(this).attr('target', '_blank');
     });
 });
