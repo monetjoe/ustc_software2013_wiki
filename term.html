@@ -12,10 +12,10 @@
             color: #aaed51 !important;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#nav').load('nav.html');
             $(".smooth").click(function () {
                 var href = $(this).attr("href");
                 var pos = $(href).offset().top - 40;
@@ -23,7 +23,6 @@
             });
         });
     </script>
-    <div id="nav"></div>
 </head>
 
 <body>

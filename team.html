@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Team</title>
     <link href="./assets/css/team.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(".smooth").click(function () {
@@ -17,10 +18,8 @@
                 let pos = $(href).offset().top - 20;
                 $("html,body").animate({ scrollTop: pos }, 1500); //the smaller the quicker 
             });
-            $('#nav').load('nav.html');
         });
     </script>
-    <div id="nav"></div>
 </head>
 
 <body>

@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Overall</title>
     <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Overall/css?action=raw&ctype=text/css"
         type="text/css" />
@@ -12,19 +13,17 @@
             color: #aaed51 !important;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script>
         $(document).ready(function () {
-            $('#nav').load('nav.html');
             $(".button").click(function () {
                 var href = $(this).attr("href");
                 var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
-                return false;
+                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker 
             });
         });
     </script>
-    <div id="nav"></div>
 </head>
 
 <body>
