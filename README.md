@@ -2,7 +2,7 @@
 
 The source code of remade [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013) wiki
 
-=================
+[![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki.svg)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
 
 We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGem 2013!
 
@@ -11,7 +11,7 @@ Our application aims to simulate gene networks. The application analyzes the sta
 
 ## About Our Software
 ### gNAP: Gene Network Analyse and Predict
-This software contains four parts, dealing with separate functions in forward and backward modeling of GRN(Gene Regulatory Network) analyse.
+This software contains four parts, dealing with separate functions in forward and backward modeling of GRN (Gene Regulatory Network) analyse.
 * 1. Start
 * 2. Monitor
 * 3. Result
@@ -105,30 +105,30 @@ To compile our source code, you should have:
 The GUI source files are written in C++ language with Qt Creator and the operation source files are also included in **gNAP.pro**. So the main functions could be compiled across platforms using Qt 5.1.0.
 What's more, for better visualization, this part was written in Java language. So it should be compiled like this:
 ```txt
-	Linux:
-	open a terminal:
-		cd gNAP-view
-		sudo apt-get update
-		sudo apt-get ant
-	and, compile source code:
-		ant
+Linux:
+open a terminal:
+    cd gNAP-view
+    sudo apt-get update
+    sudo apt-get ant
+and, compile source code:
+    ant
 
-	Mac OS X:
-	open a terminal:
-		cd gNAP-view
-		sudo brew install ant(or get ant with source code)
-	and, compile source code:
-		ant
+Mac OS X:
+open a terminal:
+    cd gNAP-view
+    sudo brew install ant(or get ant with source code)
+and, compile source code:
+    ant
 
-	Windows:
-		INSTALL ant from http://ant.apache.org/ and DO configure JAVA_HOME
-		cd path/to/gNAP-view
-		ant
-	and than the jar file will in the folder dist
+Windows:
+    INSTALL ant from http://ant.apache.org/ and DO configure JAVA_HOME
+    cd path/to/gNAP-view
+    ant
+and than the jar file will in the folder dist
 ```
 
 ### Compile gFinder
-This is a website software which do not need to compile. You could try our software from [here](http://gfinder.stlover.org:8080/static/). All source code had been inlcuded in floder:
+This is a website software which do not need to compile. You could try our software from [here](https://static.igem.org/mediawiki/2013/3/32/USTC-Software_2013_API_of_gNAP.pdf). All source code had been inlcuded in floder:
 ```bash
 /Source Code/gFinder/
 ```
