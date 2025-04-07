@@ -3,27 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Overall</title>
-    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Overall/css?action=raw&ctype=text/css"
-        type="text/css" />
-    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/css?action=raw&ctype=text/css"
-        type="text/css" />
-    <style>
-        #overallbutton,
-        #projectbutton {
-            color: #aaed51 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/overall.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/project.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(document).ready(function () {
-            $(".button").click(function () {
-                var href = $(this).attr("href");
-                var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker 
-            });
-        });
-    </script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -32,13 +16,13 @@
             <li><a href="#Introduction" class="button">Introduction</a></li>
             <li><a href="#Software" class="button">Software</a></li>
             <li><a href="#Methodology" class="button">Methodology</a></li>
-            <li><a href=".db" class="button">Database</a></li>
+            <li><a href="#db" class="button">Database</a></li>
             <li><a href="#main" class="button">Top</a></li>
         </ul>
     </div>
     <div id="main">
+        <h1 align="justify">Overall</h1>
         <div id="Introduction">
-            <h1 align="justify">Overall</h1>
             <h2 align="justify">Introduction</h2>
             <p align="justify">Synthetic Biology is the design and construction of biological devices and systems for
                 useful purposes. It is an area of biological research and technology that combines biology with
@@ -69,8 +53,7 @@
                 results can be seen in “Result” part letting users have a broad view. “Display” written in JAVA is the
                 last part displaying the results in an intuitive visual graphical interface.<br /><br />
                 gFinder(gene finder)'s source code is written in C++ language and it is a website software which is
-                really convinient. You can use this software just click <a class="content"
-                    href="http://www.stlover.org/gFinder">here</a>. All source code of this software is also push up to
+                really convinient. All source code of this software is also push up to
                 our <a class="content" href="https://github.com/igemsoftware/USTC-Software2013/">github</a>.<br><br>
                 gRNA(gene regulatory network analists) is a gaming program for children who interested in network
                 analysis. Through this game they can cultivate the interest of biology and have a visual image of
@@ -90,11 +73,11 @@
                 resource for simulation afterward. Needle-Wunsch Alignment Algorithm, Decision Tree method and Hill
                 Equation are utilized to analyze the new GRN. On the other side, to figure out an advise for choosing
                 imported gene, PSO Algorithm finds out the best interaction meeting users' needs.</p>
-            <div id="Methodology" class="db">
+            <div id="db">
                 <h2 align="justify">Database</h2>
                 <p align="justify"> The database used in gNAP is flexible because the software could construct GRN on
                     any data sources. But because our team use <a class="content"
-                        href="http://regulondb.ccg.unam.mx/index.jsp">RegulonDB</a> as an example to test gNAP, fetching
+                        href="https://regulondb.ccg.unam.mx">RegulonDB</a> as an example to test gNAP, fetching
                     mode built-in gNAP now only suit to the form of RegulonDB's files. It is very easy to change the
                     format of importing based on the database. It should be a must that the files downloaded contain all
                     information needed in the software. Such as gene sequence, promoter sequence, mutual regulation,
@@ -102,7 +85,7 @@
                     The built-in database in gNAP is Escherichia coli K-12 database which contains interaction and
                     information about all genes. The software choose TF(Transcription Factor) to TF Database, TF to Gene
                     Database, Gene Info Database, Promoter Info Database, TU(Transcription Unit) Info Database.<a
-                        class="content" href="http://regulondb.ccg.unam.mx/menu/download/datasets/index.jsp">[download
+                        class="content" href="https://regulondb.ccg.unam.mx/datasets">[download
                         here]</a>
                 </p>
             </div>
