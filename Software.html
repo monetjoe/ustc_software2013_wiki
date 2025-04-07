@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Software</title>
     <link rel="stylesheet"
         href="https://2013.igem.org/Team:USTC-Software/Project/App_Clotho/css?action=raw&ctype=text/css"
@@ -8,7 +9,8 @@
     <link rel="stylesheet"
         href="https://2013.igem.org/Team:USTC-Software/Project/Software/css?action=raw&ctype=text/css"
         type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script>
         $(document).ready(function () {
             $(".button").click(function () {
@@ -16,27 +18,25 @@
                 var pos = $(href).offset().top - 100;
                 $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
             });
-            $('#nav').load('nav.html');
         });
     </script>
-    <div id="nav"></div>
 </head>
 
 <body>
     <div id="direction">
         <ul>
-            <li><a href="#title" class="button">gNAP</a></br>
-                <a href="#Starter" class="button" id="subbutton">Starter</a></br>
-                <a href="#Monitor" class="button" id="subbutton">Monitor</a></br>
-                <a href="#Result" class="button" id="subbutton">Result</a></br>
-                <a href="#Display" class="button" id="subbutton">Display</a></br>
-                <a href="#Tutorial" class="button" id="subbutton">Tutorial</a></br>
-                <a href="#Code" class="button" id="subbutton">Code</a></br>
-                <a href="#Summary" class="button" id="subbutton">Summary</a></br>
+            <li><a href="#title" class="button">gNAP</a><br>
+                <a href="#Starter" class="button" id="subbutton">Starter</a><br>
+                <a href="#Monitor" class="button" id="subbutton">Monitor</a><br>
+                <a href="#Result" class="button" id="subbutton">Result</a><br>
+                <a href="#Display" class="button" id="subbutton">Display</a><br>
+                <a href="#Tutorial" class="button" id="subbutton">Tutorial</a><br>
+                <a href="#Code" class="button" id="subbutton">Code</a><br>
+                <a href="#Summary" class="button" id="subbutton">Summary</a><br>
             </li>
             <li><a href=".gFinder" class="button">gFinder</a></li>
-            <li><a href=".gRNA" class="button">gRNA</a></br>
-                <a href="#first" class="button" id="subbutton">Introduction</a></br>
+            <li><a href=".gRNA" class="button">gRNA</a><br>
+                <a href="#first" class="button" id="subbutton">Introduction</a><br>
                 <a href="#second" class="button" id="subbutton">Tutorial</a>
             </li>
             <li><a href="#Download" class="button">Download</a></li>
@@ -93,7 +93,7 @@
                 which can be operated with adding the desired target expression instead of inputting the exogenous gene
                 sequence. The running time of this part is determined by the precision and the number of iteration time
                 in prediction algorithms. "Monitor" is very easy to operate through some simple action buttons and
-                intelligent gene selection mode.</br></br>
+                intelligent gene selection mode.<br><br>
                 The result of this monitor can be found in "Result" and "Display".</p>
         </div>
         <div id="Result" class="contain">
@@ -137,7 +137,7 @@
                     Quick Start will be the best approach.<br /><br />
                     Quick Start is designed for beginners, especially for those who need to know the basic operation of
                     gNAP. With no doubt, it is brief and will help the users starting using gNAP and doing his work in a
-                    convenient and swift way by several pictures with short instructive sentences.</br></br>
+                    convenient and swift way by several pictures with short instructive sentences.<br><br>
                     Instruction Video uploaded on YouTube is also tailored for novices. It shows the operation in a
                     dynamic status, which makes the operation vividly and easy-to-learn.</p>
             </div>
@@ -145,10 +145,8 @@
                 <iframe width="440" height="330" src="http://www.youtube.com/embed/F6Y6WAxUSws" frameborder="0"
                     allowfullscreen="true"></iframe>
                 <p>PDF Download</p>
-                <a href="https://static.igem.org/mediawiki/igem.org/3/35/USTC_Software_QucikStart.pdf"
-                    style="color:#8cc63f;"><b>*QucikStart</b></a><br />
-                <a href="https://static.igem.org/mediawiki/igem.org/9/9f/USTC_Software_Tutorial.pdf"
-                    style="color:#8cc63f;"><b>*Tutorial</b></a>
+                <a href="./assets/doc/USTC_Software_QucikStart.pdf" style="color:#8cc63f;"><b>*QucikStart</b></a><br />
+                <a href="./assets/doc/USTC_Software_Tutorial.pdf" style="color:#8cc63f;"><b>*Tutorial</b></a>
             </div>
         </div>
         <div id="Code" class="contain">
@@ -160,8 +158,7 @@
                 The command line source files are written in C++ language and visualization part are written in Java
                 language. Both of them can be complied across platforms. The GUI source files are also written in C++
                 language with Qt Creator, it can also be compiled across various platforms using Qt 5.1.0, which can be
-                downloaded <a class="content"
-                    href="https://static.igem.org/mediawiki/2013/3/32/USTC-Software_2013_API_of_gNAP.pdf">here</a>.</p>
+                downloaded <a class="content" href="./assets/doc/USTC-Software_2013_API_of_gNAP.pdf">here</a>.</p>
         </div>
         <div id="Summary" class="contain">
             <h2>Summary</h2>
@@ -175,23 +172,21 @@
     </div>
     <div id="main" class="gFinder"><!--gFinder-->
         <h1 style="margin-top:0px;">gFinder: Gene Finder</h1>
-        <div class="image" align="center"><img
-                src="https://static.igem.org/mediawiki/2013/b/bc/USTC_Software_Finder2.jpg" /></div>
+        <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder2.jpg" /></div>
         <p align="justify">gFinder is a web app which you can visit here<a
                 href="http://gfinder.stlover.org:8080/static/" class="content"></a>. It could be used to find the
-            specific gene with target regulations.</br></br>
+            specific gene with target regulations.<br><br>
             For example, if users need to find a gene which can enhance geneA's expression, depress geneB's expression,
             enhance..., gFinder can find a gene whose function is similar most from the database. So, with the help of
             gFinder, the reverse analysis result of gNAP, our main software, can step forward. We could get the specific
             gene for target expression instead of some interactions. Users could also input the known regulation to get
             the specific gene from database.
         </p>
-        <div class="image" align="center"><img
-                src="https://static.igem.org/mediawiki/2013/f/fe/USTC_Software_Finder1.jpg" /></div>
+        <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder1.jpg" /></div>
         <p align="justify">About our database, it is a pity that there are no integral databases available containing
             information of such giant gene regulatory network. So in our software, we use some specific gene sequence
             segments to create a network. In fact, all genes there is virtual gene. For future development, we also left
-            a file input entrance from which you could input real GRN.</br></br>
+            a file input entrance from which you could input real GRN.<br><br>
             What's more, gFinder is written as a website and it will be really convenient to use. The source code of
             gFinder is written in C++ language. All source code has been pushed up to our github.
         </p>
@@ -205,9 +200,9 @@
                 image of complex regulatory network. The calculation module is as same as the modeling of GRN in our
                 major software “gNAP”. To make the app more interesting, we reduced the difficulty of analysis and
                 investigate the analytical thinking ability of complex network regulation.
-            </p></br>
+            </p><br>
         </div>
-        <div align="center"><img src="https://static.igem.org/mediawiki/2013/d/dd/USTC_Software_Clotho.png" /></div>
+        <div align="center"><img src="./assets/src/USTC_Software_Clotho.png" /></div>
         <div id="second" align="justify">
             <h2>Tutorial</h2>
             <p>• Press 'start' to begin the game,</p>
@@ -234,23 +229,22 @@
         </div>
         <div id="Download" class="contain">
             <h2>Download</h2>
-            <p>You can download the ZIP files including Executable Program build on Windows, Linux and MacOS here:</p>
-            <span class="downloadbutton"><a class="content"
+            <p>You can download the ZIP files including Executable Program build on Windows and MacOS here:</p>
+            <!-- <span class="downloadbutton"><a class="content"
                     href="https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_GNAP-3.0-linux-32bit.zip"><img
-                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
-                        align="absmiddle" />gNAP_3.0_linux_32bit</a></span><br />
+                        src="./assets/src/USTC_Software_Package_download.png"
+                        align="absmiddle" />gNAP_3.0_linux_32bit</a></span><br /> -->
             <span class="downloadbutton"><a class="content"
                     href="https://static.igem.org/mediawiki/2013/6/64/USTC_Software_GNAP_windows-32bit.zip"><img
-                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
+                        src="./assets/src/USTC_Software_Package_download.png"
                         align="absmiddle" />gNAP_3.0_windows_32bit/64bit</a></span><br />
             <span class="downloadbutton"><a class="content"
                     href="https://static.igem.org/mediawiki/2013/5/56/USTC_Software_GNAP_3.0_Mac_OS.zip"><img
-                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
-                        align="absmiddle" />gNAP_3.0_Mac_OS</span></a></br>
+                        src="./assets/src/USTC_Software_Package_download.png"
+                        align="absmiddle" />gNAP_3.0_Mac_OS</span></a><br>
             <span class="downloadbutton"><a class="content"
                     href="https://static.igem.org/mediawiki/2013/5/5f/USTC_Software_Clotho_App.zip"><img
-                        src="https://static.igem.org/mediawiki/2013/3/3c/USTC_Software_Package_download.png"
-                        align="absmiddle" />gRNA</span></a>
+                        src="./assets/src/USTC_Software_Package_download.png" align="absmiddle" />gRNA</span></a>
         </div>
     </div>
 </body>
