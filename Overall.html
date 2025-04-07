@@ -1,48 +1,21 @@
-{{USTC-Software/hidden}}
-
-{{USTC-Software/header2}}
-
-<!--{{USTC-Software/project}}-->
-
 <html>
 
 <head>
-
     <title>Overall</title>
-
-    <script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
-
     <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Overall/css?action=raw&ctype=text/css"
         type="text/css" />
     <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/css?action=raw&ctype=text/css"
         type="text/css" />
-
     <style>
         #overallbutton,
         #projectbutton {
             color: #aaed51 !important;
         }
     </style>
-
-<body>
-
-
-    <div id="direction">
-        <ul>
-            <li><a href="#Introduction" class="button">Introduction</a></li>
-
-            <li><a href="#Software" class="button">Software</a></li>
-
-            <li><a href="#Methodology" class="button">Methodology</a></li>
-
-            <li><a href=".db" class="button">Database</a></li>
-
-            <li><a href="#main" class="button">Top</a></li>
-
-        </ul>
-    </div>
-    <script type="text/javascript">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
         $(document).ready(function () {
+            $('#nav').load('nav.html');
             $(".button").click(function () {
                 var href = $(this).attr("href");
                 var pos = $(href).offset().top - 100;
@@ -51,36 +24,42 @@
             });
         });
     </script>
+    <div id="nav"></div>
+</head>
 
-
+<body>
+    <div id="direction">
+        <ul>
+            <li><a href="#Introduction" class="button">Introduction</a></li>
+            <li><a href="#Software" class="button">Software</a></li>
+            <li><a href="#Methodology" class="button">Methodology</a></li>
+            <li><a href=".db" class="button">Database</a></li>
+            <li><a href="#main" class="button">Top</a></li>
+        </ul>
+    </div>
     <div id="main">
-
-
         <div id="Introduction">
-
             <h1 align="justify">Overall</h1>
             <h2 align="justify">Introduction</h2>
             <p align="justify">Synthetic Biology is the design and construction of biological devices and systems for
                 useful purposes. It is an area of biological research and technology that combines biology with
                 engineering <a class="content" href="http://en.wikipedia.org/wiki/Synthetic_Biology">(From
                     Wikipedia)</a>. As a result, it is inevitable to import exogenous gene into engineered bacteria to
-                enhance special protein’s expression. But the result of import couldn’t be found out without cumbersome
+                enhance special protein's expression. But the result of import couldn't be found out without cumbersome
                 wet lab experiments. There will be some results out of control because the infect of gene regulatory
                 network(GRN) is rarely considered when finding imported gene.<br /><br />
                 Gene Network Analyze and Predict (gNAP) is a software which can model the interaction between genes and
                 figure out the expression of all genes in new GRN. Using alignment method, gNAP predicts the
-                interactions between new gene and original genes to construct a new GRN. What’s more, gNAP’s inverse
+                interactions between new gene and original genes to construct a new GRN. What's more, gNAP's inverse
                 modeling based on overall GRN gives advice to experimenters before choosing the imported gene meeting
                 their purpose.<br /><br />
                 gNAP is the FIRST software analyzing the infection of importing new exogenous gene into engineered
                 bacteria. Take a gNAP before your experiment!
             </p>
         </div>
-
-
         <div id="Software">
             <h2 align="justify">Software</h2>
-            <p align="justify">gNAP’s source code is written in C++ programming language and its visualization parts are
+            <p align="justify">gNAP's source code is written in C++ programming language and its visualization parts are
                 written in Java programming language. The GUI is designed with <a class="content"
                     href="http://qt-project.org/">Qt</a> which is based on C++ also. As a result, all of them can be
                 compiled across various platforms. The executable program has been built on Windows, Linux and MacOS
@@ -100,15 +79,10 @@
                 software “gNAP”. To improve the playability of this app, we reduced the difficulty of analysis in
                 purpose to investigate the analytical thinking ability of complex network regulation.
             </p>
-
         </div>
-
-
-
-
         <div id="Methodology">
             <h2 align="justify">Methodology</h2>
-            <p align="justify">In order to simulate the GRN’s working and analyze the change after exogenous gene
+            <p align="justify">In order to simulate the GRN's working and analyze the change after exogenous gene
                 imported, some advanced algorithms and classical methods have been employed in the software. These
                 algorithms and methods include Binary Tree method, Needle-Wunsch Algorithm, Decision Tree method, Hill
                 Equation and PSO Algorithm. To meet need of the analysis and prediction, our team innovatively improved
@@ -116,16 +90,13 @@
                 gNAP uses Binary Tree to filtrate useful information from database and construct them together as
                 resource for simulation afterward. Needle-Wunsch Alignment Algorithm, Decision Tree method and Hill
                 Equation are utilized to analyze the new GRN. On the other side, to figure out an advise for choosing
-                imported gene, PSO Algorithm finds out the best interaction meeting users’ needs.</p>
-
-
-
+                imported gene, PSO Algorithm finds out the best interaction meeting users' needs.</p>
             <div id="Methodology" class="db">
                 <h2 align="justify">Database</h2>
                 <p align="justify"> The database used in gNAP is flexible because the software could construct GRN on
                     any data sources. But because our team use <a class="content"
                         href="http://regulondb.ccg.unam.mx/index.jsp">RegulonDB</a> as an example to test gNAP, fetching
-                    mode built-in gNAP now only suit to the form of RegulonDB’s files. It is very easy to change the
+                    mode built-in gNAP now only suit to the form of RegulonDB's files. It is very easy to change the
                     format of importing based on the database. It should be a must that the files downloaded contain all
                     information needed in the software. Such as gene sequence, promoter sequence, mutual regulation,
                     gene name and so on.<br /><br />
@@ -135,15 +106,8 @@
                         class="content" href="http://regulondb.ccg.unam.mx/menu/download/datasets/index.jsp">[download
                         here]</a>
                 </p>
-
-
-
             </div>
-
-
         </div>
-
-
 </body>
 
 </html>
