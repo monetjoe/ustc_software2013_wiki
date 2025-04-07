@@ -1,0 +1,25 @@
+#cowork {
+    width: 1050px;
+    height: auto;
+    background: url(../src/M_1243691170517.jpg) repeat !important;
+    box-shadow: #999 3px 3px 3px;
+    margin: 120px auto;
+}
+
+#cowork .content {
+    width: 920px;
+    margin: 10px auto;
+}
+
+#cowork .content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#cowork .string {
+    width: 920px;
+}
+
+#cowork .string p {
+    width: 920px;
+}
