@@ -32,30 +32,6 @@ div.contain {
     margin-left: -20px;
 }
 
-
-/* #Tutorial {
-    margin-left: 0;
-    height: auto;
-}
-
-
-#Tutorial .left {
-    width: 460px;
-    height: auto;
-    float: left;
-    margin-left: 25px;
-    margin-top: 5px;
-}
-
-
-#Tutorial .right {
-    width: 460px;
-    float: right;
-    margin-right: -25px;
-    height: 400px;
-    padding-top: 70px;
-} */
-
 #Code {
     clear: both;
     position: relative;
