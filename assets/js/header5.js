@@ -1,13 +1,10 @@
-
-
-; (function ($) {
-    $.fn.diapo = function (opts, callback) {
+(function ($) {
+    $.fn.diapo = function (opts, _) {
 
         var defaults = {
             selector: 'div',	//target element
 
             fx: 'random',
-
 
             mobileFx: '',	//leave empty if you want to display the same effect on mobile devices and on desktop etc.
 
@@ -50,9 +47,6 @@
             mobileCommands: true,	//true, false. It enables stop and play buttons on mobile devices
 
             pagination: true,
-
-
-
 
             mobilePagination: true,	//true, false. It enables the pagination numbers on mobile devices
 
@@ -100,16 +94,10 @@
         }
 
         var opts = $.extend({}, defaults, opts);
-
         var elem = this;
-
         var h = elem.height();
         var w = elem.width();
-
         var u;
-
-
-
         var clickEv,
             autoAdv,
             navigation,
@@ -157,9 +145,6 @@
             pagination = opts.pagination;
         }
 
-
-
-
         function loadimages(imgArr, callback) {
             if (!$.browser.msie || ($.browser.msie && $.browser.version == 9)) {
                 var imagesLoaded = 0;
@@ -184,16 +169,10 @@
             }
         }
 
-
-
         if (elem.length != 0) {
-
             var selector = $('> ' + opts.selector, elem).not('#pix_canvas').not('#pix_canvas_wrap').not('#pix_next').not('#pix_prev').not('#pix_commands');
             selector.wrapInner('<div class="pix_relativize" style="width:' + w + 'px; height:' + h + 'px" />');	//wrap a div for the position of absolute elements
             var amountSlide = selector.length;    //how many sliders
-
-            var nav;	//nextSlide(nav)
-
             function imgFake() {	//this function replace elements such as iframes or objects with an image stored in data-fake attribute
                 $('*[data-fake]', elem).each(function () {
                     var t = $(this);
@@ -212,7 +191,6 @@
             }
 
             imgFake();
-
 
             if (opts.hover == true) {	//if the option "hover" is true I stop the slideshow on mouse over and I resume it on mouse out
                 if (!isMobile()) {
@@ -246,7 +224,6 @@
                     });
                 }
             }
-
 
             $.fn.diapoStop = function () {
                 autoAdv = false;
@@ -301,7 +278,6 @@
                 });
             }
 
-
             var allImg = new Array();	//I create an array for the images of the slideshow
             $('img', elem).each(function () {
                 allImg.push($(this).attr('src'));	//all the images are pushed in the array
@@ -328,11 +304,8 @@
                 });
             }
 
-
             loadimages(allImg, nextSlide);	//when all the images in the array are loaded nextSlide function starts
-
         }
-
 
         function shuffle(arr) {	//to randomize the effect
             for (
@@ -341,10 +314,6 @@
                 x = arr[--i], arr[i] = arr[j], arr[j] = x
             );
             return arr;
-        }
-
-        function isInteger(s) {	//to check if a number is integer
-            return Math.ceil(s) == Math.floor(s);
         }
 
         if (($.browser.msie && $.browser.version < 9) || opts.loader == 'bar') {	//IE8- has some problems with canvas, I prefer to use a simple loading bar in CSS
@@ -358,7 +327,6 @@
             canvas.css({ 'position': 'absolute', 'left': 0, 'z-index': 1001, 'height': opts.barStroke, 'width': 0, 'background-color': opts.loaderColor });
         } else {
             elem.append('<canvas id="pix_canvas"></canvas>');
-            var G_vmlCanvasManager;
             var canvas = document.getElementById("pix_canvas");
             canvas.setAttribute("width", opts.pieDiameter);
             canvas.setAttribute("height", opts.pieDiameter);
@@ -433,17 +401,13 @@
             }
         }
 
-
         canvasLoader();
-
 
         $('.fromLeft, .fromRight, .fromTop, .fromBottom, .fadeIn').each(function () {
             $(this).css('visibility', 'hidden');
         });
 
-
         /*************************** FUNCTION nextSlide() ***************************/
-
         function nextSlide(nav) {    //funzione per il fading delle immagini
             elem.addClass('diaposliding');	//aggiunge una classe che mi dice che il fading è in corso
 
@@ -457,8 +421,6 @@
                 var i = vis + 1;
             }
 
-
-
             var rows = opts.rows,
                 cols = opts.cols,
                 couples = 1,
@@ -470,7 +432,6 @@
                 randomFx = new Array('simpleFade', 'curtainTopLeft', 'curtainTopRight', 'curtainBottomLeft', 'curtainBottomRight', 'curtainSliceLeft', 'curtainSliceRight', 'blindCurtainTopLeft', 'blindCurtainTopRight', 'blindCurtainBottomLeft', 'blindCurtainBottomRight', 'blindCurtainSliceBottom', 'blindCurtainSliceTop', 'stampede', 'mosaic', 'mosaicReverse', 'mosaicRandom', 'mosaicSpiral', 'mosaicSpiralReverse', 'topLeftBottomRight', 'bottomRightTopLeft', 'bottomLeftTopRight', 'bottomLeftTopRight', 'scrollLeft', 'scrollRight', 'scrollTop', 'scrollBottom', 'scrollHorz');
             marginLeft = 0,
                 marginTop = 0;
-
 
             if (isMobile()) {
                 var dataFx = selector.eq(i).attr('data-fx');
@@ -748,8 +709,6 @@
                 cycle++;
             }
 
-
-
             switch (fx) {
                 case 'curtainTopLeft':
                     break;
@@ -869,8 +828,6 @@
                     delay = order;
                     break;
             }
-
-
 
             $.each(arr, function (index, value) {
 
@@ -1060,14 +1017,12 @@
                         break;
                 }
 
-
                 var tApp = $('.diapoappended:eq(' + value + ')');
 
                 if (typeof u !== 'undefined') {
                     clearInterval(u);
                     setTimeout(canvasLoader, opts.transPeriod + difference);
                 }
-
 
                 function diapoeased() {
                     $(this).addClass('diapoeased');
@@ -1091,11 +1046,8 @@
                                 }
                                 var t = $(this);
                                 var wMoveIn = t.width();
-                                var hMoveIn = t.outerHeight();
                                 t.css('width', wMoveIn);
                                 var pos = t.position();
-                                var left = pos.left;
-                                var top = pos.top;
                                 var tClass = t.attr('class');
                                 var ind = t.index();
                                 var hRel = t.parents('.pix_relativize').height();
@@ -1117,8 +1069,6 @@
                                 }
                             });
                         }
-
-
 
                         $('.diapoappended').remove();
                         elem.removeClass('diaposliding');	//I remove this class, that means the effect is finished
@@ -1177,9 +1127,7 @@
                             }, (time) * 0.01
                         );
                     }
-
                 }
-
 
                 if (pagination == true) {
                     $('#pix_pag li').removeClass('diapocurrent');
@@ -1241,8 +1189,6 @@
                     }
                 }
 
-
-
                 if (navigation == true) {
                     $('#pix_prev')[clickEv](function () {
                         if (!elem.hasClass('diaposliding')) {
@@ -1275,9 +1221,8 @@
                     });
                 }
 
-
                 if (isMobile()) {
-                    elem.live('swipeleft', function (event) {
+                    elem.live('swipeleft', function () {
                         if (!elem.hasClass('diaposliding')) {
                             var idNum = parseFloat($('div.diapocurrent', elem).index());
                             clearInterval(u);
@@ -1339,19 +1284,8 @@
                         }
                     });
                 }
-
-
-
             });
-
-
-
-
         }
-
-
-
-
     }
 
 })(jQuery);
