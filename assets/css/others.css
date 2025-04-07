@@ -4,10 +4,10 @@ body {
 
 #safety {
     width: 1050px;
-    margin: 100px auto;
+    margin: 120px auto;
     height: auto;
     background-color: #e2e1e1;
-    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat !important;
+    background: url(../src/M_1243691170517.jpg) repeat !important;
     box-shadow: #999 3px 3px 3px;
     padding-top: 30px;
 }
@@ -77,9 +77,9 @@ body {
 #hp {
     width: 1050px;
     height: auto;
-    margin: 100px auto;
+    margin: 120px auto;
     box-shadow: 3px 3px 3px #999;
-    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat !important;
+    background: url(../src/M_1243691170517.jpg) repeat !important;
 }
 
 #hp .head {
