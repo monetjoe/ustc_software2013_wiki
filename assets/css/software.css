@@ -1,12 +1,12 @@
 #first {
-    width: 1000px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0 auto;
 }
 
 #second {
-    width: 1000px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0 auto;
@@ -23,7 +23,7 @@
 div.contain {
     font: 16px Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    width: 960px;
+    width: 100%;
     height: auto;
 }
 
@@ -32,27 +32,21 @@ div.contain {
     margin-left: -20px;
 }
 
-
 #Tutorial {
-    margin-left: 0;
     height: auto;
 }
 
-
 #Tutorial .left {
-    width: 460px;
+    width: 50%;
     height: auto;
     float: left;
-    margin-left: 25px;
     margin-top: 5px;
 }
 
-
 #Tutorial .right {
-    width: 460px;
+    width: 50%;
     float: right;
-    margin-right: -25px;
-    height: 400px;
+    height: auto;
     padding-top: 70px;
 }
 
@@ -67,21 +61,17 @@ div.contain {
     height: 60px;
 }
 
-
 a:hover {
     text-decoration: none;
 }
 
-
 .image img {
-    width: 960px;
+    width: 100%;
 }
-
 
 #softwarebutton {
     color: #aaed51;
 }
-
 
 #left_direction {
     width: 130px;
@@ -89,7 +79,7 @@ a:hover {
     float: left;
     position: fixed;
     top: 40%;
-    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;
+    background: url(../src/M_1243691170517.jpg) repeat;
     border-radius: 5px;
     box-shadow: #999 3px 3px 1px;
 }
@@ -107,4 +97,9 @@ a:hover {
 #left_direction ul li a:hover {
     color: #aaed51;
     opacity: 1;
+}
+
+iframe {
+    aspect-ratio: 4 / 3;
+    width: 90%;
 }

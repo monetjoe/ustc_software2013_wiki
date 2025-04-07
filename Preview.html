@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Future Work</title>
-    <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/future/css?action=raw&ctype=text/css"
-        type="text/css" />
-    <style>
-        #futurebutton,
-        #projectbutton {
-            color: #aaed51 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/future.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(document).ready(function () {
-            $(".button").click(function () {
-                var href = $(this).attr("href");
-                var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker 
-            });
-        });
-    </script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -29,8 +14,8 @@
         <ul>
             <li><a href="#TT" class="button">Regulation Prediction</a></li>
             <li><a href="#TG" class="button">Simulation</a></li>
-            <li><a href=".cpa" class="button">Converse Prediction Accuracy</a></li>
-            <li><a href=".vg" class="button">Visualization GUI</a></li>
+            <li><a href="#TI" class="button">Converse Prediction Accuracy</a></li>
+            <li><a href="#TI" class="button">Visualization GUI</a></li>
             <li><a href="#main" class="button">Top</a></li>
         </ul>
     </div>
@@ -62,7 +47,7 @@
                 simulation will also be a part. In the same time, it will be a good attempt to add other ways of
                 simulation.</p>
         </div>
-        <div id="TI" class="cpa">
+        <div id="TI">
             <h2 align="justify">Converse Prediction Accuracy</h2>
             <p align="justify">PSO algorithm depends on the number of particles and precision, but it will increase the
                 time of calculation, of course. We are trying to combine different optimal methods such as genetic
@@ -71,7 +56,7 @@
             <p align="justify">For giving a better directivity, we are trying to pick out the really useful data of
                 prediction to the users. And users could choose what they need more efficiently.</p>
         </div>
-        <div id="TI" class="vg">
+        <div id="TI">
             <h2 align="justify">Visualization GUI</h2>
             <p align="justify">A fantastically visualized UI is a key point of good software, more friendly control,
                 more vivid data visualization, better network output. All of them will be a big part of our future work

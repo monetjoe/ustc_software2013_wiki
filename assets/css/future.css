@@ -1,0 +1,45 @@
+#futurebutton {
+    color: #aaed51;
+}
+
+h1 {
+    display: block;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    margin-top: 100px;
+}
+
+#TT {
+    width: 100%;
+    margin: 0 auto;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+#TG {
+    width: 100%;
+    margin: 0 auto;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+#GI {
+    width: 100%;
+    margin: 0 auto;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+#PI {
+    width: 100%;
+    margin: 0 auto;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+#TI {
+    width: 100%;
+    margin: 0 auto;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+img#pictures {
+    width: 100%;
+}
