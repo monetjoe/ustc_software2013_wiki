@@ -4,9 +4,9 @@ The source code of remade [USTC-Software 2013](https://github.com/igemsoftware/U
 
 [![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki.svg)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
 
-We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGem 2013!
+We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGEM 2013!
 
-##Introduction##
+## Introduction
 Our application aims to simulate gene networks. The application analyzes the stability and the change of gene networks after introduction of exogenous genes. Meanwhile, given the original network and specific purposes, the application traces the regulative process back and gives possible regulative patterns.
 
 ## About Our Software
@@ -18,19 +18,15 @@ This software contains four parts, dealing with separate functions in forward an
 * 4. Display
 
 #### Start
-
 >**Start** is used to prepare for the later analysis and prediction. In this part, users could input their database downloaded on Internet and sequences of exogenous gene which is needed to analyse. Also, if not input sequence in **Start**, users could also use the "Predict" function in next part.
 
 #### Monitor
-
 >**Monitor** undertakes several functions of our software as the core methods of **gNAP**. First of them is **Analyse** function which figure out the network change when input an exogenous gene. In the same time a score presenting stablility of new GRN by statist stable time and value variation for lots of times. **Analyse** result could be saw intuitively in **Result** part next. Secondly, **Predict** function use target gene exprssion to figure out possible interaction whose result could also receive in **Result**.
 
 #### Result
-
 >**Result** is a output part which contains all results of operations used. It is easy to read each gene's information and changing consequence in this part. What's more, all gene information could be output in [SBOL](http://www.sbolstandard.org/).
 
 #### Display
-
 >**Display** is the data visualization part of our software. To reach a more vivid output data, this part had been written in JAVA. There are three parts in **Display**: ShowRegulation, ShowChange and ShowNetwork.
 
 ### gFinder: Gene Finder
@@ -61,6 +57,7 @@ gFinder is a website software which do not need to executable program. Website:H
 /Executable/gRNA/
 This floder contains the executable program file of "gFinder" which could be ran on all those platforms.
 ```
+
 Source Code:
 ```bash
 /Source Code/gNAP/
@@ -86,6 +83,7 @@ The command line source files were written in C++ language and its GUI were embe
 /Source Code/gRNA/
 This floder contains the source code files of "gRNA" which were written in Java language.
 ```
+
 Source Data:
 ```bash
 /Source Data/
