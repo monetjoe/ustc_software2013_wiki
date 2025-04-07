@@ -120,14 +120,14 @@
 }
 
 .camera_target_content .camera_link {
-    background: url url(https://static.igem.org/mediawiki/2013/3/3e/USTC-Software_Blank.gif);
+    background: url url(../src/USTC-Software_Blank.gif);
     display: block;
     height: 100%;
     text-decoration: none;
 }
 
 .camera_loader {
-    background: #fff url(https://static.igem.org/mediawiki/2013/1/14/USTC-Software_Camera-loader.gif) no-repeat center;
+    background: #fff url(../src/USTC-Software_Camera-loader.gif) no-repeat center;
     background: rgba(255, 255, 255, 0.9) url(../pictures/camera-loader.gif) no-repeat center;
     border: 1px solid #ffffff;
     -webkit-border-radius: 18px;
@@ -209,7 +209,7 @@
 }
 
 .camera_prevThumbs div {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat -160px 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat -160px 0;
     display: block;
     height: 40px;
     margin-top: -20px;
@@ -230,7 +230,7 @@
 }
 
 .camera_nextThumbs div {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat -190px 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat -190px 0;
     display: block;
     height: 40px;
     margin-top: -20px;
@@ -344,7 +344,7 @@
 }
 
 .camera_prev>span {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat 0 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat 0 0;
     display: block;
     height: 40px;
     width: 40px;
@@ -355,7 +355,7 @@
 }
 
 .camera_next>span {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat -40px 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat -40px 0;
     display: block;
     height: 40px;
     width: 40px;
@@ -366,13 +366,13 @@
 }
 
 .camera_commands>.camera_play {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat -80px 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat -80px 0;
     height: 40px;
     width: 40px;
 }
 
 .camera_commands>.camera_stop {
-    background: url(https://static.igem.org/mediawiki/2013/3/33/USTC-Software_Camera_skins.png) no-repeat -120px 0;
+    background: url(../src/USTC-Software_Camera_skins.png) no-repeat -120px 0;
     display: block;
     height: 40px;
     width: 40px;
@@ -462,43 +462,43 @@
 *
 **************************/
 .pattern_1 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/7/7f/USTC-Software_Overlay1.png) repeat;
+    background: url(../src/USTC-Software_Overlay1.png) repeat;
 }
 
 .pattern_2 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/4/44/USTC-Software_Overlay2.png) repeat;
+    background: url(../src/USTC-Software_Overlay2.png) repeat;
 }
 
 .pattern_3 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/c/c9/USTC-Software_Overlay3.png) repeat;
+    background: url(../src/USTC-Software_Overlay3.png) repeat;
 }
 
 .pattern_4 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/e/ec/USTC-Software_Overlay4.png) repeat;
+    background: url(../src/USTC-Software_Overlay4.png) repeat;
 }
 
 .pattern_5 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/f/f3/USTC-Software_Overlay5.png) repeat;
+    background: url(../src/USTC-Software_Overlay5.png) repeat;
 }
 
 .pattern_6 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/4/41/USTC-Software_Overlay6.png) repeat;
+    background: url(../src/USTC-Software_Overlay6.png) repeat;
 }
 
 .pattern_7 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/2/28/USTC-Software_Overlay7.png) repeat;
+    background: url(../src/USTC-Software_Overlay7.png) repeat;
 }
 
 .pattern_8 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/3/3a/USTC-Software_Overlay8.png) repeat;
+    background: url(../src/USTC-Software_Overlay8.png) repeat;
 }
 
 .pattern_9 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/b/b3/USTC-Software_Overlay9.png) repeat;
+    background: url(../src/USTC-Software_Overlay9.png) repeat;
 }
 
 .pattern_10 .camera_overlayer {
-    background: url(https://static.igem.org/mediawiki/2013/4/4e/USTC-Software_Overlay10.png) repeat;
+    background: url(../src/USTC-Software_Overlay10.png) repeat;
 }
 
 .camera_caption {

@@ -129,7 +129,7 @@ body {
 .more {
     height: 35px;
     width: 70px;
-    background: url(https://static.igem.org/mediawiki/2012/7/70/More.png) no-repeat center;
+    background: url(../src/More.png) no-repeat center;
     float: right;
     margin-top: -20px;
 }
@@ -137,7 +137,7 @@ body {
 .more:hover {
     height: 35px;
     width: 70px;
-    background: url(https://static.igem.org/mediawiki/2012/f/f5/USTC_Software_More.gif) no-repeat center;
+    background: url(../src/USTC_Software_More.gif) no-repeat center;
 }
 
 
