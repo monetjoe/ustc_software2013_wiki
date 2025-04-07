@@ -3,43 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Software</title>
-    <style>
-        #first {
-            width: 1000px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-        }
-
-
-
-        #second {
-            width: 1000px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-        }
-
-        #dlink a {
-            font: 16px Arial, Helvetica, sans-serif;
-        }
-
-        #clothobutton {
-            color: #aaed51 !important;
-        }
-    </style>
     <link rel="stylesheet" href="./assets/css/software.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(document).ready(function () {
-            $(".button").click(function () {
-                var href = $(this).attr("href");
-                var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker
-            });
-        });
-    </script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -65,8 +32,7 @@
     </div>
     <div id="main">
         <div id="title" class="contain">
-            <div align="left" style="margin-left:20px;"><img
-                    src="https://static.igem.org/mediawiki/2013/b/bd/USTC_Software_Gnap.png" />
+            <div align="left" style="margin-left:20px;"><img src="./assets/src/USTC_Software_Gnap.png" />
             </div>
         </div>
         <div id="abstract" class="contain">
@@ -84,8 +50,7 @@
         </div>
         <div id="Starter" class="contain">
             <h2>Starter</h2>
-            <div class="image" align="center"><img
-                    src="https://static.igem.org/mediawiki/2013/3/36/USTC-Software_start.png" /></div>
+            <div class="image" align="center"><img src="./assets/src/USTC-Software_start.png" /></div>
             <p align="justify">“Starter” has only one button which could lead users to input all information needed for
                 the next simulation and get ready to start. It is an easy-to-use interface guiding users to complete the
                 operation according to the prompts. The exogenous transcription unit's promoter and gene sequence shall
@@ -98,11 +63,9 @@
         </div>
         <div id="Monitor" class="contain">
             <h2>Monitor</h2>
-            <div class="image" align="center"><img
-                    src="https://static.igem.org/mediawiki/2013/a/aa/USTC_Software_start.jpg" /></div>
+            <div class="image" align="center"><img src="./assets/src/USTC_Software_start.jpg" /></div>
             <p>This shows the function of forward analysis.</p>
-            <div class="image" align="center"><img
-                    src="https://static.igem.org/mediawiki/2013/8/8a/USTC-Software_monitor.png" /></div>
+            <div class="image" align="center"><img src="./assets/src/USTC-Software_monitor.png" /></div>
             <p>This shows the function of reverse analysis.</p>
             <p align="justify">"Monitor" is one of the main module of our software as a monitor keeping watch on
                 running. The command lines in "Monitor" intuitively shows the detail in the process of software running.
@@ -118,8 +81,7 @@
         </div>
         <div id="Result" class="contain">
             <h2>Result</h2>
-            <div class="image" align="center"><img
-                    src="https://static.igem.org/mediawiki/2013/8/89/USTC_Software_Software_result.png" /></div>
+            <div class="image" align="center"><img src="./assets/src/USTC_Software_Software_result.png" /></div>
             <p align="justify">"Result" uses simply words to show the results of all functions of gNAP intuitively.
                 There are two parts in the interface showing different results about the modules of analyze and predict.
                 <br /><br />
@@ -144,35 +106,26 @@
                 and shown in a small network.
             </p>
         </div>
-        <div class="image" align="center"><img
-                src="https://static.igem.org/mediawiki/2013/2/29/USTC_Software_Display.png" /></div>
+        <div class="image" align="center"><img src="./assets/src/USTC_Software_Display.png" /></div>
         <div id="Tutorial" class="contain">
-            <div class="left">
-                <h2>Tutorial</h2>
-                <p align="justify">The tutorial of gNAP contains 3 parts: Help Document, Quick Start, and Instruction
-                    Video.<br /><br />
-                    Help Document is a PDF document which collects all of the information and operation details of the
-                    application. It will be helpful for users who want to carefully understand our software because it
-                    contains all details about gNAP using. If you are interested in gNAP and hope to start in a minute,
-                    Quick Start will be the best approach.<br /><br />
-                    Quick Start is designed for beginners, especially for those who need to know the basic operation of
-                    gNAP. With no doubt, it is brief and will help the users starting using gNAP and doing his work in a
-                    convenient and swift way by several pictures with short instructive sentences.<br><br>
-                    Instruction Video uploaded on YouTube is also tailored for novices. It shows the operation in a
-                    dynamic status, which makes the operation vividly and easy-to-learn.</p>
-            </div>
-            <div class="right" align="center">
-                <iframe width="440" height="330" src="http://www.youtube.com/embed/F6Y6WAxUSws" frameborder="0"
-                    allowfullscreen="true"></iframe>
-                <p>PDF Download</p>
-                <a href="./assets/doc/USTC_Software_QucikStart.pdf" style="color:#8cc63f;"><b>*QucikStart</b></a><br />
-                <a href="./assets/doc/USTC_Software_Tutorial.pdf" style="color:#8cc63f;"><b>*Tutorial</b></a>
-            </div>
+            <h2>Tutorial</h2>
+            <p align="justify">The tutorial of gNAP contains <a href="./assets/doc/USTC_Software_Tutorial.pdf"
+                    style="color:#8cc63f;">Help Document</a> and <a href="./assets/doc/USTC_Software_QucikStart.pdf"
+                    style="color:#8cc63f;">Quick Start</a>.<br /><br />
+                Help Document is a PDF document which collects all of the information and operation details of the
+                application. It will be helpful for users who want to carefully understand our software because it
+                contains all details about gNAP using. If you are interested in gNAP and hope to start in a minute,
+                Quick Start will be the best approach.<br /><br />
+                Quick Start is designed for beginners, especially for those who need to know the basic operation of
+                gNAP. With no doubt, it is brief and will help the users starting using gNAP and doing his work in a
+                convenient and swift way by several pictures with short instructive sentences.<br><br>
+                Instruction Video uploaded on YouTube is also tailored for novices. It shows the operation in a
+                dynamic status, which makes the operation vividly and easy-to-learn.</p>
         </div>
         <div id="Code" class="contain">
             <h2>Code</h2>
             <p align="justify">All source code of our software have been pushed up to <a class="content"
-                    href="https://github.com/igemsoftware/USTC-Software2013">Github</a> and there is a help document
+                    href="https://github.com/igemsoftware/USTC-Software2013">GitHub</a> and there is a help document
                 generated by Doxygen based on our notations in the command lines. You can download the PDF file [here]
                 which contains the introductions about all Classes and Functions used in our software.<br /><br />
                 The command line source files are written in C++ language and visualization part are written in Java
@@ -183,11 +136,11 @@
         <div id="Summary" class="contain">
             <h2>Summary</h2>
             <p align="justify">In general, most mathematical models were used for analyze the experimental results. <a
-                    class="content" href="http://ibis.inrialpes.fr/article122.html">GNA</a> also analyze the GRN but
-                just focus on regulation in original network. However, our software focuses on the infection of imported
-                gene which is quite usual in synthetic biology instead of analyze the GRN only. In the same time, gNAP
-                uses various algorithms and methotheir lab gloves will be really useful to researchers and save them a
-                lot of time.</p>
+                    class="content" href="https://team.inria.fr/microcosme/genetic-network-analyzer-gna">GNA</a> also
+                analyze the GRN but just focus on regulation in original network. However, our software focuses on the
+                infection of imported gene which is quite usual in synthetic biology instead of analyze the GRN only. In
+                the same time, gNAP uses various algorithms and methotheir lab gloves will be really useful to
+                researchers and save them a lot of time.</p>
         </div>
         <div id="gFinder"><!--gFinder-->
             <h1 style="margin-top:0px;">gFinder: Gene Finder</h1>
@@ -261,14 +214,10 @@
                 <p>• If you want to quit game, press back button on the right-up corner.</p>
                 <p>• There are 10 levels waiting for you! Good luck and have fun!</p>
             </div>
-            <div id="Download" class="contain">
-                <h2>Download</h2>
+            <div id="Download">
+                <h1 style="margin-top:0px;">Download</h1>
                 <p>You can download the ZIP files including Executable Program build on Windows, MacOS and Linux here:
                 </p>
-                <!-- <span class="downloadbutton"><a class="content"
-                    href="https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_GNAP-3.0-linux-32bit.zip"><img
-                        src="./assets/src/USTC_Software_Package_download.png"
-                        align="absmiddle" />gNAP_3.0_linux_32bit</a></span><br /> -->
                 <span class="downloadbutton"><a class="content"
                         href="./assets/bin/USTC_Software_GNAP_windows-32bit.zip"><img
                             src="./assets/src/USTC_Software_Package_download.png"
