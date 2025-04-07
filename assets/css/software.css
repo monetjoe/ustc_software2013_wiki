@@ -1,3 +1,25 @@
+#first {
+    width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+#second {
+    width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+#dlink a {
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+#clothobutton {
+    color: #aaed51 !important;
+}
+
 div.contain {
     font: 16px Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -11,7 +33,7 @@ div.contain {
 }
 
 
-#Tutorial {
+/* #Tutorial {
     margin-left: 0;
     height: auto;
 }
@@ -32,7 +54,7 @@ div.contain {
     margin-right: -25px;
     height: 400px;
     padding-top: 70px;
-}
+} */
 
 #Code {
     clear: both;
