@@ -1,0 +1,93 @@
+h1 {
+    text-decoration: none;
+}
+
+#abstract {
+    font: 16px Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
+#Fetch_Database {
+    font: 16px Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#Alignment_Analyze {
+    font: 16px Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#New_Network_Construction {
+    font: 16px Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#Network_Model {
+    font: 16px Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#Predict {
+    font: 16px Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#jobs_container {
+    position: relative;
+    width: 100%;
+}
+
+.jobs_trigger {
+    background: url(https://static.igem.org/mediawiki/2012/6/64/USTC-Software_Bg_trigger_status.png) no-repeat 12px 12px;
+    height: 15px;
+    line-height: 15px;
+    border-top: 1px solid #b1b1b1;
+    cursor: pointer;
+    padding: 7px 15px;
+}
+
+.jobs_trigger.active {
+    background-position: 12px -40px;
+}
+
+.jobs_trigger strong {
+    margin-left: 25px;
+    font: 14px Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #36526c;
+}
+
+.jobs_item {
+    padding: 1px 15px 12px;
+}
+
+.jobs_item p {
+    margin: 11px 0 0;
+}
+
+#pseudo {
+    width: 600px;
+    height: auto;
+    color: #000;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    border: 2px #000 dashed;
+    margin: 0 auto;
+}
+
+#methodbutton {
+    color: #aaed51;
+}
