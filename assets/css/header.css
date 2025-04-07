@@ -33,12 +33,12 @@
 }
 
 #pix_prev {
-    background: url(https://static.igem.org/mediawiki/2013/6/60/USTC_Software_Prev.png) no-repeat;
+    background: url(../src/USTC_Software_Prev.png) no-repeat;
     left: 0px;
 }
 
 #pix_next {
-    background: url(https://static.igem.org/mediawiki/2013/5/5e/USTC_Software_Next.png) no-repeat;
+    background: url(../src/USTC_Software_Next.png) no-repeat;
     left: auto !important;
     right: 0px !important;
 }
@@ -61,7 +61,7 @@
 }
 
 #pix_play {
-    background: url(https://static.igem.org/mediawiki/2013/4/45/USTC_Software_play.png) center no-repeat;
+    background: url(../src/USTC_Software_play.png) center no-repeat;
     height: 24px;
     left: 0;
     position: absolute;
@@ -70,7 +70,7 @@
 }
 
 #pix_stop {
-    background: url(https://static.igem.org/mediawiki/2013/c/ce/USTC_Software_Stop.png) center no-repeat;
+    background: url(../src/USTC_Software_Stop.png) center no-repeat;
     height: 24px;
     left: 0;
     position: absolute;

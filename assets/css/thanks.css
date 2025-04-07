@@ -45,23 +45,23 @@
 }
 
 .img .mask1 {
-    background: url(https://static.igem.org/mediawiki/2013/3/36/USTC_Software_Db_mask.png) center no-repeat;
+    background: url(../src/USTC_Software_Db_mask.png) center no-repeat;
 }
 
 .img .mask2 {
-    background: url(https://static.igem.org/mediawiki/2013/7/72/USTC_Software_USTCIF_mask.png) center no-repeat;
+    background: url(../src/USTC_Software_USTCIF_mask.png) center no-repeat;
 }
 
 .img .mask3 {
-    background: url(https://static.igem.org/mediawiki/2013/9/90/USTC_Software_Teaching_mask.png) center no-repeat;
+    background: url(../src/USTC_Software_Teaching_mask.png) center no-repeat;
 }
 
 .img .mask4 {
-    background: url(https://static.igem.org/mediawiki/2013/5/52/USTC_Software_Physics_mask.png) center no-repeat;
+    background: url(../src/USTC_Software_Physics_mask.png) center no-repeat;
 }
 
 .img .mask5 {
-    background: url(https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_Life_mask.png) center no-repeat;
+    background: url(../src/USTC_Software_Life_mask.png) center no-repeat;
 }
 
 #img:hover .mask1,

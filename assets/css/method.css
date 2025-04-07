@@ -51,7 +51,7 @@ h1 {
 }
 
 .jobs_trigger {
-    background: url(https://static.igem.org/mediawiki/2012/6/64/USTC-Software_Bg_trigger_status.png) no-repeat 12px 12px;
+    background: url(../src/USTC-Software_Bg_trigger_status.png) no-repeat 12px 12px;
     height: 15px;
     line-height: 15px;
     border-top: 1px solid #b1b1b1;
