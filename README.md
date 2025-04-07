@@ -114,7 +114,7 @@ and, compile source code:
 Mac OS X:
 open a terminal:
     cd gNAP-view
-    sudo brew install ant(or get ant with source code)
+    sudo brew install ant (or get ant with source code)
 and, compile source code:
     ant
 
@@ -141,5 +141,5 @@ All softwares which could compile Java are usable to compile this small game. Al
 
 ## Contacts
 For any questions, feel free to contact:<br>
-Chenkun Wang(ustckun@gmail.com)<br>
-Jinyang Li(jinyangustc@gmail.com)
+Chenkun Wang (ustckun@gmail.com)<br>
+Jinyang Li (jinyangustc@gmail.com)
