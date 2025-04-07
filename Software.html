@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Software</title>
-    <link rel="stylesheet"
-        href="https://2013.igem.org/Team:USTC-Software/Project/App_Clotho/css?action=raw&ctype=text/css"
-        type="text/css" />
-    <link rel="stylesheet"
-        href="https://2013.igem.org/Team:USTC-Software/Project/Software/css?action=raw&ctype=text/css"
-        type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #first {
+            width: 1000px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+
+
+
+        #second {
+            width: 1000px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+
+        #dlink a {
+            font: 16px Arial, Helvetica, sans-serif;
+        }
+
+        #clothobutton {
+            color: #aaed51 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/css/software.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script>
         $(document).ready(function () {
@@ -26,18 +46,18 @@
     <div id="direction">
         <ul>
             <li><a href="#title" class="button">gNAP</a><br>
-                <a href="#Starter" class="button" id="subbutton">Starter</a><br>
-                <a href="#Monitor" class="button" id="subbutton">Monitor</a><br>
-                <a href="#Result" class="button" id="subbutton">Result</a><br>
-                <a href="#Display" class="button" id="subbutton">Display</a><br>
-                <a href="#Tutorial" class="button" id="subbutton">Tutorial</a><br>
-                <a href="#Code" class="button" id="subbutton">Code</a><br>
-                <a href="#Summary" class="button" id="subbutton">Summary</a><br>
+                <a href="#Starter" class="button subbutton">Starter</a><br>
+                <a href="#Monitor" class="button subbutton">Monitor</a><br>
+                <a href="#Result" class="button subbutton">Result</a><br>
+                <a href="#Display" class="button subbutton">Display</a><br>
+                <a href="#Tutorial" class="button subbutton">Tutorial</a><br>
+                <a href="#Code" class="button subbutton">Code</a><br>
+                <a href="#Summary" class="button subbutton">Summary</a><br>
             </li>
-            <li><a href=".gFinder" class="button">gFinder</a></li>
-            <li><a href=".gRNA" class="button">gRNA</a><br>
-                <a href="#first" class="button" id="subbutton">Introduction</a><br>
-                <a href="#second" class="button" id="subbutton">Tutorial</a>
+            <li><a href="#gFinder" class="button subbutton">gFinder</a></li>
+            <li><a href="#gRNA" class="button subbutton">gRNA</a><br>
+                <a href="#first" class="button subbutton">Introduction</a><br>
+                <a href="#second" class="button subbutton">Tutorial</a>
             </li>
             <li><a href="#Download" class="button">Download</a></li>
             <li><a href="#title" class="button">Top</a></li>
@@ -169,80 +189,97 @@
                 uses various algorithms and methotheir lab gloves will be really useful to researchers and save them a
                 lot of time.</p>
         </div>
-    </div>
-    <div id="main" class="gFinder"><!--gFinder-->
-        <h1 style="margin-top:0px;">gFinder: Gene Finder</h1>
-        <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder2.jpg" /></div>
-        <p align="justify">gFinder is a web app which you can visit here<a
-                href="http://gfinder.stlover.org:8080/static/" class="content"></a>. It could be used to find the
-            specific gene with target regulations.<br><br>
-            For example, if users need to find a gene which can enhance geneA's expression, depress geneB's expression,
-            enhance..., gFinder can find a gene whose function is similar most from the database. So, with the help of
-            gFinder, the reverse analysis result of gNAP, our main software, can step forward. We could get the specific
-            gene for target expression instead of some interactions. Users could also input the known regulation to get
-            the specific gene from database.
-        </p>
-        <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder1.jpg" /></div>
-        <p align="justify">About our database, it is a pity that there are no integral databases available containing
-            information of such giant gene regulatory network. So in our software, we use some specific gene sequence
-            segments to create a network. In fact, all genes there is virtual gene. For future development, we also left
-            a file input entrance from which you could input real GRN.<br><br>
-            What's more, gFinder is written as a website and it will be really convenient to use. The source code of
-            gFinder is written in C++ language. All source code has been pushed up to our github.
-        </p>
-    </div>
-    <div id="main" class="gRNA">
-        <div id="first">
-            <h1 style="margin-top:0px;">gRNA: gene regulatory network analysts</h1>
-            <h2>Introduction</h2>
-            <p align="justify">This little app is a entertaining yet educational program for children who are interested
-                in network analysis. Through this game they can cultivate the interest of biology and have a visual
-                image of complex regulatory network. The calculation module is as same as the modeling of GRN in our
-                major software “gNAP”. To make the app more interesting, we reduced the difficulty of analysis and
-                investigate the analytical thinking ability of complex network regulation.
-            </p><br>
-        </div>
-        <div align="center"><img src="./assets/src/USTC_Software_Clotho.png" /></div>
-        <div id="second" align="justify">
-            <h2>Tutorial</h2>
-            <p>• Press 'start' to begin the game,</p>
-            <p>• After you entered the game interface, you can right click the gene (those colorful circles) to find out
-                how other genes change if you remove the gene you choose. </p>
-            <p>• Then you should judge the relationship among the genes. There are two kinds of relationships,
-                suppression and promotion. Attention, not all genes have relationship with other genes, and every two
-                genes can only have one relationship. For example, gene1 suppresses gene2, then they can't have other
-                relationship such as gene1 promotes gene2 or gene2 suppresses gene1 etc.</p>
-            <p>• When you have already judged all genes, you can make you own regulatory network. Press the suppression
-                button and the you can draw a red arrow between two genes. If gene1 points to gene2, it means gene1
-                suppresses gene2. In the similar way, you can draw green arrows with promotion button.</p>
-            <p>• If you what to undo the last operation, press the cancel button.</p>
-            <p>• When you have finished you operation, press finish button.</p>
-            <p>• The bar on the left is control by time and the quality of your job. When this bar disappears, the game
-                is over.</p>
-            <p>• If you press the finish button, the answer button and next button will available. Press the answer
-                button to check the answer (the answer may not be unique, so even if your answer is different with the
-                answer that computer gives you, you may also get a high score).Press the next button to the next level.
+        <div id="gFinder"><!--gFinder-->
+            <h1 style="margin-top:0px;">gFinder: Gene Finder</h1>
+            <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder2.jpg" /></div>
+            <p align="justify">gFinder is a web app which you can visit here<a
+                    href="http://gfinder.stlover.org:8080/static/" class="content"></a>. It could be used to find the
+                specific gene with target regulations.<br><br>
+                For example, if users need to find a gene which can enhance geneA's expression, depress geneB's
+                expression,
+                enhance..., gFinder can find a gene whose function is similar most from the database. So, with the help
+                of
+                gFinder, the reverse analysis result of gNAP, our main software, can step forward. We could get the
+                specific
+                gene for target expression instead of some interactions. Users could also input the known regulation to
+                get
+                the specific gene from database.
             </p>
-            <p>• In the next level, you can see how much score you have got in previous level.</p>
-            <p>• If you want to quit game, press back button on the right-up corner.</p>
-            <p>• There are 10 levels waiting for you! Good luck and have fun!</p>
+            <div class="image" align="center"><img src="./assets/src/USTC_Software_Finder1.jpg" /></div>
+            <p align="justify">About our database, it is a pity that there are no integral databases available
+                containing
+                information of such giant gene regulatory network. So in our software, we use some specific gene
+                sequence
+                segments to create a network. In fact, all genes there is virtual gene. For future development, we also
+                left
+                a file input entrance from which you could input real GRN.<br><br>
+                What's more, gFinder is written as a website and it will be really convenient to use. The source code of
+                gFinder is written in C++ language. All source code has been pushed up to our github.
+            </p>
         </div>
-        <div id="Download" class="contain">
-            <h2>Download</h2>
-            <p>You can download the ZIP files including Executable Program build on Windows, MacOS and Linux here:</p>
-            <!-- <span class="downloadbutton"><a class="content"
+        <div id="gRNA">
+            <h1 style="margin-top:0px;">gRNA: gene regulatory network analysts</h1>
+            <div id="first">
+                <h2>Introduction</h2>
+                <p align="justify">This little app is a entertaining yet educational program for children who are
+                    interested
+                    in network analysis. Through this game they can cultivate the interest of biology and have a visual
+                    image of complex regulatory network. The calculation module is as same as the modeling of GRN in our
+                    major software “gNAP”. To make the app more interesting, we reduced the difficulty of analysis and
+                    investigate the analytical thinking ability of complex network regulation.
+                </p><br>
+            </div>
+            <div align="center"><img src="./assets/src/USTC_Software_Clotho.png" /></div>
+            <div id="second" align="justify">
+                <h2>Tutorial</h2>
+                <p>• Press 'start' to begin the game,</p>
+                <p>• After you entered the game interface, you can right click the gene (those colorful circles) to find
+                    out
+                    how other genes change if you remove the gene you choose. </p>
+                <p>• Then you should judge the relationship among the genes. There are two kinds of relationships,
+                    suppression and promotion. Attention, not all genes have relationship with other genes, and every
+                    two
+                    genes can only have one relationship. For example, gene1 suppresses gene2, then they can't have
+                    other
+                    relationship such as gene1 promotes gene2 or gene2 suppresses gene1 etc.</p>
+                <p>• When you have already judged all genes, you can make you own regulatory network. Press the
+                    suppression
+                    button and the you can draw a red arrow between two genes. If gene1 points to gene2, it means gene1
+                    suppresses gene2. In the similar way, you can draw green arrows with promotion button.</p>
+                <p>• If you what to undo the last operation, press the cancel button.</p>
+                <p>• When you have finished you operation, press finish button.</p>
+                <p>• The bar on the left is control by time and the quality of your job. When this bar disappears, the
+                    game
+                    is over.</p>
+                <p>• If you press the finish button, the answer button and next button will available. Press the answer
+                    button to check the answer (the answer may not be unique, so even if your answer is different with
+                    the
+                    answer that computer gives you, you may also get a high score).Press the next button to the next
+                    level.
+                </p>
+                <p>• In the next level, you can see how much score you have got in previous level.</p>
+                <p>• If you want to quit game, press back button on the right-up corner.</p>
+                <p>• There are 10 levels waiting for you! Good luck and have fun!</p>
+            </div>
+            <div id="Download" class="contain">
+                <h2>Download</h2>
+                <p>You can download the ZIP files including Executable Program build on Windows, MacOS and Linux here:
+                </p>
+                <!-- <span class="downloadbutton"><a class="content"
                     href="https://static.igem.org/mediawiki/2013/e/e7/USTC_Software_GNAP-3.0-linux-32bit.zip"><img
                         src="./assets/src/USTC_Software_Package_download.png"
                         align="absmiddle" />gNAP_3.0_linux_32bit</a></span><br /> -->
-            <span class="downloadbutton"><a class="content"
-                    href="./assets/bin/USTC_Software_GNAP_windows-32bit.zip"><img
-                        src="./assets/src/USTC_Software_Package_download.png"
-                        align="absmiddle" />gNAP_3.0_windows_32bit/64bit</a></span><br />
-            <span class="downloadbutton"><a class="content" href="./assets/bin/USTC_Software_GNAP_3.0_Mac_OS.zip"><img
-                        src="./assets/src/USTC_Software_Package_download.png"
-                        align="absmiddle" />gNAP_3.0_Mac_OS</span></a><br>
-            <span class="downloadbutton"><a class="content" href="./assets/bin/USTC_Software_Clotho_App.zip"><img
-                        src="./assets/src/USTC_Software_Package_download.png" align="absmiddle" />gRNA</span></a>
+                <span class="downloadbutton"><a class="content"
+                        href="./assets/bin/USTC_Software_GNAP_windows-32bit.zip"><img
+                            src="./assets/src/USTC_Software_Package_download.png"
+                            align="absmiddle" />gNAP_3.0_windows_32bit/64bit</a></span><br />
+                <span class="downloadbutton"><a class="content"
+                        href="./assets/bin/USTC_Software_GNAP_3.0_Mac_OS.zip"><img
+                            src="./assets/src/USTC_Software_Package_download.png"
+                            align="absmiddle" />gNAP_3.0_Mac_OS</span></a><br>
+                <span class="downloadbutton"><a class="content" href="./assets/bin/USTC_Software_Clotho_App.zip"><img
+                            src="./assets/src/USTC_Software_Package_download.png" align="absmiddle" />gRNA</span></a>
+            </div>
         </div>
     </div>
 </body>

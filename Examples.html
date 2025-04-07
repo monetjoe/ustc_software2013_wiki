@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Example</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
     <script>
         $(document).ready(function () {
@@ -20,10 +20,10 @@
     <div id="nav"></div>
     <div id="direction">
         <ul>
-            <li><a href="#tvel" class="button">Test and verify by experiment literatures</a></br>
-                <a href="#gge" class="button" id="subbutton">IHF+/IHF-</a></br>
-                <a href="#ggep" class="button" id="subbutton">Lrp+/Lrp-</a></br>
-                <a href="#ggepe" class="button" id="subbutton">-Oxygen FNR+/FNR-</a></br>
+            <li><a href="#tvel" class="button">Test and verify by experiment literatures</a><br>
+                <a href="#gge" class="button" id="subbutton">IHF+/IHF-</a><br>
+                <a href="#ggep" class="button" id="subbutton">Lrp+/Lrp-</a><br>
+                <a href="#ggepe" class="button" id="subbutton">-Oxygen FNR+/FNR-</a><br>
                 <a href="#ggepec" class="button" id="subbutton">-Oxygen ArcA+/ArcA-</a>
             </li>
             <li><a href="#consistency" class="button">Consistency</a></li>
@@ -38,17 +38,17 @@
         <p align="justify">To prove our software's reliability, we looked into lots of literature. It is hard to find an
             appropriate literature which research the effect of importing an exogenous gene into E.coli K-12. But
             actually, our software could also simulate the effect of changing endogenous gene by putting the same
-            promoter and gene sequence in.</br></br>
+            promoter and gene sequence in.<br><br>
             So, we eventually found four literatures to test and verify our software.
         </p>
 
-        </br>
+        <br>
         <h3 id="gge">Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST FACTOR</h3>
         <p align="justify">In this literature, Stuart and his team measured the gene expression profiles in otherwise
             isogenic integration host factor IHF+ and IHF- strains. And IHF is one of the genes in our genetic
-            regulatory network(GRN). </br></br>
+            regulatory network(GRN). <br><br>
             By importing the IHF's promoter and gene sequence, we used our software simulating the enhancement of IHF's
-            expression and compared the result with the gene expression profile in that literature.</br></br>
+            expression and compared the result with the gene expression profile in that literature.<br><br>
             There are 30 genes in that profile which are also in our GRN. Here is the list and Genes differentially
             expressed between E. coli K12 strains IH100 (IHF+) and IH105 (IHF-) with a p value less than 0.0005:
         </p>
@@ -877,15 +877,15 @@
             with gNAP's simulation, 70% of the total.</p>
 
 
-        </br>
+        <br>
         <h3 id="ggep">Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF LEUCINE-RESPONSIVE
             REGULATORY PROTEIN</h3>
 
         <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
             with the effects of leucine-responsive regulatory protein(Lrp). And Lrp is one of the genes in our genetic
-            regulatory network(GRN). </br></br>
+            regulatory network(GRN). <br><br>
             By importing the Lrp's promoter and gene sequence, we used our software simulating the enhancement of Lrp's
-            expression and compared the result with the gene expression profile in that literature.</br></br>
+            expression and compared the result with the gene expression profile in that literature.<br><br>
             There are 22 genes in that profile which are also in our GRN. Here is the list and Genes deferentially
             expressed between lrp+ and lrp- (control vs. experimental) E. coli strains with a p value less than 0.001:
         </p>
@@ -1595,16 +1595,16 @@
             same to gNAP's simulation, 68.2% of the total.</p>
 
 
-        </br>
+        <br>
         <h3 id="ggepe">Global Gene Expression Profiling in Escherichia coli K12 THE EFFECTS OF OXYGEN AVAILABILITY AND
             FNR</h3>
 
         <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
             with the effects of oxygen availability and FNR. And FNR is one of the genes in our genetic regulatory
             network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
-            and consider the effect of FNR+ and FNR-.</br></br>
+            and consider the effect of FNR+ and FNR-.<br><br>
             By importing the FNR's promoter and gene sequence, we used our software simulating the enhancement of FNR's
-            expression and compared the result with the gene expression profile in that literature.</br></br>
+            expression and compared the result with the gene expression profile in that literature.<br><br>
             There are 38 genes in that profile which are also in our GRN. Here is the list and Genes differentially
             expressed between FNR+ and FNR- E. coli strains:
         </p>
@@ -2282,16 +2282,16 @@
             simulation, 65.8% of the total.</p>
 
 
-        </br>
+        <br>
         <h3 id="ggepec">Global Gene Expression Profiling in Escherichia coli K12 EFFECTS OF OXYGEN AVAILABILITY AND ArcA
         </h3>
 
         <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
             with the effects of oxygen availability and arcA. And arcA is one of the genes in our genetic regulatory
             network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
-            and consider the effect of arcA+ and arcA-.</br></br>
+            and consider the effect of arcA+ and arcA-.<br><br>
             By importing the arcA's promoter and gene sequence, we used our software simulating the enhancement of
-            arcA's expression and compared the result with the gene expression profile in that literature.</br></br>
+            arcA's expression and compared the result with the gene expression profile in that literature.<br><br>
             There are 43 genes in that profile which are also in our arcA. Here is the list and Genes differentially
             expressed between arcA+ and arcA- E. coli strains:
         </p>
@@ -3089,7 +3089,7 @@
         <p align="justify">In first two literatures, without the limit of oxygen, the average fitness is up to 69.1%.
             And in the other two literatures, the average fitness is 64.3%. We thought that it may be the oxygen's limit
             which affect the expression of each gene. Gene regulatory network analysis has its weakness about
-            environment's change.</br></br>
+            environment's change.<br><br>
             All in all, the total average of fitness is still up to 66.7%. Therefore, we may draw the following
             conclusion that our software could simulate the impact of new gene to some extent.
         </p>
@@ -3098,15 +3098,15 @@
         <h2 id="reference">Reference</h2>
         <p align="justify"><a class="content" href="http://www.jbc.org/content/275/38/29672.short">Arfin S M, Long A D,
                 Ito E T, et al. Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST
-                FACTOR[J]. Journal of Biological Chemistry, 2000, 275(38): 29672-29684.</a></br></br>
+                FACTOR[J]. Journal of Biological Chemistry, 2000, 275(38): 29672-29684.</a><br><br>
 
             <a class="content" href="http://www.jbc.org/content/277/43/40309.short">Hung S, Baldi P, Hatfield G W.
                 Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF LEUCINE-RESPONSIVE REGULATORY
-                PROTEIN[J]. Journal of Biological Chemistry, 2002, 277(43): 40309-40323.</a></br></br>
+                PROTEIN[J]. Journal of Biological Chemistry, 2002, 277(43): 40309-40323.</a><br><br>
 
             <a class="content" href="http://www.jbc.org/content/278/32/29837.short">Salmon K, Hung S, Mekjian K, et al.
                 Global Gene Expression Profiling in Escherichia coli K12 THE EFFECTS OF OXYGEN AVAILABILITY AND FNR[J].
-                Journal of Biological Chemistry, 2003, 278(32): 29837-29855.</a></br></br>
+                Journal of Biological Chemistry, 2003, 278(32): 29837-29855.</a><br><br>
 
             <a class="content" href="http://www.jbc.org/content/280/15/15084.short">Salmon K A, Hung S, Steffen N R, et
                 al. Global Gene Expression Profiling in Escherichia coli K12 EFFECTS OF OXYGEN AVAILABILITY AND ArcA[J].
