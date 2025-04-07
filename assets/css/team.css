@@ -1,4 +1,4 @@
-#main {
+#content #main {
     background: #f3f3f3;
     box-shadow: #f3f3f3 3px 3px 3px;
     margin: 0 auto;
@@ -11,7 +11,7 @@
     height: 455px;
     margin-top: 40px;
     margin-left: -10px;
-    background: url(https://static.igem.org/mediawiki/2013/4/4e/USTC_Software_team-all.png);
+    background: url(../src/USTC_Software_team-all.png);
 }
 
 #content .team_pic a.smooth {
@@ -26,7 +26,7 @@
 }
 
 #content .team_pic .jing:hover {
-    background: url(https://static.igem.org/mediawiki/2013/3/3f/USTC_Software_Jing.png);
+    background: url(../src/USTC_Software_Jing.png);
 }
 
 
@@ -38,7 +38,7 @@
 }
 
 #content .team_pic .hua:hover {
-    background: url(https://static.igem.org/mediawiki/2013/2/23/USTC_Software_Hua.png);
+    background: url(../src/USTC_Software_Hua.png);
 }
 
 #content .team_pic .yu {
@@ -49,7 +49,7 @@
 }
 
 #content .team_pic .yu:hover {
-    background: url(https://static.igem.org/mediawiki/2013/a/a6/USTC_Software_Yu.png);
+    background: url(../src/USTC_Software_Yu.png);
 }
 
 #content .team_pic .kun {
@@ -60,7 +60,7 @@
 }
 
 #content .team_pic .kun:hover {
-    background: url(https://static.igem.org/mediawiki/2013/a/ad/USTC_Software_Kun.png);
+    background: url(../src/USTC_Software_Kun.png);
 }
 
 
@@ -72,7 +72,7 @@
 }
 
 #content .team_pic .yang:hover {
-    background: url(https://static.igem.org/mediawiki/2013/c/c6/USTC_Software_Yang.png) no-repeat;
+    background: url(../src/USTC_Software_Yang.png) no-repeat;
 }
 
 
@@ -85,7 +85,7 @@
 }
 
 #content .team_pic .sen:hover {
-    background: url(https://static.igem.org/mediawiki/2013/0/05/USTC_Software_Sen.png);
+    background: url(../src/USTC_Software_Sen.png);
 }
 
 #content .team_pic .nan {
@@ -97,7 +97,7 @@
 }
 
 #content .team_pic .nan:hover {
-    background: url(https://static.igem.org/mediawiki/2013/7/7e/USTC_Software_Nan.png);
+    background: url(../src/USTC_Software_Nan.png);
 }
 
 #content .team_pic .shuai {
@@ -109,7 +109,7 @@
 }
 
 #content .team_pic .shuai:hover {
-    background: url(https://static.igem.org/mediawiki/2013/7/70/USTC_Software_Shuai.png);
+    background: url(../src/USTC_Software_Shuai.png);
 }
 
 #content .team_pic .pei {
@@ -120,7 +120,7 @@
 }
 
 #content .team_pic .pei:hover {
-    background: url(https://static.igem.org/mediawiki/2013/7/7d/USTC_Software_Pei.png);
+    background: url(../src/USTC_Software_Pei.png);
 }
 
 #content .team_pic .hao {
@@ -131,7 +131,7 @@
 }
 
 #content .team_pic .hao:hover {
-    background: url(https://static.igem.org/mediawiki/2013/a/a7/USTC_Software_Hao.png);
+    background: url(../src/USTC_Software_Hao.png);
 }
 
 
@@ -142,7 +142,7 @@
     border: 1px solid #f3f3f3;
     margin-top: 0px;
     margin-left: -20px;
-    background: url(https://static.igem.org/mediawiki/2013/f/fa/USTC_Software_Bg1.png) repeat-x;
+    background: url(../src/USTC_Software_Bg1.png) repeat-x;
 }
 
 #content .box {
@@ -170,7 +170,7 @@
 }
 
 
-#to_top {
+/* #to_top {
     float: left;
 }
 
@@ -192,7 +192,7 @@
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
-}
+} */
 
 #content .members .one {
     width: 400px;
@@ -238,13 +238,4 @@
     margin: 70px auto auto 50px;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-}
-
-#teambutton {
-    color: #aaed51 !important;
 }

@@ -1,5 +1,9 @@
+body {
+    background: #f3f3f3;
+}
+
 #main {
-    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;
+    background: url(../src/M_1243691170517.jpg) repeat;
     width: 75%;
     height: auto;
     padding: 30px;
@@ -11,20 +15,17 @@
     border-radius: 10px;
 }
 
-
 a.content {
     text-decoration: none;
     color: #36526c;
     transition: 1s;
 }
 
-
 a.content:hover {
     text-decoration: none;
     color: #6b93af;
     transition: 1s;
 }
-
 
 h1 {
     display: block;
@@ -34,11 +35,9 @@ h1 {
     margin-top: 100px;
 }
 
-
 ul {
     list-style-image: inherit !important;
 }
-
 
 #logo {
     width: 220px;
@@ -56,7 +55,6 @@ ul {
     margin-left: -250px;
 }
 
-
 #top {
     position: fixed;
     background-color: #34495e;
@@ -67,7 +65,6 @@ ul {
     left: 0px;
     opacity: 1;
 }
-
 
 #header {
     position: relative;
@@ -82,14 +79,11 @@ ul {
     width: 100%;
 }
 
-
-
 .menu {
     font: 18px Arial, Helvetica, sans-serif;
     width: 100%;
     padding-top: 50px;
 }
-
 
 .menu ul {
     padding: 0;
@@ -97,7 +91,6 @@ ul {
     list-style-type: none;
     text-decoration: none;
 }
-
 
 .menu ul li {
     float: left;
@@ -108,7 +101,6 @@ ul {
     padding: 0;
     transition: 1s;
 }
-
 
 .menu ul li a,
 .menu ul li a:visited {
@@ -127,20 +119,17 @@ ul {
     transition: 1s;
 }
 
-
 .menu ul li ul {
     display: none;
     list-style-type: none !important;
     transition: 1s;
 }
 
-
 .menu ul li:hover a {
     color: #000;
     background: #fff;
     transition: 1s;
 }
-
 
 .menu ul li:hover ul {
     display: block;
@@ -149,7 +138,6 @@ ul {
     width: 150px;
     transition: 1s;
 }
-
 
 .menu ul li:hover ul li a {
     display: block;
@@ -161,13 +149,11 @@ ul {
     transition: 1s;
 }
 
-
 .menu ul li:hover ul li a:hover {
     background: #7599bc;
     color: #fff;
     transition: 1s;
 }
-
 
 #igem {
     float: right;
@@ -176,7 +162,6 @@ ul {
     height: 83px;
     width: 130px;
 }
-
 
 #igem a img {
     transition: width 1s, height 1s;
@@ -200,7 +185,6 @@ ul {
     -ms-transition: width 1s, height 1s, -ms-transform 1s;
     /*IE*/
 }
-
 
 #direction {
     width: 18%;

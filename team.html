@@ -3,9 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Team</title>
-    <link href="./assets/css/team.css" rel="stylesheet" />
+    <link href="./assets/css/team.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(".smooth").click(function () {
@@ -13,42 +14,35 @@
                 let pos = $(href).offset().top;
                 $("html,body").animate({ scrollTop: pos }, 2000);
             });
-            $(".button").click(function () {
-                let href = $(this).attr("href");
-                let pos = $(href).offset().top - 20;
-                $("html,body").animate({ scrollTop: pos }, 1500); //the smaller the quicker 
-            });
         });
     </script>
 </head>
 
-<body>
+<body id="content">
     <div id="direction">
         <ul>
             <li><a href="#main" class="button">Teamers</a><br>
-                <a href="#kun" class="button" id="subbutton">Chenkun Wang</a><br>
-                <a href="#yang" class="button" id="subbutton">Jinyang Li</a><br>
-                <a href="#pei" class="button" id="subbutton">Pei Zhang</a><br>
-                <a href="#yu" class="button" id="subbutton">Xingyu Liao</a><br>
-                <a href="#hua" class="button" id="subbutton">Shaohua Chen</a><br>
-                <a href="#jing" class="button" id="subbutton">Jinjing Yi</a><br>
-                <a href="#sen" class="button" id="subbutton">Haosen Tan</a><br>
-                <a href="#shuai" class="button" id="subbutton">Shuai Ma</a><br>
-                <a href="#nan" class="button" id="subbutton">Monan Zhou</a><br>
-                <a href="#xhao" class="button" id="subbutton">Hao Xu</a><br>
-                <a href="#hao" class="button" id="subbutton">Tianhao Zhang</a><br>
-                <a href="#chen" class="button" id="subbutton">Chen Shao</a>
+                <a href="#kun" class="button subbutton">Chenkun Wang</a><br>
+                <a href="#yang" class="button subbutton">Jinyang Li</a><br>
+                <a href="#pei" class="button subbutton">Pei Zhang</a><br>
+                <a href="#yu" class="button subbutton">Xingyu Liao</a><br>
+                <a href="#hua" class="button subbutton">Shaohua Chen</a><br>
+                <a href="#jing" class="button subbutton">Jinjing Yi</a><br>
+                <a href="#sen" class="button subbutton">Haosen Tan</a><br>
+                <a href="#shuai" class="button subbutton">Shuai Ma</a><br>
+                <a href="#nan" class="button subbutton">Monan Zhou</a><br>
+                <a href="#xhao" class="button subbutton">Hao Xu</a><br>
+                <a href="#hao" class="button subbutton">Tianhao Zhang</a><br>
+                <a href="#chen" class="button subbutton">Chen Shao</a>
             </li>
-
             <li><a href="#instructor" class="button">Instructors</a><br>
-                <a href="#hai" class="button" id="subbutton">Haiyan Liu</a><br>
-                <a href="#hong" class="button" id="subbutton">Jiong Hong</a><br>
-                <a href="#liang" class="button" id="subbutton">Zhi Liang</a>
+                <a href="#hai" class="button subbutton">Haiyan Liu</a><br>
+                <a href="#hong" class="button subbutton">Jiong Hong</a><br>
+                <a href="#liang" class="button subbutton">Zhi Liang</a>
             </li>
             <li><a href="#main" class="button">Top</a></li>
         </ul>
     </div>
-
     <div id="main">
         <div class="box" id="topper"></div>
         <div class="team_pic">
@@ -63,7 +57,6 @@
             <a href="#pei" class="smooth"><span class="pei"></span></a>
             <a href="#hao" class="smooth"><span class="hao"></span></a>
         </div>
-
         <div id="kun" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/4/44/USTC-Software_Kun.png" /></div>
@@ -88,7 +81,6 @@
                 </p>
             </div>
         </div>
-
         <div id="yang" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/d/df/USTC-Software_yang.png" /></div>
@@ -113,7 +105,6 @@
                 </p>
             </div>
         </div>
-
         <div id="pei" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/c/cd/USTC-Software_Pei.png" /></div>
@@ -136,7 +127,6 @@
                 </p>
             </div>
         </div>
-
         <div id="yu" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/e/e2/Yu.png" /></div>
@@ -157,7 +147,6 @@
 
             </div>
         </div>
-
         <div id="hua" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/c/cd/USTC-Software_Shaohua.png" /></div>
@@ -177,7 +166,6 @@
 
             </div>
         </div>
-
         <div id="jing" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/6/6a/USTC-Software_Jing.png" /></div>
@@ -199,13 +187,12 @@
                 </p>
             </div>
         </div>
-
         <div id="sen" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/5/5e/USTC-Software_Haosen.png" /></div>
             <div class="words">
                 <p>
-                    <b>Name</b>：Haosen Tan (谈浩森) <br />
+                    <b>Name</b>: Haosen Tan (谈浩森) <br />
                     <b>Age</b>:20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <b>Grade</b>: Sophomore undergraduate<br />
                     <b>Major</b>: Physics <br />
@@ -225,7 +212,6 @@
                 </p>
             </div>
         </div>
-
         <div id="shuai" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/6/6e/USTC-Software_Shuai.png" /></div>
@@ -245,7 +231,6 @@
                 </p>
             </div>
         </div>
-
         <div id="nan" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/0/03/USTC-Software_Nan.png" /></div>
@@ -264,11 +249,9 @@
                     As a sophomore who has just transferred to School of Mathematical Sciences, he is now struggling for
                     a better academic performance and seeking for offers from top research facilities in the world in
                     the near two years.
-
                 </p>
             </div>
         </div>
-
         <div id="xhao" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/9/98/USTC-Software_hao.png" /></div>
@@ -283,12 +266,10 @@
                     <b>Breif Intro:</b><br />
                     Hao Xu is always interested in lots of things,such as programming,airplane models and so on.Hao was
                     in charge of the visualizition of data with java.In USTC-Software,he find that biology is even
-                    insteresting and he learned a lot.By the way ,He is too lazy to write a self intro...<a
-                        href="http://www.stlover.org">learn more</a>
+                    insteresting and he learned a lot. By the way, he is too lazy to write a self intro...
                 </p>
             </div>
         </div>
-
         <div id="hao" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/b/b2/USTC-SOftware-Hao.png" /></div>
@@ -312,7 +293,6 @@
                 </p>
             </div>
         </div>
-
         <div id="chen" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/3/32/USTC-Software_Shaochen.png" /></div>
@@ -334,11 +314,9 @@
                 </p>
             </div>
         </div>
-
-
-        <div id="instructor" class="box"></div>
-        <p id="h1">Instructors</p>
-
+        <div id="instructor" class="box">
+            <h2>Instructors</h2>
+        </div>
         <div id="hai" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/f/f6/USTC-Software_Lui.png" /></div>
@@ -357,9 +335,6 @@
                 </p>
             </div>
         </div>
-
-
-
         <div id="hong" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/a/a3/USTC-Software_Hong.png" /></div>
@@ -376,9 +351,6 @@
                 </p>
             </div>
         </div>
-
-
-
         <div id="liang" class="box"></div>
         <div class="members">
             <div class="pic"><img src="https://static.igem.org/mediawiki/2013/8/8d/USTC-Software_Zhi.png" /></div>
@@ -399,11 +371,7 @@
                 </p>
             </div>
         </div>
-
-
-
     </div>
-
 </body>
 
 </html>
