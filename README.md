@@ -9,7 +9,6 @@ We are USTC-Software, a team from University of Science and Technology of China.
 ##Introduction##
 Our application aims to simulate gene networks. The application analyzes the stability and the change of gene networks after introduction of exogenous genes. Meanwhile, given the original network and specific purposes, the application traces the regulative process back and gives possible regulative patterns.
 
-
 ## About Our Software
 ### gNAP: Gene Network Analyse and Predict
 This software contains four parts, dealing with separate functions in forward and backward modeling of GRN(Gene Regulatory Network) analyse.
@@ -102,7 +101,6 @@ To compile our source code, you should have:
 * ant  (the compile tool)
 * jse  (include jdk and etc.)
 
-
 ### Compile gNAP
 The GUI source files are written in C++ language with Qt Creator and the operation source files are also included in **gNAP.pro**. So the main functions could be compiled across platforms using Qt 5.1.0.
 What's more, for better visualization, this part was written in Java language. So it should be compiled like this:
@@ -144,9 +142,6 @@ All softwares which could compile Java are usable to compile this small game. Al
 **For more information, please refer to our [wiki page](http://2013.igem.org/Team:USTC-Software).**
 
 ## Contacts
-
-For any questions, feel free to contact:
-
-Chenkun Wang(ustckun@gmail.com)
-
+For any questions, feel free to contact:<br>
+Chenkun Wang(ustckun@gmail.com)<br>
 Jinyang Li(jinyangustc@gmail.com)
