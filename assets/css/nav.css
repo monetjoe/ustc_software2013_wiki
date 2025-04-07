@@ -233,7 +233,7 @@ ul {
     font-size: 18px;
 }
 
-#subbutton {
+.subbutton {
     font-size: 16px !important;
     margin-left: 10px;
 }

@@ -12,7 +12,7 @@
             color: #aaed51 !important;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js"></script>
     <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide1?action=raw&ctype=text/javascript"
         type="text/javascript" charset="utf-8"></script>
@@ -62,10 +62,10 @@
             <p align="justify">In order to simulate the GRN's working and analyze the changing after exogenous gene
                 imported, some advanced algorithms and classical methods are employed in the software. These algorithms
                 and methods include Binary Tree method, Needle-Wunsch Algorithm, Decision Tree method, Hill Equation and
-                PSO Algorithm.</br><br />
+                PSO Algorithm.<br><br />
 
                 <img src="https://static.igem.org/mediawiki/2013/6/6b/USTC_Software_FLOW.png"
-                    style="width:1000px;" /></br>
+                    style="width:1000px;" /><br>
 
                 There are four parts of methodologies: Database, Operon Theory and Regulatory Model, Forward Analysis
                 and Reverse Analysis.
@@ -103,34 +103,34 @@
                                 to TF</a> and <a class="content"
                                 href="http://regulondb.ccg.unam.mx/menu/download/datasets/files/network_tf_gene.txt">TF
                                 to Gene</a>. Since the database about the regulation between TFs and Genes contains only
-                            one-way interaction, the matrix of GRN is a rectangle.</br></br>
+                            one-way interaction, the matrix of GRN is a rectangle.<br><br>
                             First of all, read the regulation relationship of TFs. Our software filters the
                             documentation of RegulonDB on the head of all files and then reads the name of regulate and
                             regulated TF, which is also the name of its genes, one by one. In the same time, our
                             software numerates the genes and stores their names into an objects' array of genetic data.
-                            </br></br>
-                            &nbsp;&nbsp;The format of regulation database:</br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;+/-/+-</br></br>
+                            <br><br>
+                            &nbsp;&nbsp;The format of regulation database:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;+/-/+-<br><br>
                         <div align="center"><img
-                                src="https://static.igem.org/mediawiki/2013/6/69/USTC_Software_TT.jpg" /></div></br>
+                                src="https://static.igem.org/mediawiki/2013/6/69/USTC_Software_TT.jpg" /></div><br>
                         The regulation of TFs has been put into a square matrix whose row is the regulator and column is
                         the one regulated by. To make our GRN as complete as possible, the regulation between TF and
                         genes has joined into the matrix. The one-way interaction results that we must read the TF in
                         order to fulfill the regulator before completing the TF to gene's regulation in the same way of
-                        TF to TF. </br></br>
-                        &nbsp;&nbsp;The format of regulation database:</br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;Gene_name &nbsp;&nbsp;&nbsp;+/-/+-</br></br>
+                        TF to TF. <br><br>
+                        &nbsp;&nbsp;The format of regulation database:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;TF_name &nbsp;&nbsp;&nbsp;Gene_name &nbsp;&nbsp;&nbsp;+/-/+-<br><br>
                         <div align="center"><img
-                                src="https://static.igem.org/mediawiki/2013/4/47/USTC_Software_TG.jpg" /></div></br>
+                                src="https://static.igem.org/mediawiki/2013/4/47/USTC_Software_TG.jpg" /></div><br>
                         At last, a regulatory matrix whose row represents regulate gene (TF) and whose column represents
                         gene regulated by (TF+Gene) has been output into a file called “old_GRN” in root directory. The
                         values in GRN matrix are regulations in which “1” means positive activation, “-1” means
                         repression and “0” means no relationship. There have been some regulations both positive and
                         negative identified regulations are determined by the experimental environment. As a result, our
                         software picks out those uncertain genes and stores them into a file named
-                        “uncertain_database”.</br></br>
-                        &nbsp;&nbsp;The format of uncertain database:</br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;? &nbsp;&nbsp;&nbsp;Gene_name->Gene_name</br></br>
+                        “uncertain_database”.<br><br>
+                        &nbsp;&nbsp;The format of uncertain database:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;? &nbsp;&nbsp;&nbsp;Gene_name->Gene_name<br><br>
 
                         The question mark represents the unknown regulation between regulator and regulated-by whose
                         names presented afterward. Users could replace the question mark with the data known in past
@@ -149,16 +149,16 @@
                             stored in a “map”. “Map” is just like a dictionary yet its words are names of genes and its
                             descriptions of words are replaced by genetic information. By using binary tree method, it
                             is very fast to search the “word” wanted in the “dictionary”. As tested, the speed of binary
-                            tree method built-in “map” function is 720 times faster than traversal method.</br></br>
-                            &nbsp;&nbsp;The format of Gene Info database:</br>
+                            tree method built-in “map” function is 720 times faster than traversal method.<br><br>
+                            &nbsp;&nbsp;The format of Gene Info database:<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;ID_assigned_by_RegulonDB &nbsp;&nbsp;&nbsp;Gene_name
                             &nbsp;&nbsp;&nbsp;Left_end_position &nbsp;&nbsp;&nbsp;Right_end_position
                             &nbsp;&nbsp;&nbsp;DNA_strand &nbsp;&nbsp;&nbsp;Product_type
                             &nbsp;&nbsp;&nbsp;&nbsp;Product_name
                             &nbsp;&nbsp;&nbsp;Start_codon_sequence&nbsp;&nbsp;&nbsp; Stop_codon_sequence
-                            &nbsp;&nbsp;&nbsp;Gene_sequence</br></br>
+                            &nbsp;&nbsp;&nbsp;Gene_sequence<br><br>
                         <div align="center"><img
-                                src="https://static.igem.org/mediawiki/2013/4/45/USTC_Software_GI.jpg" /></div></br>
+                                src="https://static.igem.org/mediawiki/2013/4/45/USTC_Software_GI.jpg" /></div><br>
                         The label of the map vector is gene name which will be picked out based on the names read in
                         regulation matrix before. It is really fast using the binary tree method to find the specific
                         genetic information and store them into a specific object. Those information includes gene ID,
@@ -184,21 +184,21 @@
                             contains the starting position of each TU and its promoter name. Our software picks out the
                             starting position into a integer array. Using the left position picked out in gene info, our
                             software would find out which unit the gene belongs to through dichotomy method and then
-                            stores the name of promoter into corresponding object.</br></br>
-                            &nbsp;&nbsp;The format of TU info database:</br>
+                            stores the name of promoter into corresponding object.<br><br>
+                            &nbsp;&nbsp;The format of TU info database:<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;Operon_name &nbsp;&nbsp;&nbsp;Unit_name
-                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;Transcription_start_site ......</br></br>
+                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;Transcription_start_site ......<br><br>
                         <div align="center"><img
-                                src="https://static.igem.org/mediawiki/2013/1/1e/USTC_Software_TI.jpg" /></div></br>
+                                src="https://static.igem.org/mediawiki/2013/1/1e/USTC_Software_TI.jpg" /></div><br>
                         The principle of fetching information of promoters is same as fetching genes's. Our software
                         stores the promoter information from the file named “promoter_info” in a “map” which could be
                         used to pick out the promoter sequence by searching promoter name through binary tree
-                        method.</br></br>
-                        &nbsp;&nbsp;The format of Promoter Info database:</br>
+                        method.<br><br>
+                        &nbsp;&nbsp;The format of Promoter Info database:<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;Promoter_ID_assigned_by_RegulonDB
-                        &nbsp;&nbsp;&nbsp;Promoter_name</br></br>
+                        &nbsp;&nbsp;&nbsp;Promoter_name<br><br>
                         <div align="center"><img
-                                src="https://static.igem.org/mediawiki/2013/8/8a/USTC_Software_PI.jpg" /></div></br>
+                                src="https://static.igem.org/mediawiki/2013/8/8a/USTC_Software_PI.jpg" /></div><br>
                         The sequence of promoter will be used in the alignment method in next module which could make a
                         prediction of exogenous genes' regulation pattern.
                         </p>
@@ -212,14 +212,14 @@
                             Our software integrates all information we picked out about genes and generates a file named
                             “all_info” —— all information about genes —— for the output graphical interface's reading.
                             In the meanwhile, the array of objects containing all information has been stored in
-                            computer memory which greatly improve the computing speed of our software.</br></br>
-                            &nbsp;&nbsp;The format of all_info database:</br>
+                            computer memory which greatly improve the computing speed of our software.<br><br>
+                            &nbsp;&nbsp;The format of all_info database:<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;No. &nbsp;&nbsp;&nbsp;promoter_sequence
                             &nbsp;&nbsp;&nbsp;gene_sequence &nbsp;&nbsp;&nbsp;gene_name &nbsp;&nbsp;&nbsp;ID
                             &nbsp;&nbsp;&nbsp;left_position &nbsp;&nbsp;&nbsp;right_position
-                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;&nbsp;description</br>
+                            &nbsp;&nbsp;&nbsp;promoter_name &nbsp;&nbsp;&nbsp;&nbsp;description<br>
 
-                            The fetching module generates three files: old_GRN, all_info and uncertain_database.</br>
+                            The fetching module generates three files: old_GRN, all_info and uncertain_database.<br>
                         </p>
                     </div>
 
@@ -383,7 +383,7 @@
                     <p align="justify">
                     <div id="sequence">
                         <h4>2.1 Sequence</h4>
-                    </div></br>
+                    </div><br>
                     <div id="nwa">
                         <h5>2.1.1 Needleman-Wunsch Algorithm</h5>
                     </div>
@@ -573,11 +573,11 @@
                         other than to those in other groups (clusters). It is a main task of exploratory data mining,
                         and a common technique for statistical data analysis, used in many fields, including machine
                         learning, pattern recognition, image analysis, information retrieval, and
-                        bioinformatics.</br></br>
+                        bioinformatics.<br><br>
                         For get a better regulation, we use online database DAVID to cluster all the genes in our whole
                         GRN. Avoid of supersoftless, we hope to create an online communication with DAVID. After getting
                         the cluster of our genes, we multiply the genes simalarity with a factor if they are in the same
-                        cluster.</br></br>
+                        cluster.<br><br>
                         Though the source code of this part has already done, we lack the experiment information to set
                         a propriate factor. All source code were pushed up to our github.
                     </p>
@@ -598,10 +598,10 @@
                             regulation is Rji; Rji>0 means the possibility of negative regulation is –Rji; Rji=0 means
                             there is no regulation from i to j.
                             We use Hill equations to describe intensity of regulation. Equations are like following:
-                            <br /></br>
+                            <br /><br>
                             <img src="https://static.igem.org/mediawiki/2013/e/e0/USTC_Software_1.png"
                                 style="width:600px;" />
-                            <br /></br>
+                            <br /><br>
                             The left side of the equation is the derivative x(density) on
                             t(time).”qi”,”pi”,”ri”,”mi”,”ni” are parameters, which determine the intensity of
                             regulation."ri" is degradation rate. Mji is exponent. M is a matrix whose dimensions are
@@ -609,20 +609,20 @@
                             material of original network, if Rji=1,Mji ranges from 0.5 to 1.2;if Rji=-1, Mji ranges from
                             -1.2 to -0.5; if Rji=2;Mji ranges from -1.2 to 0.5 or 0.5 to 1. These Mjis' absolute values
                             are given randomly by program. If Rji=0, Mji=0.
-                            </br>For the new material,
-                            <br /></br>
+                            <br>For the new material,
+                            <br /><br>
                             <img src="https://static.igem.org/mediawiki/2013/6/64/USTC_Software_2.png" />
-                            <br /></br>
+                            <br /><br>
 
                     </p>
                     <p align="justify">
                         Stable condition is the condition in which densities are time-invariant. We store material
                         densities in a vector and solve the differential equations with Euler's formula, which is like
                         below
-                        <br /></br>
+                        <br /><br>
                         <img src="https://static.igem.org/mediawiki/2013/e/e6/USTC_Software_3.png"
                             style="width:600px;" />
-                        <br /></br>
+                        <br /><br>
                         We know the network will be stable at last, so every material density has a limitation.
 
                     </p>
@@ -634,20 +634,20 @@
                 <div class="jobs_item" style="display: none;">
                     <p align="justify">Record the original stable condition, set new material density to 0 and this is
                         the new initial density vector. Solve new equations and record density vectors before the new
-                        condition is stable and store these data in a text file.</br></br>
+                        condition is stable and store these data in a text file.<br><br>
 
                         To evaluate the new network, we introduce the grading system.
-                        <br /></br>
+                        <br /><br>
                         <img src="https://static.igem.org/mediawiki/2013/3/32/USTC_Software_4.png"
                             style="width:600px;" />
                         <img src="https://static.igem.org/mediawiki/2013/b/bc/USTC_Software_5.png"
                             style="width:500px;" />
 
-                        <br /></br>
+                        <br /><br>
                         "xi" and "Xi" are densities of material i, which is not the new material."ny" is the number of
                         materials. The more new densities are close to the original, the less the influence the cell
                         endues. In general, cells close to the original cell are more likely to survive than those who
-                        are far different from the original cell. That is the thought of the grading system.</br></br>
+                        are far different from the original cell. That is the thought of the grading system.<br><br>
                         We did a lot of running and found that the “AbsValue” ranges from 0 to 370, so "ScoreA" ranges
                         from 0 to 4.9.We get the integer part and store it in an array, which has five sections.
                         Generate 100 or 200 matrix M from matrix R and run the original and new network for each M, so
@@ -671,7 +671,7 @@
                 <div class="jobs_item" style="display: none;">
                     <p align="justify">Before prediction, the expression of specific genes which the experimenter needs
                         should be input into our software as well as the improvement or depression. The number of target
-                        gene is SIX at most.</br></br>
+                        gene is SIX at most.<br><br>
                         It is a must that figuring out the strongest and weakest expression strength before inputting
                         the extreme cases into the target expression. The way to find out the strongest and weakest
                         expression is modeling the GRN's steady state by a large amount of random regulation from -1 and
@@ -693,10 +693,10 @@
                         variance of 30 particles is the global optimum and the minimal variance of the procession in one
                         particle is the local optimum. Then, taking a step towards global and local optimum as well as
                         considering the inertia and perturbation avoids falling into the sub-optimal
-                        condition.</br></br>
+                        condition.<br><br>
                         At last, when the variance of expression reaches an acceptable range, our software picks out and
                         saves the best global optimum particle following by the movement of those particles
-                        stop.</br></br>
+                        stop.<br><br>
                         We constantly revises the factors in PSO algorithm by machine learning method for accurate
                         simulation with a fast PSO particle-motion equation. At the same time, our software also filter
                         the result of regulatory value which is more intuitive.
@@ -711,8 +711,8 @@
                         between -1 to 1 in which -1 means negative effect and 1 means positive effect. As a result, what
                         our software has done is filtering out the absolute value which is lower than 0.9. Because the
                         difference of regulatory intensity lower than 0.1 has very little effect to the stable
-                        expression, the final result of regulation is indicated by Boolean value.</br></br>
-                        The format of regulatory prediction in “Result”:</br>
+                        expression, the final result of regulation is indicated by Boolean value.<br><br>
+                        The format of regulatory prediction in “Result”:<br>
                         Gene_name->Gene_name regulation(+/-)
                     </p>
                 </div>
@@ -722,41 +722,41 @@
                 <p align="justify">
 
                     Lei Z, Dai Y. Assessing protein similarity with Gene Ontology and its use in subnuclear localization
-                    prediction[J]. BMC bioinformatics, 2006, 7(1): 491.</br></br>
+                    prediction[J]. BMC bioinformatics, 2006, 7(1): 491.<br><br>
 
 
                     Ramoni M F, Sebastiani P, Kohane I S. Cluster analysis of gene expression dynamics[J]. Proceedings
-                    of the National Academy of Sciences, 2002, 99(14): 9121-9126.</br></br>
+                    of the National Academy of Sciences, 2002, 99(14): 9121-9126.<br><br>
 
                     Thieffry D, Huerta A M, Pérez‐Rueda E, et al. From specific gene regulation to genomic networks: a
                     global analysis of transcriptional regulation in Escherichia coli[J]. Bioessays, 1998, 20(5):
-                    433-440.</br></br>
+                    433-440.<br><br>
 
 
                     Eberhart R, Kennedy J. A new optimizer using particle swarm theory[C]//Micro Machine and Human
                     Science, 1995. MHS'95., Proceedings of the Sixth International Symposium on. IEEE, 1995:
-                    39-43.</br></br>
+                    39-43.<br><br>
 
 
                     Jacob F, Perrin D, Sánchez C, et al. L'opéron: groupe de gènes à expression coordonnée par un
                     opérateur [CR Acad. Sci. Paris 250 (1960) 1727–1729][J]. Comptes rendus biologies, 2005, 328(6):
-                    514-520.</br></br>
+                    514-520.<br><br>
 
 
                     Needleman S B, Wunsch C D. A general method applicable to the search for similarities in the amino
-                    acid sequence of two proteins[J]. Journal of molecular biology, 1970, 48(3): 443-453.</br></br>
+                    acid sequence of two proteins[J]. Journal of molecular biology, 1970, 48(3): 443-453.<br><br>
 
 
                     Gama-Castro S, Jiménez-Jacinto V, Peralta-Gil M, et al. RegulonDB (version 6.0): gene regulation
                     model of Escherichia coli K-12 beyond transcription, active (experimental) annotated promoters and
-                    Textpresso navigation[J]. Nucleic acids research, 2008, 36(suppl 1): D120-D124.</br></br>
+                    Textpresso navigation[J]. Nucleic acids research, 2008, 36(suppl 1): D120-D124.<br><br>
 
                     Martınez-Antonio A, Collado-Vides J. Identifying global regulators in transcriptional regulatory
-                    networks in bacteria[J]. Current opinion in microbiology, 2003, 6(5): 482-489.</br></br>
+                    networks in bacteria[J]. Current opinion in microbiology, 2003, 6(5): 482-489.<br><br>
 
 
                     Salgado H, Moreno-Hagelsieb G, Smith T F, et al. Operons in Escherichia coli: genomic analyses and
-                    predictions[J]. Proceedings of the National Academy of Sciences, 2000, 97(12): 6652-6657.</br></br>
+                    predictions[J]. Proceedings of the National Academy of Sciences, 2000, 97(12): 6652-6657.<br><br>
 
 
                     Thieffry D, Salgado H, Huerta A M, et al. Prediction of transcriptional regulatory sites in the
