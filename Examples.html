@@ -5,15 +5,7 @@
     <title>Example</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/nav.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(document).ready(function () {
-            $(".button").click(function () {
-                var href = $(this).attr("href");
-                var pos = $(href).offset().top - 100;
-                $("html,body").animate({ scrollTop: pos }, 1500);//the smaller the quicker 
-            });
-        });
-    </script>
+    <script src="./assets/js/button.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -52,8 +44,8 @@
             There are 30 genes in that profile which are also in our GRN. Here is the list and Genes differentially
             expressed between E. coli K12 strains IH100 (IHF+) and IH105 (IHF-) with a p value less than 0.0005:
         </p>
-        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
-            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(./assets/src/M_1243691170517.jpg) repeat;">
             <tr>
                 <td width="69" rowspan="2" style="border-bottom:2px #000 solid;">
                     <p align="center">Gene</p>
@@ -890,8 +882,8 @@
             expressed between lrp+ and lrp- (control vs. experimental) E. coli strains with a p value less than 0.001:
         </p>
 
-        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
-            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(./assets/src/M_1243691170517.jpg) repeat;">
             <tr>
                 <td width="64" style="border-bottom:2px #000 solid;">
                     <p align="center">Gene name</p>
@@ -1610,8 +1602,8 @@
         </p>
 
 
-        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
-            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(./assets/src/M_1243691170517.jpg) repeat;">
             <tr>
                 <td width="114" style="border-bottom:2px #000000 solid;">
                     <p align="center">Gene</p>
@@ -2296,8 +2288,8 @@
             expressed between arcA+ and arcA- E. coli strains:
         </p>
 
-        <table width="1000px" border="0" cellspacing="0" cellpadding="0"
-            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+            style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(./assets/src/M_1243691170517.jpg) repeat;">
             <tr>
                 <td width="187" style="border-bottom:2px #000000 solid;">
                     <p align="center">Gene name(NIH) and b no.</p>
@@ -3059,15 +3051,13 @@
             gene in the network and compared the regulations predicted by the program with the
             original regulations. Without filtering the random similarities, the actual regulations were
             submerged in the network noise.</p>
-        <div align="center"><img
-                src="https://static.igem.org/mediawiki/igem.org/2/2a/USTC_Software_Theoretical_Regulation_wiki.png" />
+        <div align="center"><img src="./assets/src/USTC_Software_Theoretical_Regulation_wiki.png" />
             <p><strong>Figure 1.</strong> The green line represents regulating values.<br />
                 The blue line
                 represents regulated values.</p>
         </div>
 
-        <div align="center"><img
-                src="https://static.igem.org/mediawiki/igem.org/5/59/USTC_Software_Predicted_Regulation_wiki.png" />
+        <div align="center"><img src="./assets/src/USTC_Software_Predicted_Regulation_wiki.png" />
             <p><strong>Figure 2.</strong>Predicted regulation without filtered.<br />
                 The actual regulations are submerged by the
                 noise.</p>
@@ -3076,8 +3066,7 @@
         <p>With random similarities filtered, all original regulations were picked out. The result shows
             that the program is consistent with the original network.</p>
         <br />
-        <div align="center"><img
-                src="https://static.igem.org/mediawiki/igem.org/b/b9/USTC_Software_Predicted_Regulation_%28Filtered%29.png" />
+        <div align="center"><img src="./assets/src/USTC_Software_Predicted_Regulation_%28Filtered%29.png" />
             <p><strong>Figure 3.</strong>The SNR is better.<br />
                 The actual regulations are
                 picked out.</p>
@@ -3096,21 +3085,22 @@
 
 
         <h2 id="reference">Reference</h2>
-        <p align="justify"><a class="content" href="http://www.jbc.org/content/275/38/29672.short">Arfin S M, Long A D,
+        <p align="justify">
+            <li class="content" href="http://www.jbc.org/content/275/38/29672.short">Arfin S M, Long A D,
                 Ito E T, et al. Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST
-                FACTOR[J]. Journal of Biological Chemistry, 2000, 275(38): 29672-29684.</a><br><br>
+                FACTOR[J]. Journal of Biological Chemistry, 2000, 275(38): 29672-29684.</li><br>
 
-            <a class="content" href="http://www.jbc.org/content/277/43/40309.short">Hung S, Baldi P, Hatfield G W.
+            <li class="content" href="http://www.jbc.org/content/277/43/40309.short">Hung S, Baldi P, Hatfield G W.
                 Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF LEUCINE-RESPONSIVE REGULATORY
-                PROTEIN[J]. Journal of Biological Chemistry, 2002, 277(43): 40309-40323.</a><br><br>
+                PROTEIN[J]. Journal of Biological Chemistry, 2002, 277(43): 40309-40323.</li><br>
 
-            <a class="content" href="http://www.jbc.org/content/278/32/29837.short">Salmon K, Hung S, Mekjian K, et al.
+            <li class="content" href="http://www.jbc.org/content/278/32/29837.short">Salmon K, Hung S, Mekjian K, et al.
                 Global Gene Expression Profiling in Escherichia coli K12 THE EFFECTS OF OXYGEN AVAILABILITY AND FNR[J].
-                Journal of Biological Chemistry, 2003, 278(32): 29837-29855.</a><br><br>
+                Journal of Biological Chemistry, 2003, 278(32): 29837-29855.</li><br>
 
-            <a class="content" href="http://www.jbc.org/content/280/15/15084.short">Salmon K A, Hung S, Steffen N R, et
+            <li class="content" href="http://www.jbc.org/content/280/15/15084.short">Salmon K A, Hung S, Steffen N R, et
                 al. Global Gene Expression Profiling in Escherichia coli K12 EFFECTS OF OXYGEN AVAILABILITY AND ArcA[J].
-                Journal of Biological Chemistry, 2005, 280(15): 15084-15096.</a>
+                Journal of Biological Chemistry, 2005, 280(15): 15084-15096.</li>
         </p>
 
     </div>
