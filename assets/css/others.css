@@ -1,0 +1,121 @@
+body {
+    background-color: #f3f3f3;
+}
+
+#safety {
+    width: 1050px;
+    margin: 100px auto;
+    height: auto;
+    background-color: #e2e1e1;
+    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat !important;
+    box-shadow: #999 3px 3px 3px;
+    padding-top: 30px;
+}
+
+#safety .head {
+    height: 100px;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#safety .head img {
+    margin-left: 210px;
+}
+
+#safety .pic {
+    width: 150px;
+    height: 150px;
+    margin: -120px auto auto -10px;
+    opacity: 0.5;
+}
+
+#content1 .ques {
+    width: 950px;
+    padding-left: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #668cc0;
+}
+
+#content1 .ques p {
+    font-size: 22px;
+}
+
+#content1 .ans {
+    width: 100%;
+    padding-left: 60px;
+}
+
+#content1 .ans p {
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    text-indent: 3em;
+}
+
+#download {
+    width: 700px;
+    height: 300px;
+    margin-left: 100px;
+    font-size: 22px;
+}
+
+#download p {
+    font-size: 24px;
+    float: left;
+}
+
+#download .pic {
+    margin-left: 310px;
+    margin-top: 0px;
+}
+
+#download .pic img:hover {
+    border: 3px #999 outset;
+}
+
+#hp {
+    width: 1050px;
+    height: auto;
+    margin: 100px auto;
+    box-shadow: 3px 3px 3px #999;
+    background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat !important;
+}
+
+#hp .head {
+    margin-left: 60px;
+}
+
+#hp .content p {
+    width: 990px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#safety .content p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hp .content img {
+    margin-left: 120px;
+}
+
+#video {
+    float: left;
+    margin-left: 30px;
+    width: 49%;
+}
+
+#video video {
+    display: block;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+#sign {
+    margin-top: 0px;
+    margin-left: 500px;
+    width: 49%;
+}
