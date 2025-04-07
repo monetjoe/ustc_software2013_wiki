@@ -1,6 +1,6 @@
 # USTC-Software 2013 Wiki
 
-The wiki of [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013)
+The source code of [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013) wiki
 
 =================
 
