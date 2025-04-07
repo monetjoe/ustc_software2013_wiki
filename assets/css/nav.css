@@ -2,6 +2,11 @@ body {
     background: #f3f3f3;
 }
 
+p,
+ul {
+    line-height: 1.5em;
+}
+
 #main {
     background: url(../src/M_1243691170517.jpg) repeat;
     width: 75%;

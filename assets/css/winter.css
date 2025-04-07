@@ -1,0 +1,550 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+#leftdirection {
+    width: 160px;
+    height: auto;
+    float: left;
+    position: fixed;
+    top: 40%;
+    background: url(../src/M_1243691170517.jpg) repeat;
+    border-radius: 5px;
+    box-shadow: #999 3px 3px 1px;
+}
+
+#leftdirection ul,
+#leftdirection ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Tahoma, Geneva, sans-serif;
+    list-style-image: none;
+    list-style-type: disc;
+}
+
+#leftdirection ul li a:hover {
+    color: #4945e9;
+    opacity: 1;
+}
+
+#global_wrapper {
+    margin-top: 90px;
+}
+
+div.dev_wrapper0 {
+    width: 1050px;
+    margin: 10px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+div.dev_wrapper0 .dev .circle {
+    height: 2297px;
+    width: 95px;
+    margin-top: 0px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+div.dev_wrapper0 .dev .content {
+    width: 820px;
+    height: 2300px;
+    margin: 20px auto 10px 80px;
+}
+
+div.dev_wrapper0 .dev .pic {
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+#con_one .head p {
+    width: 500px;
+    height: 100px;
+    margin: 0px auto auto 250px;
+    font-size: 84px;
+    color: #4945e9;
+    font-family: 'Bilbo Swash Caps', cursive;
+}
+
+#con_one .content0 {
+    height: 570px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#con_one .content0 .date {
+    width: 400px;
+    height: 30px;
+    margin: 30px auto auto 230px;
+}
+
+#date {
+    margin-top: 50px;
+}
+
+#con_one .content0 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content0 .main {
+    /* border: #333 1px solid; */
+    color: #000;
+}
+
+#con_one .content0 .main p {
+    font-size: 19px;
+}
+
+div.dev_wrapper1 {
+    width: 1050px;
+    margin: 120px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+div.dev_wrapper1 .dev .circle {
+    height: 1847px;
+    width: 95px;
+    margin-top: 0px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+div.dev_wrapper1 .dev .content {
+    width: 820px;
+    height: 1850px;
+    margin: 60px auto 10px 80px;
+}
+
+div.dev_wrapper1 .dev .pic {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+#con_one .content1 {
+    height: 600px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border: 0px #2da7a0 solid;
+}
+
+#con_one .content1 .date {
+    width: 200px;
+    height: 30px;
+    margin: 30px auto auto 300px;
+}
+
+#con_one .content1 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content1 .main {
+    /* border: #333 1px solid; */
+    color: #000;
+
+}
+
+#con_one .content1 .main p {
+    font-size: 19px;
+}
+
+
+div.dev_wrapper2 {
+    width: 1050px;
+    margin: 120px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+div.dev_wrapper2 .dev .circle {
+    height: 1785px;
+    width: 95px;
+    margin-top: 10px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+div.dev_wrapper2 .dev .content {
+    width: 820px;
+    height: 1800px;
+    margin: 60px auto 10px 80px;
+}
+
+div.dev_wrapper2 .dev .content .pic {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+#con_one .content2 {
+    height: 650px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 0px;
+    border: 0px #2da7a0 solid;
+}
+
+#con_one .content2 .date {
+    width: 300px;
+    height: 30px;
+    margin: 100px auto auto 300px;
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content2 .main {
+    margin-top: 10px;
+}
+
+#con_one .content2 .main p {
+    font-size: 19px;
+    margin-top: 30px;
+    color: #000;
+}
+
+div.dev_wrapper3 {
+    width: 1050px;
+    margin: 120px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+div.dev_wrapper3 .dev .circle {
+    height: 1300px;
+    width: 95px;
+    margin-top: 10px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+div.dev_wrapper3 .dev .content {
+    width: 820px;
+    height: 1400px;
+    margin: 60px auto 10px 80px;
+}
+
+#con_one .content3 {
+    height: 650px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 0px #2da7a0 solid;
+}
+
+#con_one .content3 .date {
+    width: 200px;
+    height: 30px;
+    margin: 100px auto auto 300px;
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content3 .main {
+    margin-top: 10px;
+}
+
+#con_one .content3 .main p {
+    font-size: 19px;
+    margin-top: 30px;
+
+}
+
+div.dev_wrapper4 {
+    width: 1050px;
+    margin: 120px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+div.dev_wrapper4 .dev .circle {
+    height: 1300px;
+    width: 95px;
+    margin-top: 10px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+div.dev_wrapper4 .dev .content {
+    width: 820px;
+    height: 1400px;
+    margin: 60px auto 10px 80px;
+}
+
+div.dev_wrapper4 .dev .content .pic {
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+#con_one .content4 {
+    height: 600px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 0px #2da7a0 solid;
+}
+
+#con_one .content5 {
+    height: 300px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 0px;
+    border: 0px #2da7a0 solid;
+}
+
+#con_one .content4 .date,
+#con_one .content5 .date {
+    width: 200px;
+    height: 30px;
+    margin: 100px auto auto 300px;
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content4 .main,
+#con_one .content5 .main {
+    margin-top: 10px;
+    text-indent: 2em;
+}
+
+#con_one .content4 .main p,
+#con_one .content5 .main p {
+    font-size: 19px;
+    margin-top: 30px;
+    color: #000;
+}
+
+div.wrapper {
+    width: 1050px;
+    margin: 50px 10px auto auto;
+    border-radius: 10px;
+    box-shadow: #999 3px 3px 1px;
+    background: url(../src/M_1243691170517.jpg) repeat;
+}
+
+#second .dev .circle {
+    height: 4240px;
+    width: 90px;
+    margin-top: 0px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+#second .dev .content {
+    width: 820px;
+    height: 4250px;
+    margin: 60px auto 10px 80px;
+}
+
+#cont_one .head {
+    width: 400px;
+    height: 100px;
+    margin: 10px auto auto 300px;
+    font-size: 84px;
+    color: #4945e9;
+    font-family: 'Bilbo Swash Caps', cursive;
+}
+
+#cont_one .content2 {
+    height: 600px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#cont_one .pic {
+    margin: -10px auto auto 100px;
+}
+
+#cont_one .aa {
+    height: 50px;
+}
+
+#cont_one .content2 .date {
+    width: 400px;
+    height: 30px;
+    margin: 30px auto auto 300px;
+}
+
+#date {
+    margin-top: 50px;
+}
+
+#cont_one .content2 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content2 .main {
+    text-indent: 2em;
+    color: #000;
+}
+
+#cont_one .content2 .main p {
+    font-size: 19px;
+    color: #000;
+}
+
+#cont_one .content3 {
+    height: 1200px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#cont_one .content3 .date {
+    width: 400px;
+    height: 30px;
+    margin: 30px auto auto 300px;
+}
+
+#date {
+    margin-top: 50px;
+}
+
+#cont_one .content3 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content3 .main {
+    text-indent: 2em;
+    color: #000;
+}
+
+#cont_one .content3 .main p {
+    font-size: 19px;
+    color: #000;
+}
+
+#third .dev .circle {
+    height: 2840px;
+    width: 90px;
+    margin-top: 0px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+#third .dev .content {
+    width: 780px;
+    height: 2850px;
+    margin: 60px auto 10px 80px;
+}
+
+#third .dev .pic {
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+#cont_one .content4 {
+    height: 700px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#cont_one .content4 .date {
+    width: 400px;
+    height: 30px;
+    margin: 30px auto auto 300px;
+}
+
+#date {
+    margin-top: 50px;
+}
+
+#cont_one .content4 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content4 .main {
+    /* border: #333 1px solid; */
+    color: #000;
+    text-indent: 2em;
+}
+
+#cont_one .content4 .main p {
+    font-size: 19px;
+    color: #000;
+}
+
+#forth .dev .circle {
+    height: 2690px;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: -20px;
+    float: left;
+    border-radius: 10px;
+    background: url(../src/USTC-Software_Note.png) repeat-y;
+}
+
+#forth .dev .content {
+    width: 820px;
+    height: 2700px;
+    margin: 60px auto 10px 80px;
+}
+
+#forth .dev .pic {
+    margin-left: 100px;
+}
+
+
+#cont_one .content5 {
+    height: 550px;
+    width: 800px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border: 0px #2da7a0 solid;
+}
+
+#cont_one .content5 .date {
+    width: 400px;
+    height: 30px;
+    margin: 30px auto auto 300px;
+
+}
+
+#date {
+    margin-top: 50px;
+}
+
+#cont_one .content5 .date p {
+    font-size: 28px;
+    color: #4945e9;
+}
+
+#con_one .content4 .main {
+    /* border: #333 1px solid; */
+    color: #000;
+    text-indent: 2em;
+}
+
+#cont_one .content5 .main p {
+    font-size: 19px;
+    color: #000;
+
+}
