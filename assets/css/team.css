@@ -169,31 +169,6 @@
     color: #383838;
 }
 
-
-/* #to_top {
-    float: left;
-}
-
-#to_top a img {
-    position: fixed;
-    left: 20px;
-    margin-top: 450px;
-    width: 125px;
-    height: 128px;
-    transition: 1s;
-    -moz-transition: 1s;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    -ms-transition: 1s;
-}
-
-#to_top a img:hover {
-    transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-} */
-
 #content .members .one {
     width: 400px;
     height: 600px;
