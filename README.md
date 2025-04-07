@@ -2,10 +2,10 @@
 
 The source code of remade [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013) wiki
 
-[![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki.svg)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
 [![Deploy static content to Pages](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/static.yml)
 [![github](https://img.shields.io/badge/GitHub-USTC--Software2013-000000.svg)](https://github.com/igemsoftware/USTC-Software2013)
-[![igem](https://img.shields.io/badge/iGEM-2013-00cc66.svg)](https://github.com/igemsoftware/USTC-Software2013)
+[![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://github.com/igemsoftware/USTC-Software2013)
 
 We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGEM 2013!
 
