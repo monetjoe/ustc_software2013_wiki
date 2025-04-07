@@ -1,12 +1,9 @@
-{{USTC-Software/hidden}}
-
-{{USTC-Software/header}}
-
 {{USTC-Software/medal}}
 
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>App Clotho</title>
     <style>
         #first {
@@ -31,8 +28,13 @@
             color: #aaed51 !important;
         }
     </style>
-
-    <script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#nav').load('nav.html');
+        });
+    </script>
+</head>
 
 <body>
 

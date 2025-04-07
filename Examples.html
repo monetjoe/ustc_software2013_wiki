@@ -1,48 +1,12 @@
-{{USTC-Software/hidden}}
-
-{{USTC-Software/header2}}
-
-<!--{{USTC-Software/project}}-->
-
 <html>
 
 <head>
-
+    <meta charset="UTF-8">
     <title>Example</title>
-
-
-    <!--link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Examples/css?action=raw&ctype=text/css" type="text/css"/>
-
-<style> #examplesbutton , #projectbutton {color:#aaed51 !important;} </style-->
-
-</head>
-
-<body>
-
-
-    <div id="direction">
-        <ul>
-
-            <li><a href="#tvel" class="button">Test and verify by experiment literatures</a></br>
-                <a href="#gge" class="button" id="subbutton">IHF+/IHF-</a></br>
-                <a href="#ggep" class="button" id="subbutton">Lrp+/Lrp-</a></br>
-
-                <a href="#ggepe" class="button" id="subbutton">-Oxygen FNR+/FNR-</a></br>
-
-                <a href="#ggepec" class="button" id="subbutton">-Oxygen ArcA+/ArcA-</a>
-
-            </li>
-
-            <li><a href="#consistency" class="button">Consistency</a></li>
-
-            <li><a href="#sum1" class="button">Summary</li>
-            <li><a href="#reference" class="button">Reference</li>
-            <li><a href="#main" class="button">Top</a></li>
-
-        </ul>
-    </div>
-    <script type="text/javascript">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
         $(document).ready(function () {
+            $('#nav').load('nav.html');
             $(".button").click(function () {
                 var href = $(this).attr("href");
                 var pos = $(href).offset().top - 100;
@@ -51,17 +15,28 @@
             });
         });
     </script>
+</head>
 
-
+<body>
+    <div id="nav"></div>
+    <div id="direction">
+        <ul>
+            <li><a href="#tvel" class="button">Test and verify by experiment literatures</a></br>
+                <a href="#gge" class="button" id="subbutton">IHF+/IHF-</a></br>
+                <a href="#ggep" class="button" id="subbutton">Lrp+/Lrp-</a></br>
+                <a href="#ggepe" class="button" id="subbutton">-Oxygen FNR+/FNR-</a></br>
+                <a href="#ggepec" class="button" id="subbutton">-Oxygen ArcA+/ArcA-</a>
+            </li>
+            <li><a href="#consistency" class="button">Consistency</a></li>
+            <li><a href="#sum1" class="button">Summary</li>
+            <li><a href="#reference" class="button">Reference</li>
+            <li><a href="#main" class="button">Top</a></li>
+        </ul>
+    </div>
     <div id="main">
-
         <h1>Examples</h1>
-
-
         <h2 id="tvel">Test and verify by experiment literatures</h2>
-
-
-        <p align="justify">To prove our software’s reliability, we looked into lots of literature. It is hard to find an
+        <p align="justify">To prove our software's reliability, we looked into lots of literature. It is hard to find an
             appropriate literature which research the effect of importing an exogenous gene into E.coli K-12. But
             actually, our software could also simulate the effect of changing endogenous gene by putting the same
             promoter and gene sequence in.</br></br>
@@ -70,18 +45,14 @@
 
         </br>
         <h3 id="gge">Global Gene Expression Profiling in Escherichia coliK12 THE EFFECTS OF INTEGRATION HOST FACTOR</h3>
-
-
         <p align="justify">In this literature, Stuart and his team measured the gene expression profiles in otherwise
             isogenic integration host factor IHF+ and IHF- strains. And IHF is one of the genes in our genetic
             regulatory network(GRN). </br></br>
-            By importing the IHF’s promoter and gene sequence, we used our software simulating the enhancement of IHF’s
+            By importing the IHF's promoter and gene sequence, we used our software simulating the enhancement of IHF's
             expression and compared the result with the gene expression profile in that literature.</br></br>
             There are 30 genes in that profile which are also in our GRN. Here is the list and Genes differentially
             expressed between E. coli K12 strains IH100 (IHF+) and IH105 (IHF-) with a p value less than 0.0005:
         </p>
-
-
         <table width="1000px" border="0" cellspacing="0" cellpadding="0"
             style="border-top:2px #000000 solid;border-bottom:2px #000000 solid;background: url(https://static.igem.org/mediawiki/2013/1/1e/M_1243691170517.jpg) repeat;">
             <tr>
@@ -904,7 +875,7 @@
 
         <p align="justify">The comparison indicates whether the result of our software fit the result of gene expression
             profile or not. After statistical processing, in these 30 genes, there are 21 genes whose result are same
-            with gNAP’s simulation, 70% of the total.</p>
+            with gNAP's simulation, 70% of the total.</p>
 
 
         </br>
@@ -914,7 +885,7 @@
         <p align="justify">In this literature, researchers measure the gene expression profiles in Escherichia coli k12
             with the effects of leucine-responsive regulatory protein(Lrp). And Lrp is one of the genes in our genetic
             regulatory network(GRN). </br></br>
-            By importing the Lrp’s promoter and gene sequence, we used our software simulating the enhancement of Lrp’s
+            By importing the Lrp's promoter and gene sequence, we used our software simulating the enhancement of Lrp's
             expression and compared the result with the gene expression profile in that literature.</br></br>
             There are 22 genes in that profile which are also in our GRN. Here is the list and Genes deferentially
             expressed between lrp+ and lrp- (control vs. experimental) E. coli strains with a p value less than 0.001:
@@ -1622,7 +1593,7 @@
 
         <p align="justify">The compare result means that whether the result of our software fit to the result of gene
             expression profile. After statistical processing, in these 22 genes, there are 15 genes whose result are
-            same to gNAP’s simulation, 68.2% of the total.</p>
+            same to gNAP's simulation, 68.2% of the total.</p>
 
 
         </br>
@@ -1633,7 +1604,7 @@
             with the effects of oxygen availability and FNR. And FNR is one of the genes in our genetic regulatory
             network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
             and consider the effect of FNR+ and FNR-.</br></br>
-            By importing the FNR’s promoter and gene sequence, we used our software simulating the enhancement of FNR’s
+            By importing the FNR's promoter and gene sequence, we used our software simulating the enhancement of FNR's
             expression and compared the result with the gene expression profile in that literature.</br></br>
             There are 38 genes in that profile which are also in our GRN. Here is the list and Genes differentially
             expressed between FNR+ and FNR- E. coli strains:
@@ -2308,7 +2279,7 @@
         </table>
 
         <p align="justify">The compare result means that whether the result of our software fit to the result of gene
-            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP’s
+            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP's
             simulation, 65.8% of the total.</p>
 
 
@@ -2320,8 +2291,8 @@
             with the effects of oxygen availability and arcA. And arcA is one of the genes in our genetic regulatory
             network(GRN). We do not consider the effect of oxygen, but instead, we control the oxygen in the same way
             and consider the effect of arcA+ and arcA-.</br></br>
-            By importing the arcA’s promoter and gene sequence, we used our software simulating the enhancement of
-            arcA’s expression and compared the result with the gene expression profile in that literature.</br></br>
+            By importing the arcA's promoter and gene sequence, we used our software simulating the enhancement of
+            arcA's expression and compared the result with the gene expression profile in that literature.</br></br>
             There are 43 genes in that profile which are also in our arcA. Here is the list and Genes differentially
             expressed between arcA+ and arcA- E. coli strains:
         </p>
@@ -3079,7 +3050,7 @@
         </table>
 
         <p align="justify">The compare result means that whether the result of our software fit to the result of gene
-            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP’s
+            expression profile. After statistic, in these 38 genes, there are 25 genes whose result are same to gNAP's
             simulation, 62.8% of the total.</p>
 
 
@@ -3117,9 +3088,9 @@
         <h2 id="sum1">Summary</h2>
 
         <p align="justify">In first two literatures, without the limit of oxygen, the average fitness is up to 69.1%.
-            And in the other two literatures, the average fitness is 64.3%. We thought that it may be the oxygen’s limit
+            And in the other two literatures, the average fitness is 64.3%. We thought that it may be the oxygen's limit
             which affect the expression of each gene. Gene regulatory network analysis has its weakness about
-            environment’s change.</br></br>
+            environment's change.</br></br>
             All in all, the total average of fitness is still up to 66.7%. Therefore, we may draw the following
             conclusion that our software could simulate the impact of new gene to some extent.
         </p>

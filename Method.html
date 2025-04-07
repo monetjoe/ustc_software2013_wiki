@@ -1,23 +1,12 @@
-{{USTC-Software/hidden}}
-
-{{USTC-Software/header2}}
-
-<!--{{USTC-Software/project}}-->
-
 <html>
 
 <head>
-
     <title>Methodologies</title>
-
-    <script type="text/javascript" src="http://igem.stlover.org/js/meth.js"></script>
     <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/Method/css?action=raw&ctype=text/css"
         type="text/css" />
-
     <link rel="stylesheet" href="https://2013.igem.org/Team:USTC-Software/Project/css?action=raw&ctype=text/css"
         type="text/css" />
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide1?action=raw&ctype=text/javascript"
         type="text/javascript" charset="utf-8"></script>
     <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide2?action=raw&ctype=text/javascript"
@@ -34,33 +23,23 @@
         type="text/javascript" charset="utf-8"></script>
     <script src="https://2013.igem.org/Team:USTC-Software/Project/Overall/js/slide8?action=raw&ctype=text/javascript"
         type="text/javascript" charset="utf-8"></script>
-
     <style>
         #methodbutton {
             color: #aaed51 !important;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $('#nav').load('nav.html');
+        });
+    </script>
+    <div id="nav"></div>
+</head>
 
 <body>
 
     <div id="direction">
         <ul>
-
-            <!--li><a href="#sequence" class="button">2.1 Sequence</a></br>
-                <a href="#nwa" class="button" id="subbutton">2.1.1 Needleman-Wunsch Algorithm</a></br>
-                <a href="#asg" class="button" id="subbutton">2.1.2 A Supplementary Game</a>
-          </li>
-
-          <li><a href="#filtering" class="button">2.2 Filtering</a></br>
-                <a href="#rn" class="button" id="subbutton">2.2.1 Random Noise</a></br>
-                <a href="#filter" class="button" id="subbutton">2.2.2 Filter</a>
-         </li>
-
-          <li><a href="#rc" class="button">2.3 Regulation Calculation</a></li>
-
-          <li><a href="#main" class="button">Top</a></li-->
-
-
             <li><a href="#Fetch_Database" class="button">Database</a></li>
             <li><a href="#Alignment_Analyze" class="button">Operon Theory and Regulatory Model</a></li>
             <li><a href="#fa" class="button">Forward Analysis</a></li>
@@ -81,11 +60,7 @@
         });
     </script>
 
-
-
     <div id="main">
-
-
         <div id="abstract">
             <h1 align="justify">Methodologies</h1>
             <p align="justify">In order to simulate the GRN's working and analyze the changing after exogenous gene
@@ -101,8 +76,6 @@
             </p>
 
         </div><!--end of abstract-->
-
-
 
         <div id="Fetch_Database">
 

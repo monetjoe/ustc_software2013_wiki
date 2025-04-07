@@ -6,6 +6,7 @@
     <title>Slide</title>
     <link rel="stylesheet" type="text/css"
         href="https://2013.igem.org/Template:USTC-Software/header/css?action=raw&ctype=text/css" media="all">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://2013.igem.org/Template:USTC-Software/header/js1?action=raw&ctype=text/javascript"
         type="text/javascript" charset="utf-8"></script>
     <script src="https://2013.igem.org/Template:USTC-Software/header/js2?action=raw&ctype=text/javascript"
@@ -18,9 +19,11 @@
         type="text/javascript" charset="utf-8"></script>
     <script>
         $(function () {
+            $('#nav').load('nav.html');
             $('.pix_diapo').diapo();
         });
     </script>
+    <div id="nav"></div>
 </head>
 
 <body>
