@@ -99,7 +99,7 @@ a:hover {
     opacity: 1;
 }
 
-iframe {
+video {
     aspect-ratio: 4 / 3;
     width: 90%;
 }
