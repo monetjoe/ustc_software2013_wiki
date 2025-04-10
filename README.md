@@ -28,7 +28,7 @@ This software contains four parts, dealing with separate functions in forward an
 >**Monitor** undertakes several functions of our software as the core methods of **gNAP**. First of them is **Analyse** function which figure out the network change when input an exogenous gene. In the same time a score presenting stablility of new GRN by statist stable time and value variation for lots of times. **Analyse** result could be saw intuitively in **Result** part next. Secondly, **Predict** function use target gene exprssion to figure out possible interaction whose result could also receive in **Result**.
 
 #### Result
->**Result** is a output part which contains all results of operations used. It is easy to read each gene's information and changing consequence in this part. What's more, all gene information could be output in [SBOL](http://www.sbolstandard.org/).
+>**Result** is a output part which contains all results of operations used. It is easy to read each gene's information and changing consequence in this part. What's more, all gene information could be output in [SBOL](https://www.sbolstandard.org).
 
 #### Display
 >**Display** is the data visualization part of our software. To reach a more vivid output data, this part had been written in JAVA. There are three parts in **Display**: ShowRegulation, ShowChange and ShowNetwork.
@@ -55,7 +55,7 @@ This floder contains the executable program file of "gNAP" on Mac OS.
 ```
 ```bash
 /Executable/gFinder/
-gFinder is a website software which do not need to executable program. Website:Http://www.stlover.org/gFinder
+gFinder is a website software which do not need to executable program. Website:https://www.stlover.org/gFinder
 ```
 ```bash
 /Executable/gRNA/
@@ -98,8 +98,8 @@ The data which used in "gNAP" is flexible. All database in those form could be r
 
 ## How to Compile
 To compile our source code, you should have:
-* Qt   (we use version 5.1.0, which can be found [here](http://qt-project.org/downloads))
-* Java (you can get install jre [here](http://www.java.com/))
+* Qt   (we use version 5.1.0, which can be found [here](https://qt-project.org/downloads))
+* Java (you can get install jre [here](https://www.java.com))
 * ant  (the compile tool)
 * jse  (include jdk and etc.)
 
@@ -123,14 +123,14 @@ and, compile source code:
     ant
 
 Windows:
-    INSTALL ant from http://ant.apache.org/ and DO configure JAVA_HOME
+    INSTALL ant from https://ant.apache.org and DO configure JAVA_HOME
     cd path/to/gNAP-view
     ant
 and than the jar file will in the folder dist
 ```
 
 ### Compile gFinder
-This is a website software which do not need to compile. You could try our software from [here](https://static.igem.org/mediawiki/2013/3/32/USTC-Software_2013_API_of_gNAP.pdf). All source code had been inlcuded in floder:
+This is a website software which do not need to compile. You could try our software from [here](./assets/doc/USTC-Software_2013_API_of_gNAP.pdf). All source code had been inlcuded in floder:
 ```bash
 /Source Code/gFinder/
 ```
@@ -141,7 +141,7 @@ All softwares which could compile Java are usable to compile this small game. Al
 /Source Code/gRNA/
 ```
 
-**For more information, please refer to our [wiki page](http://2013.igem.org/Team:USTC-Software).**
+**For more information, please refer to our [wiki page](https://2013.igem.org/Team:USTC-Software).**
 
 ## Contacts
 For any questions, feel free to contact:<br>
