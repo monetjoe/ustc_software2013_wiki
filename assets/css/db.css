@@ -7,41 +7,9 @@ h1 {
 }
 
 #TT {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     font: 18px Arial, Helvetica, sans-serif;
-}
-
-#TG {
-    width: 1000px;
-    margin: 0 auto;
-    font: 18px Arial, Helvetica, sans-serif;
-}
-
-#GI {
-    width: 1000px;
-    margin: 0 auto;
-    font: 18px Arial, Helvetica, sans-serif;
-}
-
-#PI {
-    width: 1000px;
-    margin: 0 auto;
-    font: 18px Arial, Helvetica, sans-serif;
-}
-
-#TI {
-    width: 1000px;
-    margin: 0 auto;
-    font: 18px Arial, Helvetica, sans-serif;
-}
-
-img#pictures {
-    width: 1000px;
-}
-
-#developbutton {
-    color: #aaed51;
 }
 
 #main {
