@@ -3,7 +3,7 @@
 The source code of remade [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013) wiki
 
 [![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
-[![Deploy static content to Pages](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/static.yml/badge.svg?branch=main)](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/static.yml)
+[![pages-build-deployment](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/pages/pages-build-deployment)
 [![github](https://img.shields.io/badge/GitHub-USTC--Software2013-15191f.svg)](https://github.com/igemsoftware/USTC-Software2013)
 [![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://github.com/igemsoftware/USTC-Software2013)
 [![wiki](https://img.shields.io/badge/wiki-GitHub_Pages-34495e.svg)](https://github.com/igemsoftware/USTC-Software2013)
