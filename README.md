@@ -1,14 +1,12 @@
 # USTC-Software 2013 Wiki
 
-The source code of remade [USTC-Software 2013](https://github.com/igemsoftware/USTC-Software2013) wiki
-
-[![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
 [![pages-build-deployment](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/monetjoe/ustc_software2013_wiki/actions/workflows/pages/pages-build-deployment)
 [![github](https://img.shields.io/badge/GitHub-USTC--Software2013-15191f.svg)](https://github.com/igemsoftware/USTC-Software2013)
-[![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://github.com/igemsoftware/USTC-Software2013)
+[![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki)](https://github.com/monetjoe/ustc_software2013_wiki/blob/master/LICENSE)
 [![wiki](https://img.shields.io/badge/wiki-GitHub_Pages-34495e.svg)](https://github.com/igemsoftware/USTC-Software2013)
+[![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://github.com/igemsoftware/USTC-Software2013)
 
-We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGEM 2013!
+This is the source code of remade USTC-Software 2013 wiki! We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGEM 2013!
 
 ## Introduction
 Our application aims to simulate gene networks. The application analyzes the stability and the change of gene networks after introduction of exogenous genes. Meanwhile, given the original network and specific purposes, the application traces the regulative process back and gives possible regulative patterns.
