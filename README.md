@@ -7,6 +7,8 @@
 
 This is the source code of remade USTC-Software 2013 wiki! We are USTC-Software, a team from University of Science and Technology of China. We were competing in iGEM 2013!
 
+![](./assets/src/USTC_Software_Page1.png)
+
 ## Introduction
 Our application aims to simulate gene networks. The application analyzes the stability and the change of gene networks after introduction of exogenous genes. Meanwhile, given the original network and specific purposes, the application traces the regulative process back and gives possible regulative patterns.
 
