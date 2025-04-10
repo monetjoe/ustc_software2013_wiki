@@ -16,10 +16,10 @@ Our application aims to simulate gene networks. The application analyzes the sta
 ## About Our Software
 ### gNAP: Gene Network Analyse and Predict
 This software contains four parts, dealing with separate functions in forward and backward modeling of GRN (Gene Regulatory Network) analyse.
-* 1. Start
-* 2. Monitor
-* 3. Result
-* 4. Display
+1. Start
+2. Monitor
+3. Result
+4. Display
 
 #### Start
 >**Start** is used to prepare for the later analysis and prediction. In this part, users could input their database downloaded on Internet and sequences of exogenous gene which is needed to analyse. Also, if not input sequence in **Start**, users could also use the "Predict" function in next part.
@@ -145,5 +145,5 @@ All softwares which could compile Java are usable to compile this small game. Al
 
 ## Contacts
 For any questions, feel free to contact:<br>
-Chenkun Wang (ustckun@gmail.com)<br>
-Jinyang Li (jinyangustc@gmail.com)
+[@ustckun](https://github.com/ustckun)<br>
+[@jinyangustc](https://github.com/jinyangustc)
