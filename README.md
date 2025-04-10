@@ -6,30 +6,30 @@
 [![wiki](https://img.shields.io/badge/wiki-GitHub_Pages-34495e.svg)](https://github.com/igemsoftware/USTC-Software2013)
 [![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://github.com/igemsoftware/USTC-Software2013)
 
-This is the source code of remade USTC-Software 2013 wiki! We are USTC-Software, a team from University of Science and Technology of China. We will be competing in iGEM 2013!
+This is the source code of remade USTC-Software 2013 wiki! We are USTC-Software, a team from University of Science and Technology of China. We were competing in iGEM 2013!
 
 ## Introduction
 Our application aims to simulate gene networks. The application analyzes the stability and the change of gene networks after introduction of exogenous genes. Meanwhile, given the original network and specific purposes, the application traces the regulative process back and gives possible regulative patterns.
 
 ## About Our Software
-### gNAP: Gene Network Analyse and Predict
-This software contains four parts, dealing with separate functions in forward and backward modeling of GRN (Gene Regulatory Network) analyse.
+### gNAP: Gene Network Analyze and Predict
+This software contains four parts, dealing with separate functions in forward and backward modeling of Gene Regulatory Network (GRN) analyze.
 1. Start
 2. Monitor
 3. Result
 4. Display
 
 #### Start
->**Start** is used to prepare for the later analysis and prediction. In this part, users could input their database downloaded on Internet and sequences of exogenous gene which is needed to analyse. Also, if not input sequence in **Start**, users could also use the "Predict" function in next part.
+>**Start** is used to prepare for the later analysis and prediction. In this part, users could input their database downloaded on Internet and sequences of exogenous gene which is needed to analyze. Also, if not input sequence in **Start**, users could also use the "Predict" function in next part.
 
 #### Monitor
->**Monitor** undertakes several functions of our software as the core methods of **gNAP**. First of them is **Analyse** function which figure out the network change when input an exogenous gene. In the same time a score presenting stablility of new GRN by statist stable time and value variation for lots of times. **Analyse** result could be saw intuitively in **Result** part next. Secondly, **Predict** function use target gene exprssion to figure out possible interaction whose result could also receive in **Result**.
+>**Monitor** undertakes several functions of our software as the core methods of **gNAP**. First of them is **Analyze** function which figure out the network change when input an exogenous gene. In the same time a score presenting stablility of new GRN by statist stable time and value variation for lots of times. **Analyze** result could be saw intuitively in **Result** part next. Secondly, **Predict** function use target gene exprssion to figure out possible interaction whose result could also receive in **Result**.
 
 #### Result
 >**Result** is a output part which contains all results of operations used. It is easy to read each gene's information and changing consequence in this part. What's more, all gene information could be output in [SBOL](https://www.sbolstandard.org).
 
 #### Display
->**Display** is the data visualization part of our software. To reach a more vivid output data, this part had been written in JAVA. There are three parts in **Display**: ShowRegulation, ShowChange and ShowNetwork.
+>**Display** is the data visualization part of our software. To reach a more vivid output data, this part had been written in Java. There are three parts in **Display**: _ShowRegulation, ShowChange_ and _ShowNetwork_.
 
 ### gFinder: Gene Finder
 This software helps the biologists choosing a specific gene satisfying the regulation which they needs.
