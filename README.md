@@ -3,7 +3,7 @@
 [![github](https://img.shields.io/badge/GitHub-USTC--Software2013-15191f.svg)](https://github.com/igemsoftware/USTC-Software2013)
 [![license](https://img.shields.io/github/license/monetjoe/ustc_software2013_wiki)](./LICENSE)
 [![wiki](https://img.shields.io/badge/wiki-GitHub_Pages-34495e.svg)](https://monetjoe.github.io/ustc_software2013_wiki)
-[![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](http://2013.igem.org/Team:USTC-Software)
+[![igem](https://img.shields.io/badge/iGEM-2013-009966.svg)](https://teams.igem.org/1079)
 
 This is the source code of remade USTC-Software 2013 wiki! We are USTC-Software, a team from University of Science and Technology of China. We were competing in iGEM 2013!
 
